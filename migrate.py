@@ -12,7 +12,6 @@ Base = declarative_base()
 engine = create_engine(os.environ.get("DATABASE_URL"), echo=bool(os.environ.get("ECHO")))
 class UrlBase(Base):
     __tablename__='url_base'    
-    # TODO: pendente correção dos campos 
     id = Column(Integer, primary_key=True)
     dominio = Column(String)    
     url =Column(String) 
@@ -21,9 +20,9 @@ class UrlBase(Base):
     telefone_celular = Column(String)
     cep = Column(String)
     email = Column(String)
-    endereco = Column(String)
-    dados_cnpj = Column(String)
-    complementar = Column(JSON) ############# REMOVER
+    endereco = Column(JSON)
+    dados_cnpj = Column(JSON)
+    
 
 class UrlIgnorar(Base):
     __tablename__='url_ignorar'
