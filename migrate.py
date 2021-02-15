@@ -8,8 +8,11 @@ from sqlalchemy.ext.declarative import declarative_base
 load_dotenv(find_dotenv())
 Base = declarative_base()
 
-
 engine = create_engine(os.environ.get("DATABASE_URL"), echo=bool(os.environ.get("ECHO")))
+
+from sqlalchemy.orm import sessionmaker
+Session = sessionmaker(bind = engine)
+session = Session()
 class UrlBase(Base):
     __tablename__='url_base'    
     id = Column(Integer, primary_key=True)
