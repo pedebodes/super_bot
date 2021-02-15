@@ -9,8 +9,7 @@ load_dotenv(find_dotenv())
 Base = declarative_base()
 
 
-engine = create_engine(os.environ.get("DATABASE_URL"), echo=True)
-
+engine = create_engine(os.environ.get("DATABASE_URL"), echo=bool(os.environ.get("ECHO")))
 class UrlBase(Base):
     __tablename__='url_base'    
     # TODO: pendente correção dos campos 
