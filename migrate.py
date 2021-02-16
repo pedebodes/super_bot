@@ -2,9 +2,11 @@
 import os
 from dotenv import load_dotenv, find_dotenv
 
-from sqlalchemy import Column, Integer, String, JSON
+from sqlalchemy import Column, Integer, String, JSON,ForeignKey
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship, backref
+
 load_dotenv(find_dotenv())
 Base = declarative_base()
 
@@ -26,6 +28,22 @@ class UrlBase(Base):
     endereco = Column(JSON)
     dados_cnpj = Column(JSON)
     
+
+class ItemPesquisa(Base):
+    __tablename__='item_pesquisa'
+    id = Column(Integer, primary_key=True)
+    item = Column(String)    
+
+
+class itemUrl(Base):
+    __tablename__ = 'item_url'
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    url_id = Column(Integer, ForeignKey('url_base.id'), nullable=True)
+    item_pesquisa_id = Column(Integer, ForeignKey('item_pesquisa.id'), nullable=True)
+    
+    urlBase = relationship(UrlBase, backref=backref("item_url"))
+    item = relationship(ItemPesquisa, backref=backref("item_url"))
+        
 
 class UrlIgnorar(Base):
     __tablename__='url_ignorar'
