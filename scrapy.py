@@ -26,19 +26,13 @@ def getUrls(busca,n_results=3000):
     url = "https://www.google.com/search?q=" + busca + "&num=" + str(n_results)
     
     
+    # TODO: pesquisar se ja tem pesquisa com o mesmo assunto e retornar os resultados, e parar o processamento
+    
     item_pesquisa = ItemPesquisa()
     item_pesquisa.item = busca
     session.add(item_pesquisa)
     session.commit()
 
-
-    # print("CANCELAR")
-    # import pdb; pdb.set_trace()
-    # import pdb; pdb.set_trace()
-    # import pdb; pdb.set_trace()
-    # import pdb; pdb.set_trace()
-    # import pdb; pdb.set_trace()
-    # ##################################################################
 
     ua = UserAgent()
     sleep(random.randint(0,10)) 
@@ -47,9 +41,6 @@ def getUrls(busca,n_results=3000):
     if response.status_code != 200:
         sleep(random.randint(0,10)) 
         response = requests.get(url, headers=header.generate() ) 
-    
-    print (response.status_code)
-    import pdb; pdb.set_trace()
     
     it_url = itemUrl()
     
@@ -64,7 +55,6 @@ def getUrls(busca,n_results=3000):
         if x != None:
             
             ignorar = session.query(UrlIgnorar).filter(UrlIgnorar.dominio.ilike(urlparse(x.group(1)).netloc.split('.')[1])).all()
-                        
             if len(ignorar) == 0:
                 
                 ext = pathlib.Path(x.group(1)).suffix
@@ -72,17 +62,18 @@ def getUrls(busca,n_results=3000):
                 ignorarExtensoes = ['.xls','.xlsx', '.pdf', '.rar', '.exe']
 
                 result = list(filter(lambda x: str(ext).lower() in x, ignorarExtensoes))  
+                
+              
                 addUrl = UrlBase()
                 if len(result) > 0:
                     addUrl.dominio = urlparse(x.group(1)).netloc
-                    addUrl.url = urlparse(x.group(1)).scheme+"://"+urlparse(x.group(1)).netloc
+                    addUrl.url = x.group(1)
                 else:
                     addUrl.dominio = urlparse(x.group(1)).netloc
-                    addUrl.url = x.group(1)
+                    addUrl.url = urlparse(x.group(1)).scheme+"://"+urlparse(x.group(1)).netloc
                 
                 session.add(addUrl)
                 session.commit()
-                # TODO: erro na inserção -- , autoincrement=True na criacaçõ da tabeça -> https://stackoverflow.com/questions/20848300/unable-to-create-autoincrementing-primary-key-with-flask-sqlalchemy
                 
                 it_url = itemUrl()
                 it_url.url_id =addUrl.id
