@@ -44,11 +44,18 @@ def getUrls(busca,n_results=3000):
     
     it_url = itemUrl()
     
+    print(response)
+    # import pdb; pdb.set_trace()
     
     soup = BeautifulSoup(response.text, "html.parser")
     result = soup.find_all('div', attrs = {'class': 'ZINbbc'})
-    results=[re.search('\/url\?q\=(.*)\&sa',str(i.find('a', href = True)['href'])) for i in result]
     
+    results = []
+    for i in result:
+        ln = i.find('a', href = True)            
+        if ln is not None:
+            results.append(re.search('\/url\?q\=(.*)\&sa',str(ln['href'])))
+    # results=[re.search('\/url\?q\=(.*)\&sa',str(i.find('a', href = True)['href'])) for i in result]
     
     links=[i.group(1) for i in results if i != None]
     for x in results:

@@ -1,3 +1,3 @@
 from scrapy import getUrls
 
-print(getUrls("rolamentos"))
+print(getUrls("bbb"))
