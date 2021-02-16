@@ -1,0 +1,2986 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 " lang="br"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7" lang="br"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9 ie8" lang="br"><![endif]-->
+<!--[if gt IE 8]> <html class="no-js ie9" lang="br"><![endif]-->
+<html lang="br">
+	<head>
+				
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110000426-1"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+
+				gtag('config', 'UA-110000426-1');
+			</script>
+		
+
+		<meta charset="utf-8" />
+		<title>Tudo em Rolamentos, Ferramentas e Mancais SKF - A.T.I. Brasil</title>
+				<meta name="description" content="Distribuidora oficial da SKF no Brasil. Fornecemos uma ampla variedade de rolamentos, ferramentas de manutenção e mancais. Solicite um orçamento! na A.T.I. Brasil" />
+						<meta name="generator" content="PrestaShop" />
+		<meta name="robots" content="index,follow" />
+		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+		<link rel="apple-touch-icon" href="/img/favicon.ico" />
+		<link rel="icon" href="/img/favicon.ico" />
+				<meta property="og:image" content="https://www.atibrasil.com.br/img/img_facebook.png" />
+        <meta property="og:image:type" content="image/png">
+		<meta property="og:image:width" content="500">
+		<meta property="og:image:height" content="500">
+							        		<link rel="stylesheet" href="/themes/lojapadrao/css/global.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/themes/lojapadrao/css/autoload/highdpi.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/themes/lojapadrao/css/autoload/responsive-tables.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/themes/lojapadrao/css/autoload/uniform.default.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/js/jquery/plugins/fancybox/jquery.fancybox.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/themes/lojapadrao/css/product_list.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/themes/lojapadrao/css/category.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/themes/lojapadrao/css/scenes.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/themes/lojapadrao/css/modules/blockcart/blockcart.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/js/jquery/plugins/bxslider/jquery.bxslider.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/themes/lojapadrao/css/modules/bructodascategorias/blockcategories.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/themes/lojapadrao/css/modules/blockuserinfo/blockuserinfo.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/themes/lojapadrao/css/modules/blockviewed/blockviewed.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/boletobancario/css/boletobancario.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/smartblog/css/smartblogstyle.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/brucblockspecials/brucblockspecials.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/themes/lojapadrao/css/modules/sendynewsletter/sendynewsletter.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/revsliderprestashop/views/css/rs-plugin/fonts/font-awesome/css/font-awesome.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/revsliderprestashop/views/css/rs-plugin/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/revsliderprestashop/views/css/rs-plugin/css/settings.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/revsliderprestashop/views/css/rs-plugin/css/static-captions.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/revsliderprestashop/views/css/rs-plugin/css/dynamic-captions.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/revsliderprestashop/views/css/css/front.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/bamegamenu/views/css/font.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/bamegamenu/views/css/megamenu.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/bamegamenu/views/css/font_end.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/bamegamenu/views/css/light.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/bamegamenu/views/css/style_Mobie.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/leomanufacturerscroll/assets/style.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/leomanufacturerscroll/assets/owl-carousel/owl.carousel.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/leomanufacturerscroll/assets/owl-carousel/owl.theme.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/themes/lojapadrao/css/modules/blocksearch/blocksearch.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/js/jquery/plugins/autocomplete/jquery.autocomplete.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/fkcorreiosg2/css/fkcorreiosg2_front.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/pagecache/views/css/pagecache.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/bacookielawinfo/views/css/style_frontend.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/modules/bacookielawinfo/views/css/font-awesome/css/font-awesome.min.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/themes/lojapadrao/css/custom.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/themes/lojapadrao/css/colors.css" type="text/css" media="all" />
+			        		<link rel="stylesheet" href="/themes/lojapadrao/css/personalizado.css" type="text/css" media="all" />
+							<script type="text/javascript" src="/js/jquery/jquery-1.11.0.min.js"></script>
+		
+			<script type="text/javascript">
+				(window.gaDevIds=window.gaDevIds||[]).push('d6YPbH');
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+				ga('create', 'UA-110000426-1', 'auto');
+				ga('require', 'ec');</script><!--Modules BA EU Cookie Law-->
+<style type="text/css">
+	
+	#ba_eu_cookie_law{
+		background:#FFFFFF;
+		border-bottom-color:#444444 !important;
+		border-bottom-style:solid;
+	}
+	#ba_eu_cookie_law .ba_eu_cookie_law_text{
+		color:#000000;
+	}
+	#ba_eu_cookie_accept{
+		color:#FFFFFF;
+		background:#333333;	}
+	#ba_eu_cookie_more_info{
+		color:#2C3E78;
+			}
+	#ba_eu_cookie_accept:hover{
+		color:#2C3E78;
+	}
+	#ba_eu_cookie_more_info:hover{
+		color:#2C3E78;
+	}
+	</style>
+<script language="javascript" type="text/javascript">
+	window.onload = function(){
+		if(2 == 3 && getCookie('ba_eu_cookie_law') == 1){
+			jQuery(".ba_popup_cookie").hide();
+			jQuery(".ba_popup_cookie").css("width","0");
+			jQuery(".ba_popup_cookie").css("height","0");
+		}
+		if(getCookie('ba_eu_cookie_law') != 1){
+			if(1 == 1 && 2==1){
+				jQuery("#ba_eu_cookie_law").slideDown();
+			}else if(1 == 1 && 2==2){
+				jQuery("#ba_eu_cookie_law").slideDown();
+			}else{
+				jQuery("#ba_eu_cookie_law").show();
+			}
+		}
+		jQuery("#ba_eu_cookie_accept").click(function(){
+			if(1==1){
+				jQuery("#ba_eu_cookie_law").hide();
+			}else if(1==2){
+				window.close();
+				window.open('index.php');
+			}else if(N=="Y"){
+				window.open('index.php');
+			}
+			jQuery(".ba_popup_cookie").hide();
+			setCookie("ba_eu_cookie_law", "1", 365);
+		});
+		if("N"=="Y" && 2 <=2){
+			setTimeout(function(){
+				if(2==1){
+					jQuery("#ba_eu_cookie_law").slideUp();
+					
+				}else{
+					jQuery("#ba_eu_cookie_law").hide();
+					
+				}
+			}, 3000);
+		}
+		
+		$(document).ready(function(){
+			if($(window).scrollTop()==0 && 2 <=2){
+				jQuery(window).scroll(function() {
+					if("N"=="Y"){
+						// console.log($(window).scrollTop());
+						if(2==1){
+							// alert('a');
+							jQuery("#ba_eu_cookie_law").slideUp();
+							
+						}else{
+							jQuery("#ba_eu_cookie_law").hide();
+							
+						}
+					}
+				});
+			}
+		});
+		
+		if("Y"=="Y"){
+			jQuery("#ba_eu_cookie_law").css("border-width","3px");
+			
+		}
+		if(2==3){
+			jQuery(".ba_popup_cookie").show();
+			jQuery("#ba_eu_cookie_law .fa-times-circle-o").show();
+			var widthBody = jQuery(window).width();
+			var heightBody = jQuery(window).height();
+			jQuery('#ba_eu_cookie_law').css({ 'width':'80%','overflow':'inherit'});
+			var widthPopupCookie = jQuery('#ba_eu_cookie_law').width();
+			var heightPopupCookie = jQuery('#ba_eu_cookie_law').height();
+			var MarginLeft = ((widthBody - widthPopupCookie)/2);
+			var MarginTop = ((heightBody - heightPopupCookie)/2);
+			jQuery('#ba_eu_cookie_law').css({ "top":(MarginTop-40)+"px","left":MarginLeft+"px" });
+		}
+		jQuery('.ba_popup_cookie').click(function(){
+			jQuery(this).hide();
+			jQuery("#ba_eu_cookie_law").hide();
+		});
+		jQuery("#ba_eu_cookie_law .fa-times-circle-o").click(function(){
+			jQuery(this).hide();
+			jQuery('.ba_popup_cookie').hide();
+			jQuery("#ba_eu_cookie_law").hide();
+		});
+		function setCookie(cname, cvalue, exdays) {
+			var d = new Date();
+			d.setTime(d.getTime() + (exdays*24*60*60*1000));
+			var expires = "expires="+d.toUTCString();
+			document.cookie = cname + "=" + cvalue + "; " + expires;
+		}
+		function getCookie(cname) {
+			var name = cname + "=";
+			var ca = document.cookie.split(';');
+			for(var i=0; i<ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0)==' ') c = c.substring(1);
+				if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+			}
+			return "";
+		}
+	}
+</script>
+<div id="ba_eu_cookie_law" class="show_in_footer">
+	<div class="ba_eu_cookie_law_button">
+		<div class="ba_eu_cookie_law_text" style="display:block;line-height:18px;"> 
+			Quando você navega pelas nossas plataformas digitais, utilizamos cookies e outras tecnologias semelhantes para lhe oferecer a melhor experiência de navegação, personalizar publicidade e recomendar conteúdos de seu interesse, entre outras funcionalidades. Conheça melhor essas e outras informações acessando e concordando com nossa<a href="https://www.atibrasil.com.br/content/2-politica-de-privacidade" target="" name="moreInfoSubmit" id="ba_eu_cookie_more_info" class="">&nbsp; Pol&iacute;tica de Cookies</a>
+			
+		</div>
+		<span class="ba_eu_cookie_law_text" style="line-height:18px;">
+			<a href="javascript:void(0)" name="acceptSubmit" id="ba_eu_cookie_accept" class="btn btn-default">Continuar e fechar</a>
+		</span>
+		
+	</div>
+	<i class="fa fa-times-circle-o icon-remove-circle"></i>
+</div>
+<div class="ba_popup_cookie"></div>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" type="text/css" media="all" />
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700" rel="stylesheet">
+		<!--[if IE 8]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+		
+	</head>
+	
+	<body id="category" class="category category-40 category-rolamentos-e-ferramentas-skf hide-right-column lang_br">
+			
+	<div class="sidebar-social">
+		
+<div class="caixaDoWhats">
+	<a href="https://api.whatsapp.com/send?phone=5541996058317" aria-hidden="true" target="_blank"><i class="fa fa-whatsapp fa-2x imgBtn"></i></a>
+
+</div>
+
+
+		
+<!--
+<div class="caixaDaAvaliacao">
+
+	<p class="imgBtn"><i class="fa fa-star fa-2x" aria-hidden="true"></i></p>
+    <div class="avaliacao_popup">
+        <div class="fechar"></div>
+
+
+
+         <div class="avalie_tag">
+            <i class="fa fa-star-o fa-2x" aria-hidden="true" title="0"></i><i class="fa fa-star-o fa-2x" aria-hidden="true" title="0"></i><i class="fa fa-star-o fa-2x" aria-hidden="true" title="0"></i><i class="fa fa-star-o fa-2x" aria-hidden="true" title="0"></i><i class="fa fa-star-o fa-2x" aria-hidden="true" title="0"></i>
+            <br/>
+            <p class="pTop10">Veja as opiniões dos nossos clientes!</p>
+        </div>
+
+        <div class="avalie_texto">
+            <p><a href="https://www.atibrasil.com.br/index.php?controller=comentarios">Clique aqui</a> para ler todas as resenhas já feitas!</p>
+        </div>
+       	<div class="fechar-avaliacao">
+            <span> <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i> </span>
+        </div>
+    </div>
+</div>
+-->
+
+<div class="caixaDaAvaliacao" >
+
+    <i class="fa fa-star fa-2x imgBtn" aria-hidden="true"></i>
+    <div class="fechar"></div>
+
+    <div class="caixaComAvaliacao" style="display:none">
+     	<a href="https://www.atibrasil.com.br/index.php?controller=comentarios">
+			<div class="avaliacao-titulo">
+				<i class="fa fa-star-o fa-2x" aria-hidden="true" title="0"></i><i class="fa fa-star-o fa-2x" aria-hidden="true" title="0"></i><i class="fa fa-star-o fa-2x" aria-hidden="true" title="0"></i><i class="fa fa-star-o fa-2x" aria-hidden="true" title="0"></i><i class="fa fa-star-o fa-2x" aria-hidden="true" title="0"></i>
+	            <br/>
+	            <span class="avaliacao-qtd">0 avaliação</span><br/>
+	            <p class="pTop10">Veja as opiniões dos nossos clientes!</p>
+			</div>
+		</a>
+
+		<div class="infos-e-fechar">
+			<a href="https://www.atibrasil.com.br/index.php?controller=comentarios">
+				<div class="texto-avaliacao">
+					<span>
+						 Clique aqui para ler todas as resenhas já feitas!
+					</span>
+				</div>
+			</a>
+		
+			
+			<div class="fechar-avaliacao">
+				<i class="fa fa-angle-right fa-2x" aria-hidden="true" style="padding-top: 5px;"></i>
+			</div>
+		</div>
+	</div>
+</div>
+
+	
+	<script>
+		$(document).ready(function(){
+			$('.caixaDaAvaliacao').click(function(){
+  			$('.caixaComAvaliacao').toggle(300);
+			});
+
+			$( window ).scroll(function() {
+				if($(window).scrollTop() > 100) {
+				  $( ".caixaComAvaliacao" ).hide();
+				}
+			});
+
+		});
+	</script>
+
+
+	</div>
+
+		<div id="page">
+
+			<div class="header-container">
+				<header id="header">
+					<div class="banner">
+						<div class="container">
+							<div class="row">
+								
+							</div>
+						</div>
+					</div>
+					<div class="nav">
+						<div class="container">
+							<div class="row">
+								<nav><div id="pc_displayNav_28" class="dynhook" data-hook="displayNav" data-module="28"><div class="loadingempty"></div><style>
+#owl-demo .item{
+  display: block;
+  padding: 30px 0px;
+  margin: 5px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+.owl-theme .owl-controls .owl-buttons div {
+  padding: 5px 9px;
+}
+
+.owl-theme .owl-buttons i{
+  margin-top: 2px;
+}
+
+/*To move navigation buttons outside use these settings:*/
+
+.owl-theme .owl-controls .owl-buttons div {
+  position: absolute;
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-prev{
+  left: -5px;
+  top: 15px; 
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-next{
+  right: -5px;
+  top: 15px;
+}
+
+#owl-example2 {
+	width: 250px; 
+	float: left;
+}
+
+.owl-carousel {
+	margin-top: 0;	
+}
+
+</style>
+<script type="text/javascript">
+/* Blockusreinfo */
+	
+$(document).ready( function(){
+	$(".leo-groupe").each( function(){
+		var content = $(".groupe-content");
+		$(".groupe-btn", this ).click( function(){
+			content.toggleClass("eshow");
+		}) ;
+	} );
+	
+	$(window).resize(function() {
+		if( $(window).width() > 600 ){
+			 $(".groupe-content").removeClass('eshow');
+		}
+	});
+	
+	$("#owl-example2").owlCarousel({
+     
+		// Most important owl features
+		items : 1,
+		itemsCustom : false,
+		itemsDesktop : [1199,1],
+		itemsDesktopSmall : [980,1],
+		itemsTablet: [768,1],
+		itemsTabletSmall: false,
+		itemsMobile : [479,1],
+		singleItem : false,
+		itemsScaleUp : false,
+	 
+		//Basic Speeds
+		slideSpeed : 200,
+		paginationSpeed : 800,
+		rewindSpeed : 1000,
+	 
+		//Autoplay
+		autoPlay : true,
+		stopOnHover : true,
+	 
+		// Navigation
+		navigation : true,
+		navigationText: [
+			"<i class='fa fa-angle-left' aria-hidden='true'></i>",
+			"<i class='fa fa-angle-right' aria-hidden='true'></i>"
+		],
+		rewindNav : true,
+		scrollPerPage : false,
+	 
+		//Pagination
+		pagination : false,
+		paginationNumbers: false,
+	 
+		// Responsive 
+		responsive: true,
+		responsiveRefreshRate : 200,
+		responsiveBaseWidth: window,
+	 
+		// CSS Styles
+
+	 
+		//Lazy load
+		lazyLoad : false,
+		lazyFollow : true,
+		lazyEffect : "fade",
+	 
+		//Auto height
+		autoHeight : false,
+	 
+		//JSON 
+		jsonPath : false, 
+		jsonSuccess : false,
+	 
+		//Mouse Events
+		dragBeforeAnimFinish : true,
+		mouseDrag : true,
+		touchDrag : true,
+	 
+		//Transitions
+		transitionStyle : false,
+	 
+		// Other
+		addClassActive : false,
+	 
+		//Callbacks
+		beforeUpdate : false,
+		afterUpdate : false,
+		beforeInit: true, 
+		afterInit: false, 
+		beforeMove: false, 
+		afterMove: false,
+		afterAction: false,
+		startDragging : false,
+		afterLazyLoad : false
+	 
+	});
+	
+});
+</script>
+
+<!-- Block user information module NAV  -->
+
+
+
+
+
+<div class="pull-left ">
+	
+	<div id="header_user_info" class="groupe-content hidden-xs">
+		<a href="https://api.whatsapp.com/send?phone=5541996058317" style="color: #666;"><i class="fa fa-whatsapp" aria-hidden="true"></i> 41 99605-8317</a>
+		<!--<ul class="links">
+
+							
+				<li><a href="https://www.atibrasil.com.br/minha-conta" title="Ver minha conta de usuário" rel="nofollow"><i class="icon-user"></i> Minha Conta</a></li>
+				<li><a href="https://www.atibrasil.com.br/minha-conta" title="Entrar com sua conta de cliente" class="login" rel="nofollow"><i class="icon icon-lock"></i> Login</a></li>
+				<li><a href="https://www.atibrasil.com.br/minha-conta" title="Registrar conta" class="register" rel="nofollow"><i class="icon-edit"></i> Cadastrar</a></li>
+					</ul>-->
+	</div>
+</div>
+
+<div class="pull-right leo-groupe g-dropdown dropdown_topbar alinhar-esquerda-mobile">
+	<a class="groupe-btn visible-xs" alt=""><strong>+</strong> Infos atendimento <span class="caret"></span></a>
+	<div id="header_user_info" class="groupe-content hidden-xs">
+		<div class="atendimento-topo">
+		<div class="atendimento-topo-texto">Atendimento:</div>
+		 <div id="owl-example2" class="owl-carousel owl-theme">
+                    	                    	                    	          	<div class="item"><span class="nome-lojas">BELO HORIZONTE-MG (Filial) (31) 2516-6974</span></div>
+                                	          	<div class="item"><span class="nome-lojas">CAMPINAS-SP (Filial) (19) 3238-9098</span></div>
+                                	          	<div class="item"><span class="nome-lojas">CHAPECÓ-SC (Filial) (49) 3331-7000</span></div>
+                                	          	<div class="item"><span class="nome-lojas">CURITIBA-PR (Sede) (41) 3302-3400</span></div>
+                                	          	<div class="item"><span class="nome-lojas">FORTALEZA-CE (Filial) (85) 3099-1500</span></div>
+                                	          	<div class="item"><span class="nome-lojas">GOIÂNIA-GO (Filial) (62) 3932-2431</span></div>
+                                	          	<div class="item"><span class="nome-lojas">JOINVILLE-SC (Filial) (47) 3433-1823</span></div>
+                                	          	<div class="item"><span class="nome-lojas">PORTO ALEGRE-RS (Filial) (51) 3326-7015</span></div>
+                                	          	<div class="item"><span class="nome-lojas">SÃO PAULO-SP (Filial) (11) 3577-5300</span></div>
+                                	          	<div class="item"><span class="nome-lojas">SERRA-ES (Filial) (27) 3328-0028</span></div>
+                              </div>
+  
+  		<div class="whats-mobile visible-xs hidden-sm hidden-md hidden-lg">
+  			<i class="fa fa-whatsapp" aria-hidden="true"></i> Whatsapp:
+			41 99605-8317
+		</div>
+		
+		<span><a href="https://www.atibrasil.com.br/lojas">Conheça nossas lojas</a></span>
+		<i class="fa fa-caret-right" aria-hidden="true"></i>
+		</span>
+		</div>
+		<!--<ul class="links">
+
+							
+				<li><a href="https://www.atibrasil.com.br/minha-conta" title="Ver minha conta de usuário" rel="nofollow"><i class="icon-user"></i> Minha Conta</a></li>
+				<li><a href="https://www.atibrasil.com.br/minha-conta" title="Entrar com sua conta de cliente" class="login" rel="nofollow"><i class="icon icon-lock"></i> Login</a></li>
+				<li><a href="https://www.atibrasil.com.br/minha-conta" title="Registrar conta" class="register" rel="nofollow"><i class="icon-edit"></i> Cadastrar</a></li>
+					</ul>-->
+	</div>
+</div>
+<!-- /Block usmodule NAV -->
+</div></nav>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="container">
+
+								<div id="header_logo" class="col-lg-5 col-md-3 col-sm-3 ">
+									<a href="http://www.atibrasil.com.br/" title="A.T.I. Brasil">
+										<img class="logo img-responsive" src="https://cdn.atibrasil.com.br/img/loja-padrao-logo-1510843056.jpg" alt="A.T.I. Brasil" width="438" height="100"/>
+									</a>
+								</div>
+								<div class="col-lg-7 col-md-9 col-sm-9 col-xs-12 mainMenu">
+
+									<div id="pc_displayTop_28" class="dynhook" data-hook="displayTop" data-module="28"><div class="loadingempty"></div><div class="row pLeft15 pRight15">
+	<h2 class="topo-links">
+            <a class="login destaque" href="https://www.atibrasil.com.br/minha-conta" rel="nofollow" title="Login to your customer account">
+            <strong>Cadastre-se</strong>
+        </a>
+        
+        ou
+
+        <a class="login destaque" href="https://www.atibrasil.com.br/minha-conta" rel="nofollow" title="Login to your customer account">
+            <strong>efetue login</strong>
+        </a>
+    </div></div><!-- Block search module TOP -->
+<div class="row">
+
+<div class="col-xs-8 col-sm-10 ">
+	<div id="search_block_top" >
+		<form id="searchbox" method="get" action="https://www.atibrasil.com.br/pesquisa" class="apontador2">
+			<input type="hidden" name="controller" value="search" />
+			<input class="search_query form-control" type="text" id="search_query_top" name="search_query" placeholder="Procure por correias, polias, engrenagens, correntes etc" value="" />
+			<button type="submit" name="submit_search" class="btn btn-default button-search">
+				<span>Busca</span>
+			</button>
+		</form>
+	</div>
+</div>
+
+<!-- MODULE Block cart -->
+	<div id="shopping_cart" class="col-xs-4 col-sm-2 noLpadding">
+        <a href="https://www.atibrasil.com.br/pedido" title="Ver meu carrinho de compras" rel="nofollow">
+            <div class="box-carrinho-icone ">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </div>
+            <div class="box-carrinho-preco"><span class="ajax_cart_quantity ">0</span></div>
+        </a>
+
+
+	
+					<div class="cart_block block exclusive">
+				<div class="block_content">
+					<!-- block list of products -->
+					<div class="cart_block_list expanded">
+												<p class="cart_block_no_products">
+							Sem produtos
+						</p>
+												<div class="cart-prices">
+							<div class="cart-prices-line first-line">
+								<span class="price cart_block_shipping_cost ajax_cart_shipping_cost">
+																			Frete à calcular!
+																	</span>
+								<span>
+									Frete
+								</span>
+							</div>
+																					<div class="cart-prices-line last-line">
+								<span class="price cart_block_total ajax_block_cart_total">R$ 0,00</span>
+								<span>Total</span>
+							</div>
+													</div>
+						<p class="cart-buttons">
+							<a id="button_order_cart" class="btn btn-default button button-small" href="https://www.atibrasil.com.br/pedido" title="Finalizar" rel="nofollow">
+								<span>
+									Finalizar<i class="icon-chevron-right right"></i>
+								</span>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div><!-- .cart_block --> 
+			</div>
+
+	<div id="layer_cart">
+		<div class="clearfix">
+			<div class="layer_cart_product col-xs-12 col-md-6">
+				<span class="cross" title="Fechar janela"></span>
+				<h2>
+					<i class="icon-ok"></i>Produto adicionado com sucesso ao seu carrinho
+				</h2>
+				<div class="product-image-container layer_cart_img">
+				</div>
+				<div class="layer_cart_product_info">
+					<span id="layer_cart_product_title" class="product-name"></span>
+					<span id="layer_cart_product_attributes"></span>
+					<div>
+						<strong class="dark">Quantidade</strong>
+						<span id="layer_cart_product_quantity"></span>
+					</div>
+					<div>
+						<strong class="dark">Total</strong>
+						<span id="layer_cart_product_price"></span>
+					</div>
+				</div>
+			</div>
+			<div class="layer_cart_cart col-xs-12 col-md-6">
+				<h2>
+					<!-- Plural Case [both cases are needed because page may be updated in Javascript] -->
+					<span class="ajax_cart_product_txt_s  unvisible">
+						Existem <span class="ajax_cart_quantity">0</span> itens no seu carrinho.
+					</span>
+					<!-- Singular Case [both cases are needed because page may be updated in Javascript] -->
+					<span class="ajax_cart_product_txt ">
+						Existe 1 item no seu carrinho.
+					</span>
+				</h2>
+	
+				<div class="layer_cart_row">
+					<strong class="dark">
+						Total de produtos
+													(tax incl.)
+											</strong>
+					<span class="ajax_block_products_total">
+											</span>
+				</div>
+	
+								<div class="layer_cart_row">
+					<strong class="dark">
+						Total de frete&nbsp;(tax excl.)
+					</strong>
+					<span class="ajax_cart_shipping_cost">
+													Frete à calcular!
+											</span>
+				</div>
+								<div class="layer_cart_row">	
+					<strong class="dark">
+						Total
+													(tax incl.)
+											</strong>
+					<span class="ajax_block_cart_total">
+											</span>
+				</div>
+				<div class="button-container">	
+					<span class="continue btn btn-default button exclusive-medium" title="Continuar comprando">
+						<span>
+							<i class="icon-chevron-left left"></i>Continuar comprando
+						</span>
+					</span>
+					<a class="btn btn-default button button-medium"	href="https://www.atibrasil.com.br/pedido" title="Finalizar compra" rel="nofollow">
+						<span>
+							Finalizar compra<i class="icon-chevron-right right"></i>
+						</span>
+					</a>	
+				</div>
+			</div>
+		</div>
+		<div class="crossseling"></div>
+	</div> <!-- #layer_cart -->
+	<div class="layer_cart_overlay"></div>
+
+<!-- /MODULE Block cart -->
+
+</div>
+<script type="text/javascript">
+// <![CDATA[
+$('document').ready(function() {
+	
+	var width_ac_results = 	$("#search_query_" + blocksearch_type).parent('form').width();
+	var $input = $("#search_query_top");
+
+	$input.autocomplete(
+	'https://www.atibrasil.com.br/pesquisa',
+	{
+		minChars: 3,
+		max: 10,
+		width: (width_ac_results > 0 ? width_ac_results : 564),
+		selectFirst: false,
+		scroll: false,
+		dataType: "json",
+		formatItem: function(data, i, max, value, term) {
+			return value;
+		},
+		parse: function(data) {
+			var mytab = [];
+			for (var i = 0; i < data.length; i++)
+				mytab[mytab.length] = { data: data[i], value:  data[i].imagem + '<div>' + data[i].cname + ' > ' + data[i].pname + '</div>' };
+			return mytab;
+		},
+		extraParams: {
+			ajaxSearch: 1,
+			id_lang: 1
+		}
+	})
+	.result(function(event, data, formatted) {
+		$input.val(data.pname);
+		document.location.href = data.product_link;
+	});
+});
+// ]]>
+</script>
+
+
+
+<!-- /Block search module TOP -->
+								</div>
+
+						</div>
+					</div>
+				</header>
+			</div>
+
+			<div class="container-fluid menu-fundo">
+				<div class="row noLmargin noRmargin">
+					<div id="all">
+                							<script type="text/javascript">
+			var anchor='fade';
+			var speed=100;
+		</script>
+		<!-- Menu -->
+	<!--  -->
+	<div id="outer">
+	<div id="mega_menu_plus" class="mg-contener language_ltr clearfix col-lg-12">
+		<div class="mobi"><a title="menu"><span class='menu-item-link-text fa fa-bars'>Menu</span></a></div>
+		
+			<ul id="inner" class="mg-menu hidden-ul clearfix menu-content">
+			
+			<li class='mainmenu-parent menu-level-0_20 '><a href='https://www.atibrasil.com.br/' title='Home' >
+                                    <span class='menu-item-link-text '>Home</span>
+                                </a><span class='submore'></span></li><li class='mainmenu-parent menu-level-0_21 '><a href='/content/1-sobre-nos' title='Empresa' >
+                                    <span class='menu-item-link-text '>Empresa</span>
+                                </a><span class='submore'></span></li><li class='mainmenu-parent menu-level-0_16 '><a href='/fabricantes' title='Marcas' >
+                                    <span class='menu-item-link-text '>Marcas</span>
+                                </a><span class='submore'></span></li><li class='mainmenu-parent menu-level-0_22 submenu'><a href='' title='Loja Virtual' >
+                                    <span class='menu-item-link-text '>Loja Virtual</span>
+                                </a><span class='submore'></span><div style='display:none' class='submenu-level-0_22 sub autowidth clearfix'> <div class='submenu-container'><div class='rows row_0' ><div style='width:50%' class='cols col_0 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/36-abrasivos" class="menu-item-link-text">Abrasivos</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_1 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/26-aneis-de-fixacao" class="menu-item-link-text">Anéis de fixação</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_2 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/29-aneis-trava" class="menu-item-link-text">Anéis trava</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_3 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/39-armazenagem-e-movimentacao" class="menu-item-link-text">Armazenagem e movimentação</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_4 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/25-buchas" class="menu-item-link-text">Buchas</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_5 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/28-chavetas" class="menu-item-link-text">Chavetas</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_6 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/23-componentes-diversos" class="menu-item-link-text">Componentes diversos</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_7 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/19-correntes-e-emendas" class="menu-item-link-text">Correntes e emendas</a></span></div><span class='submore'>
+                                    </span></div></div></div><div class='rows row_1' ><div style='width:50%' class='cols col_0 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/18-cremalheiras" class="menu-item-link-text">Cremalheiras</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_1 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/21-eixos-e-buchas-estriados" class="menu-item-link-text">Eixos e buchas estriados</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_2 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/17-engrenagens" class="menu-item-link-text">Engrenagens</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_3 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/34-ferramentas-eletricas" class="menu-item-link-text">Ferramentas elétricas</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_4 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/37-ferramentas-manuais" class="menu-item-link-text">Ferramentas manuais</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_5 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/20-fusos-e-porcas-trapezoidais" class="menu-item-link-text">Fusos e porcas trapezoidais</a></span></div><span class='submore'>
+                                    </span></div></div></div><div class='rows row_2' ><div style='width:50%' class='cols col_0 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/27-juntas-cardan" class="menu-item-link-text">Juntas cardan</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_1 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/24-mancais" class="menu-item-link-text">Mancais</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_2 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/33-manipulos-e-acessorios" class="menu-item-link-text">Manípulos e acessórios</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_3 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/38-produtos-para-mro" class="menu-item-link-text">Produtos para M.R.O.</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_4 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/35-redutores-e-motoredutores-bonfiglioli" class="menu-item-link-text">Redutores e motoredutores</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_5 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/40-rolamentos-e-ferramentas-skf" class="menu-item-link-text">Rolamentos</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_6 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/22-terminais-rotulares" class="menu-item-link-text">Terminais Rotulares</a></span></div><span class='submore'>
+                                    </span></div></div><div style='width:50%' class='cols col_7 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="/47-produtos-camozzi" class="menu-item-link-text">PRODUTOS CAMOZZI</a></span></div><span class='submore'>
+                                    </span></div></div></div><div class='rows row_3' ><div style='width:50%' class='cols col_0 clearfix'><div class='content_submenu clearfix'><div class='titlesub clearfix'>
+                                    <span class='menu-item-link-text'><a href="54-tampas-e-portas-inox" class="menu-item-link-text">Tampas e Portas Inox</a></span></div><span class='submore'>
+                                    </span></div></div></div></div></div></li><li class='mainmenu-parent menu-level-0_25 '><a href='/produtos' title='Produtos' >
+                                    <span class='menu-item-link-text '>Produtos</span>
+                                </a><span class='submore'></span></li><li class='mainmenu-parent menu-level-0_23 '><a href='/noticias.html' title='Not&iacute;cias' >
+                                    <span class='menu-item-link-text '>Not&iacute;cias</span>
+                                </a><span class='submore'></span></li><li class='mainmenu-parent menu-level-0_24 '><a href='/content/10-catalogo' title='Cat&aacute;logos' >
+                                    <span class='menu-item-link-text '>Cat&aacute;logos</span>
+                                </a><span class='submore'></span></li><li class='mainmenu-parent menu-level-0_19 '><a href='/lojas' title='Fale conosco' >
+                                    <span class='menu-item-link-text '>Fale conosco</span>
+                                </a><span class='submore'></span></li> 
+		</ul>
+	</div>
+	</div>
+	<!--/ Menu -->
+	<script type="text/javascript">
+	$(document).ready(function() {	
+		var width_window=$(window).width();
+		width_window=$(window).width();
+		if(width_window>768){
+			showPanel(anchor,speed);
+		}else{ 
+			$('#mega_menu_plus ul li').unbind('hover');
+		} 
+	});
+	</script>
+                	</div>
+                </div>
+
+
+
+			</div>
+
+			<div class="columns-container">
+				<div id="columns" class="container">
+											
+<!-- Breadcrumb -->
+<div class="breadcrumb clearfix">
+	<a class="home" href="http://www.atibrasil.com.br/" title="Voltar para a P&aacute;gina Inicial"><i class="icon-home"></i></a>
+			
+					<span class="navigation_page">ROLAMENTOS E FERRAMENTAS SKF</span>
+			
+				
+</div>
+
+
+
+
+<!-- /Breadcrumb -->
+										<div class="row">
+
+<!-- início imagem de categoria -->
+    				<div class="content_scene_cat col-xs-12">
+            	                     <!-- Category image --><!-- Menu -->
+                    <div class="content_scene_cat_bg" >
+                                                    <div class="cat_desc">
+                            <span class="category-name">
+                                ROLAMENTOS E FERRAMENTAS SKF                            </span>
+                                                            <div class="rte"><p>Distribuidora oficial da SKF no Brasil. Fornecemos uma ampla variedade de rolamentos, ferramentas de manutenção e mancais. Solicite um orçamento!</p></div>
+                                                        </div>
+                        
+                     </div>
+                              </div>
+		<!-- fim imagem de categoria -->
+
+
+
+						<div id="top_column" class="center_column col-xs-12 col-sm-12 mBot25"></div>
+					</div>
+					<div class="row">
+												<div id="left_column" class="column col-xs-12 col-sm-3"> 
+<!-- Block categories module -->
+<div id="categories_block_left" class="block highlighted nopadding nobackground">
+	<h4 class="title_block">
+		
+			Loja Virtual
+		
+	</h4>
+	<div class="block_content list-block">
+		<ul class="tree dhtml">
+												
+<li >
+	<a href="https://www.atibrasil.com.br/36-abrasivos" title="ABRASIVOS">
+		ABRASIVOS
+		<span id="leo-cat-36" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/55-agentes-de-limpeza" title="AGENTES DE LIMPEZA">
+		AGENTES DE LIMPEZA
+		<span id="leo-cat-55" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/26-aneis-de-fixacao" title="ANÉIS DE FIXAÇÃO">
+		ANÉIS DE FIXAÇÃO
+		<span id="leo-cat-26" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/29-aneis-trava" title="ANÉIS TRAVA">
+		ANÉIS TRAVA
+		<span id="leo-cat-29" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/39-armazenagem-e-movimentacao" title="ARMAZENAGEM E MOVIMENTAÇÃO">
+		ARMAZENAGEM E MOVIMENTAÇÃO
+		<span id="leo-cat-39" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/25-buchas" title="BUCHAS">
+		BUCHAS
+		<span id="leo-cat-25" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/28-chavetas" title="CHAVETAS">
+		CHAVETAS
+		<span id="leo-cat-28" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/23-componentes-diversos" title="COMPONENTES DIVERSOS">
+		COMPONENTES DIVERSOS
+		<span id="leo-cat-23" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/51-correia" title="CORREIA">
+		CORREIA
+		<span id="leo-cat-51" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/19-correntes-e-emendas" title="CORRENTES E EMENDAS">
+		CORRENTES E EMENDAS
+		<span id="leo-cat-19" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/18-cremalheiras" title="CREMALHEIRAS">
+		CREMALHEIRAS
+		<span id="leo-cat-18" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/21-eixos-e-buchas-estriados" title="EIXOS E BUCHAS ESTRIADOS">
+		EIXOS E BUCHAS ESTRIADOS
+		<span id="leo-cat-21" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/49-elementos-elasticos-e-tensores" title="ELEMENTOS ELÁSTICOS E TENSORES">
+		ELEMENTOS ELÁSTICOS E TENSORES
+		<span id="leo-cat-49" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/17-engrenagens" title="ENGRENAGENS">
+		ENGRENAGENS
+		<span id="leo-cat-17" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/34-ferramentas-eletricas" title="FERRAMENTAS ELÉTRICAS">
+		FERRAMENTAS ELÉTRICAS
+		<span id="leo-cat-34" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/37-ferramentas-manuais" title="FERRAMENTAS MANUAIS">
+		FERRAMENTAS MANUAIS
+		<span id="leo-cat-37" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/20-fusos-e-porcas-trapezoidais" title="FUSOS E PORCAS TRAPEZOIDAIS">
+		FUSOS E PORCAS TRAPEZOIDAIS
+		<span id="leo-cat-20" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/58-guias-lineares" title="GUIAS LINEARES">
+		GUIAS LINEARES
+		<span id="leo-cat-58" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/27-juntas-cardan" title="JUNTAS CARDAN">
+		JUNTAS CARDAN
+		<span id="leo-cat-27" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/24-mancais" title="MANCAIS">
+		MANCAIS
+		<span id="leo-cat-24" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/33-manipulos-e-acessorios" title="MANÍPULOS E ACESSÓRIOS">
+		MANÍPULOS E ACESSÓRIOS
+		<span id="leo-cat-33" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/61-movimentacao-e-armazenagem" title="MOVIMENTAÇÃO E ARMAZENAGEM">
+		MOVIMENTAÇÃO E ARMAZENAGEM
+		<span id="leo-cat-61" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/47-pneumatica" title="PNEUMÁTICA">
+		PNEUMÁTICA
+		<span id="leo-cat-47" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/60-polia" title="POLIA">
+		POLIA
+		<span id="leo-cat-60" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/38-produtos-para-mro" title="PRODUTOS PARA M.R.O.">
+		PRODUTOS PARA M.R.O.
+		<span id="leo-cat-38" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/48-rolamentos" title="ROLAMENTOS">
+		ROLAMENTOS
+		<span id="leo-cat-48" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/53-rotula" title="RÓTULA">
+		RÓTULA
+		<span id="leo-cat-53" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/56-sistema-de-lubrificacao" title="SISTEMA DE LUBRIFICAÇÃO">
+		SISTEMA DE LUBRIFICAÇÃO
+		<span id="leo-cat-56" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li >
+	<a href="https://www.atibrasil.com.br/54-tampas-e-portas-inox" title="TAMPAS E PORTAS INOX">
+		TAMPAS E PORTAS INOX
+		<span id="leo-cat-54" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+																
+<li class="last">
+	<a href="https://www.atibrasil.com.br/22-terminais-rotulares" title="TERMINAIS ROTULARES ">
+		TERMINAIS ROTULARES 
+		<span id="leo-cat-22" style="display:none" class="leo-qty badge pull-right"></span>
+	</a>
+	</li>
+
+									</ul>
+	</div>
+</div>
+<!-- /Block categories module -->
+<div id="recent_article_smart_blog_block_left"  class="block blogModule boxPlain">
+   <p class='title_block'><a href="https://www.atibrasil.com.br/noticias.html">Artigos Recentes</a></p>
+   <div class="block_content sdsbox-content">
+      <ul class="recentArticles">
+                                                            <li>
+                <a class="image" title="Redutores e motoredutores ortogonais Bonfiglioli" href="https://www.atibrasil.com.br/noticias/74_redutores-e-motoredutores-ortogonais-bonfigli.html">
+                  <img alt="Redutores e motoredutores ortogonais Bonfiglioli" src="/modules//smartblog/images/74-home-small.jpg">
+                </a>
+                <div>
+                  <a class="title"  title="Redutores e motoredutores ortogonais Bonfiglioli" href="https://www.atibrasil.com.br/noticias/74_redutores-e-motoredutores-ortogonais-bonfigli.html">Redutores e motoredutores ortogonais Bonfiglioli</a><br/>
+                  <span class="info">18-12-2020</span>
+                </div>
+             </li>
+                                                             <li>
+                <a class="image" title="Lubrificantes automáticos para a indústria Tissue." href="https://www.atibrasil.com.br/noticias/72_lubrificantes-automaticos-para-a-industria-ti.html">
+                  <img alt="Lubrificantes automáticos para a indústria Tissue." src="/modules//smartblog/images/72-home-small.jpg">
+                </a>
+                <div>
+                  <a class="title"  title="Lubrificantes automáticos para a indústria Tissue." href="https://www.atibrasil.com.br/noticias/72_lubrificantes-automaticos-para-a-industria-ti.html">Lubrificantes automáticos para a indústria Tissue.</a><br/>
+                  <span class="info">09-12-2020</span>
+                </div>
+             </li>
+                                                             <li>
+                <a class="image" title="Conheça o manipulador a vácuo Grabo a bateria. " href="https://www.atibrasil.com.br/noticias/71_conheca-o-manipulador-a-vacuo-grabo-a-bateria.html">
+                  <img alt="Conheça o manipulador a vácuo Grabo a bateria. " src="/modules//smartblog/images/71-home-small.jpg">
+                </a>
+                <div>
+                  <a class="title"  title="Conheça o manipulador a vácuo Grabo a bateria. " href="https://www.atibrasil.com.br/noticias/71_conheca-o-manipulador-a-vacuo-grabo-a-bateria.html">Conheça o manipulador a vácuo Grabo a bateria. </a><br/>
+                  <span class="info">19-10-2020</span>
+                </div>
+             </li>
+                                                             <li>
+                <a class="image" title="Conheça a linha de ferramentas VDE da A.T.I. Brasil - Setor Tissue" href="https://www.atibrasil.com.br/noticias/70_conheca-a-linha-de-ferramentas-vde-da-ati-bra.html">
+                  <img alt="Conheça a linha de ferramentas VDE da A.T.I. Brasil - Setor Tissue" src="/modules//smartblog/images/70-home-small.jpg">
+                </a>
+                <div>
+                  <a class="title"  title="Conheça a linha de ferramentas VDE da A.T.I. Brasil - Setor Tissue" href="https://www.atibrasil.com.br/noticias/70_conheca-a-linha-de-ferramentas-vde-da-ati-bra.html">Conheça a linha de ferramentas VDE da A.T.I. Brasil - Setor Tissue</a><br/>
+                  <span class="info">07-10-2020</span>
+                </div>
+             </li>
+                                                             <li>
+                <a class="image" title="Correia de teflon SilverSeal aplicado ao setor tissue." href="https://www.atibrasil.com.br/noticias/69_correia-de-teflon-silverseal-aplicado-ao-seto.html">
+                  <img alt="Correia de teflon SilverSeal aplicado ao setor tissue." src="/modules//smartblog/images/69-home-small.jpg">
+                </a>
+                <div>
+                  <a class="title"  title="Correia de teflon SilverSeal aplicado ao setor tissue." href="https://www.atibrasil.com.br/noticias/69_correia-de-teflon-silverseal-aplicado-ao-seto.html">Correia de teflon SilverSeal aplicado ao setor tissue.</a><br/>
+                  <span class="info">21-08-2020</span>
+                </div>
+             </li>
+                     </ul>
+   </div>
+</div>
+
+<!-- Block manufacturers module -->
+<div id="manufacturers_block_left" class="block blockmanufacturer">
+	<p class="title_block">
+					<a href="https://www.atibrasil.com.br/fabricantes" title="Marcas">
+						Marcas
+					</a>
+			</p>
+	<div class="block_content list-block">
+								<ul>
+														<li class="first_item">
+						<a 
+						href="https://www.atibrasil.com.br/98_algor" title="Mais sobre ALGOR">
+							ALGOR
+						</a>
+					</li>
+																			<li class="item">
+						<a 
+						href="https://www.atibrasil.com.br/13_beta" title="Mais sobre Beta">
+							Beta
+						</a>
+					</li>
+																			<li class="item">
+						<a 
+						href="https://www.atibrasil.com.br/11_bimeccanica" title="Mais sobre Bimeccanica">
+							Bimeccanica
+						</a>
+					</li>
+																			<li class="item">
+						<a 
+						href="https://www.atibrasil.com.br/2_bonfiglioli" title="Mais sobre Bonfiglioli">
+							Bonfiglioli
+						</a>
+					</li>
+																			<li class="item">
+						<a 
+						href="https://www.atibrasil.com.br/14_camozzi" title="Mais sobre Camozzi">
+							Camozzi
+						</a>
+					</li>
+																																																																																																																																																																																																																																																																								</ul>
+										<form action="/index.php" method="get">
+					<div class="form-group selector1">
+						<select class="form-control" name="manufacturer_list" id="manufacturer_list" onchange="autoUrl('manufacturer_list', '');">
+							<option value="0">Todas as marcas</option>
+																								<option value="https://www.atibrasil.com.br/98_algor">ALGOR</option>
+									
+																								<option value="https://www.atibrasil.com.br/13_beta">Beta</option>
+									
+																								<option value="https://www.atibrasil.com.br/11_bimeccanica">Bimeccanica</option>
+									
+																								<option value="https://www.atibrasil.com.br/35-redutores-e-motoredutores-bonfiglioli">Bonfiglioli</option>
+									
+																								<option value="https://www.atibrasil.com.br/14_camozzi">Camozzi</option>
+									
+																								<option value="https://www.atibrasil.com.br/96_donghua">DONGHUA</option>
+									
+																								<option value="https://www.atibrasil.com.br/6_elesaganter">Elesa+Ganter</option>
+									
+																								<option value="https://www.atibrasil.com.br/12_elte">Elte</option>
+									
+																								<option value="https://www.atibrasil.com.br/101_emc">EMC</option>
+									
+																								<option value="https://www.atibrasil.com.br/105_felo">FELO</option>
+									
+																								<option value="https://www.atibrasil.com.br/89_fervi">FERVI</option>
+									
+																								<option value="https://www.atibrasil.com.br/100_gruetzner">GRUETZNER</option>
+									
+																								<option value="https://www.atibrasil.com.br/10_isb">ISB</option>
+									
+																								<option value="https://www.atibrasil.com.br/103_keter">KETER</option>
+									
+																								<option value="https://www.atibrasil.com.br/88_milwaukee">MILWAUKEE</option>
+									
+																								<option value="https://www.atibrasil.com.br/102_milwaukeep">MILWAUKEE_P</option>
+									
+																								<option value="https://www.atibrasil.com.br/106_nemo-power-tools">NEMO POWER TOOLS</option>
+									
+																								<option value="https://www.atibrasil.com.br/93_optibelt">Optibelt</option>
+									
+																								<option value="https://www.atibrasil.com.br/91_peer">PEER</option>
+									
+																								<option value="https://www.atibrasil.com.br/108_philips">PHILIPS</option>
+									
+																								<option value="https://www.atibrasil.com.br/9_regina">Regina</option>
+									
+																								<option value="https://www.atibrasil.com.br/5_rkb">RKB</option>
+									
+																								<option value="https://www.atibrasil.com.br/3_rollon">Rollon</option>
+									
+																								<option value="https://www.atibrasil.com.br/4_rosta">Rosta</option>
+									
+																								<option value="https://www.atibrasil.com.br/1_sati">Sati</option>
+									
+																								<option value="https://www.atibrasil.com.br/95_sbc">SBC</option>
+									
+																								<option value="https://www.atibrasil.com.br/7_sit">SIT</option>
+									
+																								<option value="https://www.atibrasil.com.br/40-rolamentos-e-ferramentas-skf">SKF</option>
+									
+																								<option value="https://www.atibrasil.com.br/104_stahlwille">STAHLWILLE</option>
+									
+																								<option value="https://www.atibrasil.com.br/107_usag">USAG</option>
+									
+																								<option value="https://www.atibrasil.com.br/90_walter">WALTER</option>
+									
+																								<option value="https://www.atibrasil.com.br/92_wera">WERA</option>
+									
+																								<option value="https://www.atibrasil.com.br/99_zorzini">ZORZINI</option>
+									
+													</select>
+					</div>
+				</form>
+						</div>
+</div>
+<!-- /Block manufacturers module -->
+<div id="pc_displayLeftColumn_29" class="dynhook" data-hook="displayLeftColumn" data-module="29"><div class="loadingempty"></div></div><div class="block blogModule boxPlain clearfix" id="smartblogsearch">
+    <p class='title_block'><a href='https://www.atibrasil.com.br/noticias/category.html'>Busca Blog</a></p>
+	<div id="sdssearch_block_top" class="block_content">
+		<form action="https://www.atibrasil.com.br/noticias/search.html" method="post" id="searchbox">
+		  <div class="input-group lbl-search" style="margin: 15px 0 20px;">
+        <input type="hidden" value="0" name="smartblogaction">
+			  <input type="text" name="smartsearch" id="search_query_top" class="search_query form-control ac_input" autocomplete="off" required>
+        <label for="search_query_top">Buscar</label>
+			  <button class="btn btn-default button-search" name="smartblogsubmit" type="submit">
+			    <span>Notícias</span>
+			  </button>
+      </div>
+		</form>
+	</div>
+</div>
+
+
+
+
+</div>
+												<div id="center_column" class="center_column col-xs-12 col-sm-9">
+
+
+	    	
+        <!--
+        			<div class="content_scene_cat">
+            	                     <!-- Category image 
+                    <div class="content_scene_cat_bg" >
+                                                    <div class="cat_desc">
+                            <span class="category-name">
+                                ROLAMENTOS E FERRAMENTAS SKF                            </span>
+                                                            <div class="rte"><p>Distribuidora oficial da SKF no Brasil. Fornecemos uma ampla variedade de rolamentos, ferramentas de manutenção e mancais. Solicite um orçamento!</p></div>
+                                                        </div>
+                                             
+                     </div>
+                              </div>
+		        -->
+
+       
+		<h1 class="page-heading product-listing"><span class="cat-name">ROLAMENTOS E FERRAMENTAS SKF&nbsp;</span><span class="heading-counter">Foram encontrados 12 produtos.</span></h1>
+							<div class="content_sortPagiBar clearfix">
+            	<div class="sortPagiBar clearfix">
+            		<ul class="display hidden-xs">
+	<li class="display-title">Exibir:</li>
+    <li id="grid"><a rel="nofollow" href="#" title="Grade"><i class="icon-th-large"></i>Grade</a></li>
+    <li id="list"><a rel="nofollow" href="#" title="Lista"><i class="icon-th-list"></i>Lista</a></li>
+</ul>
+
+<form id="productsSortForm" action="https://www.atibrasil.com.br/40-rolamentos-e-ferramentas-skf?User-Agent=Mozilla%2F5.0+%28Windows+NT+6.4%3B+WOW64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F41.0.2225.0+Safari%2F537.36" class="productsSortForm">
+	<div class="select selector1">
+		<label for="selectProductSort">Ordenado por</label>
+		<select id="selectProductSort" class="selectProductSort form-control">
+			<option value="quantity:desc" selected="selected">--</option>
+							<option value="price:asc" >Mais Barato</option>
+				<option value="price:desc" >Mais Caro</option>
+						<option value="name:asc" >De A a Z</option>
+			<option value="name:desc" >De Z a A</option>
+							<option value="quantity:desc" selected="selected">Dispon&iacute;vel</option>
+						<option value="reference:asc" >Refer&ecirc;ncia: Menor primeiro</option>
+			<option value="reference:desc" >Refer&ecirc;ncia: Maior primeiro</option>
+		</select>
+	</div>
+</form>
+<!-- /Sort products -->
+			
+	
+                								<!-- nbr product/page -->
+		<!-- /nbr product/page -->
+
+				</div>
+                <div class="top-pagination-content clearfix">
+                	
+					
+	
+												<!-- Pagination -->
+	<div id="pagination" class="pagination clearfix">
+	    			</div>
+    <div class="product-count">
+    	        	                        	                        	Mostrando 1 a 12 de 12 itens
+		    </div>
+	<!-- /Pagination -->
+
+                </div>
+			</div>
+			
+
+	<script type="text/javascript">
+		jQuery(document).ready(function () {
+			$(".solicitar-orcamento").fancybox({
+				
+			});
+		});
+	</script>
+
+
+	
+									
+		
+	
+	<!-- Products list -->
+	<div id="foo"></div>
+	<ul class="product_list grid row">
+	    			
+		
+		
+								<li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 first-item-of-tablet-line first-item-of-mobile-line">
+			<div class="product-container" itemscope itemtype="http://schema.org/Product">
+				<meta itemprop="sku" content="0000" />
+				<meta itemprop="mpn" content="0" />			
+				<meta itemprop="name" content="Rolamentos Rígidos de Esferas SKF" />
+				
+								<span itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="availability">
+					<meta itemprop="priceCurrency" content="BRL" />
+					<link itemprop="url" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/280-rolamentos-rigidos-de-esferas-skf.html" />
+					<meta itemprop="priceValidUntil" content="2021-02-16" />								
+				</span>
+								
+				<div class="left-block">
+					<div class="product-image-container">
+						<!--                        	<a href="https://www.atibrasil.com.br/_"></a>
+                        -->
+						<div itemprop="brand" itemscope itemtype="http://schema.org/Thing">
+							<meta itemprop="name" content="0" />
+						</div>							
+
+                        <a class="product_img_link"	href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/280-rolamentos-rigidos-de-esferas-skf.html" title="Rolamentos Rígidos de Esferas SKF">
+							<img class="replace-2x img-responsive" src="https://cdn.atibrasil.com.br/414-home_default/rolamentos-rigidos-de-esferas-skf.jpg" alt="Rolamentos Rígidos de Esferas SKF" title="Rolamentos Rígidos de Esferas SKF"  width="270" height="270" itemprop="image" />
+						</a>
+																													</div>
+				</div>
+				<div class="right-block">
+					<div>
+												<!--Link para ver as avaliações-->
+
+												
+						 
+						<div class="score-avaliacao-produto pBot5" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+
+																								
+
+												<meta itemprop="reviewCount" content="1" />												<meta itemprop="ratingValue" content="1" />					</div>
+					
+					<div itemprop="review" itemscope itemtype="https://schema.org/Review">
+					  <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+						<span itemprop="ratingValue" style="display:none;">1</span>
+					  </span> 
+					  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<span itemprop="name" style="display:none;">A.T.I. Brasil</span>
+					  </span>
+					</div>				
+				
+					<h5>
+												<a class="product-name" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/280-rolamentos-rigidos-de-esferas-skf.html" title="Rolamentos Rígidos de Esferas SKF">
+							Rolamentos Rígidos de Esferas SKF
+						</a>
+					</h5>
+					
+										  <meta itemprop="description" content="Rolamentos Rígidos de Esferas SKF" />
+					  <p class="product-desc">
+						  Os  rolamentos rígidos de esferas  são particularmente versáteis. Eles são de concepção simples, de tipo não separável, indicados para velocidades elevadas e extremamente elevadas, resistentes em operação e exigem pouca manutenção. 
+ Os rolamentos rígidos de esferas para aplicações especiais incluem: 
+ Rolamentos rígidos de uma carreira de esferas 
+ Os...
+					  </p>
+										
+                    					<div style="min-height: 85px">
+					</div>
+										<div class="button-container">
+												<a class="button lnk_view btn btn-default" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/280-rolamentos-rigidos-de-esferas-skf.html" title="Exibir">
+							<span>Mais</span>
+						</a>
+					</div>
+											<div class="color-list-container"> </div>
+										<div class="product-flags">
+																	</div>
+									</div>
+				
+	 				<div class="functional-buttons clearfix">
+						
+						
+						
+						
+															<a class="button btn btn-ver-detalhes " href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/280-rolamentos-rigidos-de-esferas-skf.html" rel="nofollow" title="Ver detalhes">
+									<span>Ver detalhes</span>
+								</a>
+								<a class="button solicitar-orcamento btn-quickview btn-comprar" data-fancybox-type="ajax" href="https://www.atibrasil.com.br/orcamento-enviado-com-sucesso?id_product=280" rel="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/280-rolamentos-rigidos-de-esferas-skf.html">
+									<span>Or&ccedil;amento</span>
+								</a>
+                            						
+					</div>
+				
+			</div><!-- .product-container> -->
+		</li>
+	    			
+		
+		
+								<li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 last-item-of-tablet-line">
+			<div class="product-container" itemscope itemtype="http://schema.org/Product">
+				<meta itemprop="sku" content="0000" />
+				<meta itemprop="mpn" content="0" />			
+				<meta itemprop="name" content="Rolamentos de Esferas de Contato Angular SKF" />
+				
+								<span itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="availability">
+					<meta itemprop="priceCurrency" content="BRL" />
+					<link itemprop="url" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/281-rolamentos-de-esferas-de-contato-angular-skf.html" />
+					<meta itemprop="priceValidUntil" content="2021-02-16" />								
+				</span>
+								
+				<div class="left-block">
+					<div class="product-image-container">
+						<!--                        	<a href="https://www.atibrasil.com.br/_"></a>
+                        -->
+						<div itemprop="brand" itemscope itemtype="http://schema.org/Thing">
+							<meta itemprop="name" content="0" />
+						</div>							
+
+                        <a class="product_img_link"	href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/281-rolamentos-de-esferas-de-contato-angular-skf.html" title="Rolamentos de Esferas de Contato Angular SKF">
+							<img class="replace-2x img-responsive" src="https://cdn.atibrasil.com.br/415-home_default/rolamentos-de-esferas-de-contato-angular-skf.jpg" alt="Rolamentos de Esferas de Contato Angular SKF" title="Rolamentos de Esferas de Contato Angular SKF"  width="270" height="270" itemprop="image" />
+						</a>
+																													</div>
+				</div>
+				<div class="right-block">
+					<div>
+												<!--Link para ver as avaliações-->
+
+												
+						 
+						<div class="score-avaliacao-produto pBot5" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+
+																								
+
+												<meta itemprop="reviewCount" content="1" />												<meta itemprop="ratingValue" content="1" />					</div>
+					
+					<div itemprop="review" itemscope itemtype="https://schema.org/Review">
+					  <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+						<span itemprop="ratingValue" style="display:none;">1</span>
+					  </span> 
+					  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<span itemprop="name" style="display:none;">A.T.I. Brasil</span>
+					  </span>
+					</div>				
+				
+					<h5>
+												<a class="product-name" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/281-rolamentos-de-esferas-de-contato-angular-skf.html" title="Rolamentos de Esferas de Contato Angular SKF">
+							Rolamentos de Esferas de Contato Angular SKF
+						</a>
+					</h5>
+					
+										  <meta itemprop="description" content="Rolamentos de Esferas de Contato Angular SKF" />
+					  <p class="product-desc">
+						  Os  rolamentos de esferas de contato angular  possuem pistas nos anéis interno e externo que são descoladas uma em relação à outra na direção do eixo do rolamento. Isto significa que eles são adequados para suportar cargas combinadas, ou seja, cargas axiais e radiais atuando simultaneamente. 
+ Os  rolamentos de esferas de contato angular SKF  são...
+					  </p>
+										
+                    					<div style="min-height: 85px">
+					</div>
+										<div class="button-container">
+												<a class="button lnk_view btn btn-default" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/281-rolamentos-de-esferas-de-contato-angular-skf.html" title="Exibir">
+							<span>Mais</span>
+						</a>
+					</div>
+											<div class="color-list-container"> </div>
+										<div class="product-flags">
+																	</div>
+									</div>
+				
+	 				<div class="functional-buttons clearfix">
+						
+						
+						
+						
+															<a class="button btn btn-ver-detalhes " href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/281-rolamentos-de-esferas-de-contato-angular-skf.html" rel="nofollow" title="Ver detalhes">
+									<span>Ver detalhes</span>
+								</a>
+								<a class="button solicitar-orcamento btn-quickview btn-comprar" data-fancybox-type="ajax" href="https://www.atibrasil.com.br/orcamento-enviado-com-sucesso?id_product=281" rel="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/281-rolamentos-de-esferas-de-contato-angular-skf.html">
+									<span>Or&ccedil;amento</span>
+								</a>
+                            						
+					</div>
+				
+			</div><!-- .product-container> -->
+		</li>
+	    			
+		
+		
+								<li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 first-item-of-tablet-line last-item-of-mobile-line">
+			<div class="product-container" itemscope itemtype="http://schema.org/Product">
+				<meta itemprop="sku" content="0000" />
+				<meta itemprop="mpn" content="0" />			
+				<meta itemprop="name" content="Rolamentos Autocompensadores de Esferas SKF" />
+				
+								<span itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="availability">
+					<meta itemprop="priceCurrency" content="BRL" />
+					<link itemprop="url" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/282-rolamentos-autocompensadores-de-esferas-skf.html" />
+					<meta itemprop="priceValidUntil" content="2021-02-16" />								
+				</span>
+								
+				<div class="left-block">
+					<div class="product-image-container">
+						<!--                        	<a href="https://www.atibrasil.com.br/_"></a>
+                        -->
+						<div itemprop="brand" itemscope itemtype="http://schema.org/Thing">
+							<meta itemprop="name" content="0" />
+						</div>							
+
+                        <a class="product_img_link"	href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/282-rolamentos-autocompensadores-de-esferas-skf.html" title="Rolamentos Autocompensadores de Esferas SKF">
+							<img class="replace-2x img-responsive" src="https://cdn.atibrasil.com.br/416-home_default/rolamentos-autocompensadores-de-esferas-skf.jpg" alt="Rolamentos Autocompensadores de Esferas SKF" title="Rolamentos Autocompensadores de Esferas SKF"  width="270" height="270" itemprop="image" />
+						</a>
+																													</div>
+				</div>
+				<div class="right-block">
+					<div>
+												<!--Link para ver as avaliações-->
+
+												
+						 
+						<div class="score-avaliacao-produto pBot5" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+
+																								
+
+												<meta itemprop="reviewCount" content="1" />												<meta itemprop="ratingValue" content="1" />					</div>
+					
+					<div itemprop="review" itemscope itemtype="https://schema.org/Review">
+					  <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+						<span itemprop="ratingValue" style="display:none;">1</span>
+					  </span> 
+					  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<span itemprop="name" style="display:none;">A.T.I. Brasil</span>
+					  </span>
+					</div>				
+				
+					<h5>
+												<a class="product-name" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/282-rolamentos-autocompensadores-de-esferas-skf.html" title="Rolamentos Autocompensadores de Esferas SKF">
+							Rolamentos Autocompensadores de Esferas SKF
+						</a>
+					</h5>
+					
+										  <meta itemprop="description" content="Rolamentos Autocompensadores de Esferas SKF" />
+					  <p class="product-desc">
+						  Os  rolamentos autocompensadores de esferas  possuem duas carreiras de esferas e uma pista esférica comum no anel externo. Isto torna o rolamento insensível ao desalinhamento angular do eixo em relação ao mancal. Os rolamentos autocompensadores de esferas geram menos atrito que qualquer outro tipo de rolamento de esferas, o que permite que eles trabalhem...
+					  </p>
+										
+                    					<div style="min-height: 85px">
+					</div>
+										<div class="button-container">
+												<a class="button lnk_view btn btn-default" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/282-rolamentos-autocompensadores-de-esferas-skf.html" title="Exibir">
+							<span>Mais</span>
+						</a>
+					</div>
+											<div class="color-list-container"> </div>
+										<div class="product-flags">
+																	</div>
+									</div>
+				
+	 				<div class="functional-buttons clearfix">
+						
+						
+						
+						
+															<a class="button btn btn-ver-detalhes " href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/282-rolamentos-autocompensadores-de-esferas-skf.html" rel="nofollow" title="Ver detalhes">
+									<span>Ver detalhes</span>
+								</a>
+								<a class="button solicitar-orcamento btn-quickview btn-comprar" data-fancybox-type="ajax" href="https://www.atibrasil.com.br/orcamento-enviado-com-sucesso?id_product=282" rel="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/282-rolamentos-autocompensadores-de-esferas-skf.html">
+									<span>Or&ccedil;amento</span>
+								</a>
+                            						
+					</div>
+				
+			</div><!-- .product-container> -->
+		</li>
+	    			
+		
+		
+								<li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 last-item-of-tablet-line first-item-of-mobile-line">
+			<div class="product-container" itemscope itemtype="http://schema.org/Product">
+				<meta itemprop="sku" content="0000" />
+				<meta itemprop="mpn" content="0" />			
+				<meta itemprop="name" content="Rolamentos de Rolos Cilíndricos SKF" />
+				
+								<span itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="availability">
+					<meta itemprop="priceCurrency" content="BRL" />
+					<link itemprop="url" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/283-rolamentos-de-rolos-cilindricos-skf.html" />
+					<meta itemprop="priceValidUntil" content="2021-02-16" />								
+				</span>
+								
+				<div class="left-block">
+					<div class="product-image-container">
+						<!--                        	<a href="https://www.atibrasil.com.br/_"></a>
+                        -->
+						<div itemprop="brand" itemscope itemtype="http://schema.org/Thing">
+							<meta itemprop="name" content="0" />
+						</div>							
+
+                        <a class="product_img_link"	href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/283-rolamentos-de-rolos-cilindricos-skf.html" title="Rolamentos de Rolos Cilíndricos SKF">
+							<img class="replace-2x img-responsive" src="https://cdn.atibrasil.com.br/417-home_default/rolamentos-de-rolos-cilindricos-skf.jpg" alt="Rolamentos de Rolos Cilíndricos SKF" title="Rolamentos de Rolos Cilíndricos SKF"  width="270" height="270" itemprop="image" />
+						</a>
+																													</div>
+				</div>
+				<div class="right-block">
+					<div>
+												<!--Link para ver as avaliações-->
+
+												
+						 
+						<div class="score-avaliacao-produto pBot5" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+
+																								
+
+												<meta itemprop="reviewCount" content="1" />												<meta itemprop="ratingValue" content="1" />					</div>
+					
+					<div itemprop="review" itemscope itemtype="https://schema.org/Review">
+					  <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+						<span itemprop="ratingValue" style="display:none;">1</span>
+					  </span> 
+					  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<span itemprop="name" style="display:none;">A.T.I. Brasil</span>
+					  </span>
+					</div>				
+				
+					<h5>
+												<a class="product-name" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/283-rolamentos-de-rolos-cilindricos-skf.html" title="Rolamentos de Rolos Cilíndricos SKF">
+							Rolamentos de Rolos Cilíndricos SKF
+						</a>
+					</h5>
+					
+										  <meta itemprop="description" content="Rolamentos de Rolos Cilíndricos SKF" />
+					  <p class="product-desc">
+						  Os  rolamentos de rolos cilíndricos SKF  são produzidos em diversos modelos, séries e tamanhos. A maioria compreende rolamentos de uma carreira de rolos com gaiola. Rolamentos de alta capacidade e rolamentos com o número máximo de rolos de carreira dupla e simples (sem gaiola) completam a linha padrão SKF. 
+ Alguns dos fatores que influenciam o desempenho...
+					  </p>
+										
+                    					<div style="min-height: 85px">
+					</div>
+										<div class="button-container">
+												<a class="button lnk_view btn btn-default" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/283-rolamentos-de-rolos-cilindricos-skf.html" title="Exibir">
+							<span>Mais</span>
+						</a>
+					</div>
+											<div class="color-list-container"> </div>
+										<div class="product-flags">
+																	</div>
+									</div>
+				
+	 				<div class="functional-buttons clearfix">
+						
+						
+						
+						
+															<a class="button btn btn-ver-detalhes " href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/283-rolamentos-de-rolos-cilindricos-skf.html" rel="nofollow" title="Ver detalhes">
+									<span>Ver detalhes</span>
+								</a>
+								<a class="button solicitar-orcamento btn-quickview btn-comprar" data-fancybox-type="ajax" href="https://www.atibrasil.com.br/orcamento-enviado-com-sucesso?id_product=283" rel="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/283-rolamentos-de-rolos-cilindricos-skf.html">
+									<span>Or&ccedil;amento</span>
+								</a>
+                            						
+					</div>
+				
+			</div><!-- .product-container> -->
+		</li>
+	    			
+		
+		
+								<li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 first-item-of-tablet-line">
+			<div class="product-container" itemscope itemtype="http://schema.org/Product">
+				<meta itemprop="sku" content="0000" />
+				<meta itemprop="mpn" content="0" />			
+				<meta itemprop="name" content="Rolamentos Autocompensadores de Rolos SKF" />
+				
+								<span itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="availability">
+					<meta itemprop="priceCurrency" content="BRL" />
+					<link itemprop="url" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/285-rolamentos-autocompensadores-de-rolos-skf.html" />
+					<meta itemprop="priceValidUntil" content="2021-02-16" />								
+				</span>
+								
+				<div class="left-block">
+					<div class="product-image-container">
+						<!--                        	<a href="https://www.atibrasil.com.br/_"></a>
+                        -->
+						<div itemprop="brand" itemscope itemtype="http://schema.org/Thing">
+							<meta itemprop="name" content="0" />
+						</div>							
+
+                        <a class="product_img_link"	href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/285-rolamentos-autocompensadores-de-rolos-skf.html" title="Rolamentos Autocompensadores de Rolos SKF">
+							<img class="replace-2x img-responsive" src="https://cdn.atibrasil.com.br/419-home_default/rolamentos-autocompensadores-de-rolos-skf.jpg" alt="Rolamentos Autocompensadores de Rolos SKF" title="Rolamentos Autocompensadores de Rolos SKF"  width="270" height="270" itemprop="image" />
+						</a>
+																													</div>
+				</div>
+				<div class="right-block">
+					<div>
+												<!--Link para ver as avaliações-->
+
+												
+						 
+						<div class="score-avaliacao-produto pBot5" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+
+																								
+
+												<meta itemprop="reviewCount" content="1" />												<meta itemprop="ratingValue" content="1" />					</div>
+					
+					<div itemprop="review" itemscope itemtype="https://schema.org/Review">
+					  <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+						<span itemprop="ratingValue" style="display:none;">1</span>
+					  </span> 
+					  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<span itemprop="name" style="display:none;">A.T.I. Brasil</span>
+					  </span>
+					</div>				
+				
+					<h5>
+												<a class="product-name" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/285-rolamentos-autocompensadores-de-rolos-skf.html" title="Rolamentos Autocompensadores de Rolos SKF">
+							Rolamentos Autocompensadores de Rolos SKF
+						</a>
+					</h5>
+					
+										  <meta itemprop="description" content="Rolamentos Autocompensadores de Rolos SKF" />
+					  <p class="product-desc">
+						  Os rolamentos autocompensadores de rolos possuem duas carreiras de rolos com uma pista esférica comum no anel externo e duas pistas no anel interno inclinadas em um ângulo em relação ao eixo do rolamento. O ponto central da esfera na pista do anel externo fica no eixo do rolamento. Por isso os rolamentos são autocompensadores e insensíveis ao...
+					  </p>
+										
+                    					<div style="min-height: 85px">
+					</div>
+										<div class="button-container">
+												<a class="button lnk_view btn btn-default" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/285-rolamentos-autocompensadores-de-rolos-skf.html" title="Exibir">
+							<span>Mais</span>
+						</a>
+					</div>
+											<div class="color-list-container"> </div>
+										<div class="product-flags">
+																	</div>
+									</div>
+				
+	 				<div class="functional-buttons clearfix">
+						
+						
+						
+						
+															<a class="button btn btn-ver-detalhes " href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/285-rolamentos-autocompensadores-de-rolos-skf.html" rel="nofollow" title="Ver detalhes">
+									<span>Ver detalhes</span>
+								</a>
+								<a class="button solicitar-orcamento btn-quickview btn-comprar" data-fancybox-type="ajax" href="https://www.atibrasil.com.br/orcamento-enviado-com-sucesso?id_product=285" rel="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/285-rolamentos-autocompensadores-de-rolos-skf.html">
+									<span>Or&ccedil;amento</span>
+								</a>
+                            						
+					</div>
+				
+			</div><!-- .product-container> -->
+		</li>
+	    			
+		
+		
+								<li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 last-item-of-tablet-line last-item-of-mobile-line">
+			<div class="product-container" itemscope itemtype="http://schema.org/Product">
+				<meta itemprop="sku" content="0000" />
+				<meta itemprop="mpn" content="0" />			
+				<meta itemprop="name" content="Rolamentos de Rolos Cônicos SKF" />
+				
+								<span itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="availability">
+					<meta itemprop="priceCurrency" content="BRL" />
+					<link itemprop="url" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/284-rolamentos-de-rolos-conicos-skf.html" />
+					<meta itemprop="priceValidUntil" content="2021-02-16" />								
+				</span>
+								
+				<div class="left-block">
+					<div class="product-image-container">
+						<!--                        	<a href="https://www.atibrasil.com.br/_"></a>
+                        -->
+						<div itemprop="brand" itemscope itemtype="http://schema.org/Thing">
+							<meta itemprop="name" content="0" />
+						</div>							
+
+                        <a class="product_img_link"	href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/284-rolamentos-de-rolos-conicos-skf.html" title="Rolamentos de Rolos Cônicos SKF">
+							<img class="replace-2x img-responsive" src="https://cdn.atibrasil.com.br/418-home_default/rolamentos-de-rolos-conicos-skf.jpg" alt="Rolamentos de Rolos Cônicos SKF" title="Rolamentos de Rolos Cônicos SKF"  width="270" height="270" itemprop="image" />
+						</a>
+																													</div>
+				</div>
+				<div class="right-block">
+					<div>
+												<!--Link para ver as avaliações-->
+
+												
+						 
+						<div class="score-avaliacao-produto pBot5" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+
+																								
+
+												<meta itemprop="reviewCount" content="1" />												<meta itemprop="ratingValue" content="1" />					</div>
+					
+					<div itemprop="review" itemscope itemtype="https://schema.org/Review">
+					  <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+						<span itemprop="ratingValue" style="display:none;">1</span>
+					  </span> 
+					  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<span itemprop="name" style="display:none;">A.T.I. Brasil</span>
+					  </span>
+					</div>				
+				
+					<h5>
+												<a class="product-name" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/284-rolamentos-de-rolos-conicos-skf.html" title="Rolamentos de Rolos Cônicos SKF">
+							Rolamentos de Rolos Cônicos SKF
+						</a>
+					</h5>
+					
+										  <meta itemprop="description" content="Rolamentos de Rolos Cônicos SKF" />
+					  <p class="product-desc">
+						  Os rolamentos de rolos cônicos têm pistas de anel interno e externo cônicas e rolos cônicos. Eles são adequados para suportar cargas combinadas, ou seja, cargas axiais e radiais atuando simultaneamente. As linhas de projeção das pistas convergem em um ponto comum no eixo do rolamento para oferecer movimento rolante autêntico e baixo atrito. 
+ Os...
+					  </p>
+										
+                    					<div style="min-height: 85px">
+					</div>
+										<div class="button-container">
+												<a class="button lnk_view btn btn-default" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/284-rolamentos-de-rolos-conicos-skf.html" title="Exibir">
+							<span>Mais</span>
+						</a>
+					</div>
+											<div class="color-list-container"> </div>
+										<div class="product-flags">
+																	</div>
+									</div>
+				
+	 				<div class="functional-buttons clearfix">
+						
+						
+						
+						
+															<a class="button btn btn-ver-detalhes " href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/284-rolamentos-de-rolos-conicos-skf.html" rel="nofollow" title="Ver detalhes">
+									<span>Ver detalhes</span>
+								</a>
+								<a class="button solicitar-orcamento btn-quickview btn-comprar" data-fancybox-type="ajax" href="https://www.atibrasil.com.br/orcamento-enviado-com-sucesso?id_product=284" rel="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/284-rolamentos-de-rolos-conicos-skf.html">
+									<span>Or&ccedil;amento</span>
+								</a>
+                            						
+					</div>
+				
+			</div><!-- .product-container> -->
+		</li>
+	    			
+		
+		
+								<li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 first-item-of-tablet-line first-item-of-mobile-line">
+			<div class="product-container" itemscope itemtype="http://schema.org/Product">
+				<meta itemprop="sku" content="0000" />
+				<meta itemprop="mpn" content="0" />			
+				<meta itemprop="name" content="Rolamentos Axiais de Esferas SKF" />
+				
+								<span itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="availability">
+					<meta itemprop="priceCurrency" content="BRL" />
+					<link itemprop="url" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/287-rolamentos-axiais-de-esferas-skf.html" />
+					<meta itemprop="priceValidUntil" content="2021-02-16" />								
+				</span>
+								
+				<div class="left-block">
+					<div class="product-image-container">
+						<!--                        	<a href="https://www.atibrasil.com.br/_"></a>
+                        -->
+						<div itemprop="brand" itemscope itemtype="http://schema.org/Thing">
+							<meta itemprop="name" content="0" />
+						</div>							
+
+                        <a class="product_img_link"	href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/287-rolamentos-axiais-de-esferas-skf.html" title="Rolamentos Axiais de Esferas SKF">
+							<img class="replace-2x img-responsive" src="https://cdn.atibrasil.com.br/421-home_default/rolamentos-axiais-de-esferas-skf.jpg" alt="Rolamentos Axiais de Esferas SKF" title="Rolamentos Axiais de Esferas SKF"  width="270" height="270" itemprop="image" />
+						</a>
+																													</div>
+				</div>
+				<div class="right-block">
+					<div>
+												<!--Link para ver as avaliações-->
+
+												
+						 
+						<div class="score-avaliacao-produto pBot5" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+
+																								
+
+												<meta itemprop="reviewCount" content="1" />												<meta itemprop="ratingValue" content="1" />					</div>
+					
+					<div itemprop="review" itemscope itemtype="https://schema.org/Review">
+					  <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+						<span itemprop="ratingValue" style="display:none;">1</span>
+					  </span> 
+					  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<span itemprop="name" style="display:none;">A.T.I. Brasil</span>
+					  </span>
+					</div>				
+				
+					<h5>
+												<a class="product-name" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/287-rolamentos-axiais-de-esferas-skf.html" title="Rolamentos Axiais de Esferas SKF">
+							Rolamentos Axiais de Esferas SKF
+						</a>
+					</h5>
+					
+										  <meta itemprop="description" content="Rolamentos Axiais de Esferas SKF" />
+					  <p class="product-desc">
+						  Os  rolamentos axiais de esferas SKF  são fabricados como rolamentos axiais de esferas de escora simples ou de escora dupla. Eles foram projetados para suportar apenas cargas axiais e não devem ser submetidos a cargas radiais. 
+ Os  rolamentos axiais de esferas SKF  podem ser separados, ou seja, é possível montar a arruela do eixo, a(s) arruela(s) da...
+					  </p>
+										
+                    					<div style="min-height: 85px">
+					</div>
+										<div class="button-container">
+												<a class="button lnk_view btn btn-default" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/287-rolamentos-axiais-de-esferas-skf.html" title="Exibir">
+							<span>Mais</span>
+						</a>
+					</div>
+											<div class="color-list-container"> </div>
+										<div class="product-flags">
+																	</div>
+									</div>
+				
+	 				<div class="functional-buttons clearfix">
+						
+						
+						
+						
+															<a class="button btn btn-ver-detalhes " href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/287-rolamentos-axiais-de-esferas-skf.html" rel="nofollow" title="Ver detalhes">
+									<span>Ver detalhes</span>
+								</a>
+								<a class="button solicitar-orcamento btn-quickview btn-comprar" data-fancybox-type="ajax" href="https://www.atibrasil.com.br/orcamento-enviado-com-sucesso?id_product=287" rel="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/287-rolamentos-axiais-de-esferas-skf.html">
+									<span>Or&ccedil;amento</span>
+								</a>
+                            						
+					</div>
+				
+			</div><!-- .product-container> -->
+		</li>
+	    			
+		
+		
+								<li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 last-item-of-tablet-line">
+			<div class="product-container" itemscope itemtype="http://schema.org/Product">
+				<meta itemprop="sku" content="0000" />
+				<meta itemprop="mpn" content="0" />			
+				<meta itemprop="name" content="Rolamentos de Rolos Toroidais CARB SKF" />
+				
+								<span itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="availability">
+					<meta itemprop="priceCurrency" content="BRL" />
+					<link itemprop="url" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/286-rolamentos-de-rolos-toroidais-carb.html" />
+					<meta itemprop="priceValidUntil" content="2021-02-16" />								
+				</span>
+								
+				<div class="left-block">
+					<div class="product-image-container">
+						<!--                        	<a href="https://www.atibrasil.com.br/_"></a>
+                        -->
+						<div itemprop="brand" itemscope itemtype="http://schema.org/Thing">
+							<meta itemprop="name" content="0" />
+						</div>							
+
+                        <a class="product_img_link"	href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/286-rolamentos-de-rolos-toroidais-carb.html" title="Rolamentos de Rolos Toroidais CARB SKF">
+							<img class="replace-2x img-responsive" src="https://cdn.atibrasil.com.br/420-home_default/rolamentos-de-rolos-toroidais-carb.jpg" alt="Rolamentos de Rolos Toroidais CARB SKF" title="Rolamentos de Rolos Toroidais CARB SKF"  width="270" height="270" itemprop="image" />
+						</a>
+																													</div>
+				</div>
+				<div class="right-block">
+					<div>
+												<!--Link para ver as avaliações-->
+
+												
+						 
+						<div class="score-avaliacao-produto pBot5" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+
+																								
+
+												<meta itemprop="reviewCount" content="1" />												<meta itemprop="ratingValue" content="1" />					</div>
+					
+					<div itemprop="review" itemscope itemtype="https://schema.org/Review">
+					  <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+						<span itemprop="ratingValue" style="display:none;">1</span>
+					  </span> 
+					  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<span itemprop="name" style="display:none;">A.T.I. Brasil</span>
+					  </span>
+					</div>				
+				
+					<h5>
+												<a class="product-name" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/286-rolamentos-de-rolos-toroidais-carb.html" title="Rolamentos de Rolos Toroidais CARB SKF">
+							Rolamentos de Rolos Toroidais CARB SKF
+						</a>
+					</h5>
+					
+										  <meta itemprop="description" content="Rolamentos de Rolos Toroidais CARB SKF" />
+					  <p class="product-desc">
+						  Os  rolamentos de rolos toroidais CARB  combinam a capacidade autocompensadora dos rolamentos autocompensadores de rolos com a capacidade de deslocamento axial dos rolamentos de rolos cilíndricos. A seção transversal compacta e a alta capacidade de carga dos rolamentos CARB também podem estar normalmente associadas aos rolamentos de rolos de agulhas. 
+ Os...
+					  </p>
+										
+                    					<div style="min-height: 85px">
+					</div>
+										<div class="button-container">
+												<a class="button lnk_view btn btn-default" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/286-rolamentos-de-rolos-toroidais-carb.html" title="Exibir">
+							<span>Mais</span>
+						</a>
+					</div>
+											<div class="color-list-container"> </div>
+										<div class="product-flags">
+																	</div>
+									</div>
+				
+	 				<div class="functional-buttons clearfix">
+						
+						
+						
+						
+															<a class="button btn btn-ver-detalhes " href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/286-rolamentos-de-rolos-toroidais-carb.html" rel="nofollow" title="Ver detalhes">
+									<span>Ver detalhes</span>
+								</a>
+								<a class="button solicitar-orcamento btn-quickview btn-comprar" data-fancybox-type="ajax" href="https://www.atibrasil.com.br/orcamento-enviado-com-sucesso?id_product=286" rel="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/286-rolamentos-de-rolos-toroidais-carb.html">
+									<span>Or&ccedil;amento</span>
+								</a>
+                            						
+					</div>
+				
+			</div><!-- .product-container> -->
+		</li>
+	    			
+		
+		
+								<li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 first-item-of-tablet-line last-item-of-mobile-line">
+			<div class="product-container" itemscope itemtype="http://schema.org/Product">
+				<meta itemprop="sku" content="0000" />
+				<meta itemprop="mpn" content="0" />			
+				<meta itemprop="name" content="Rolamentos Axiais de Rolos Cilíndricos SKF" />
+				
+								<span itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="availability">
+					<meta itemprop="priceCurrency" content="BRL" />
+					<link itemprop="url" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/288-rolamentos-axiais-de-rolos-cilindricos-skf.html" />
+					<meta itemprop="priceValidUntil" content="2021-02-16" />								
+				</span>
+								
+				<div class="left-block">
+					<div class="product-image-container">
+						<!--                        	<a href="https://www.atibrasil.com.br/_"></a>
+                        -->
+						<div itemprop="brand" itemscope itemtype="http://schema.org/Thing">
+							<meta itemprop="name" content="0" />
+						</div>							
+
+                        <a class="product_img_link"	href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/288-rolamentos-axiais-de-rolos-cilindricos-skf.html" title="Rolamentos Axiais de Rolos Cilíndricos SKF">
+							<img class="replace-2x img-responsive" src="https://cdn.atibrasil.com.br/422-home_default/rolamentos-axiais-de-rolos-cilindricos-skf.jpg" alt="Rolamentos Axiais de Rolos Cilíndricos SKF" title="Rolamentos Axiais de Rolos Cilíndricos SKF"  width="270" height="270" itemprop="image" />
+						</a>
+																													</div>
+				</div>
+				<div class="right-block">
+					<div>
+												<!--Link para ver as avaliações-->
+
+												
+						 
+						<div class="score-avaliacao-produto pBot5" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+
+																								
+
+												<meta itemprop="reviewCount" content="1" />												<meta itemprop="ratingValue" content="1" />					</div>
+					
+					<div itemprop="review" itemscope itemtype="https://schema.org/Review">
+					  <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+						<span itemprop="ratingValue" style="display:none;">1</span>
+					  </span> 
+					  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<span itemprop="name" style="display:none;">A.T.I. Brasil</span>
+					  </span>
+					</div>				
+				
+					<h5>
+												<a class="product-name" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/288-rolamentos-axiais-de-rolos-cilindricos-skf.html" title="Rolamentos Axiais de Rolos Cilíndricos SKF">
+							Rolamentos Axiais de Rolos Cilíndricos SKF
+						</a>
+					</h5>
+					
+										  <meta itemprop="description" content="Rolamentos Axiais de Rolos Cilíndricos SKF" />
+					  <p class="product-desc">
+						  Os  rolamentos axiais de rolos cilíndricos da SKF  são projetados para comodar cargas axiais pesadas e cargas de choque. Não se deve submetê-los a cargas radiais. As extremidades dos rolos são levemente abauladas para modificar a linha de contato entre as pistas e os rolos. Isso evita picos de tensão nas extremidades do rolo, levando ao prolongamento da...
+					  </p>
+										
+                    					<div style="min-height: 85px">
+					</div>
+										<div class="button-container">
+												<a class="button lnk_view btn btn-default" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/288-rolamentos-axiais-de-rolos-cilindricos-skf.html" title="Exibir">
+							<span>Mais</span>
+						</a>
+					</div>
+											<div class="color-list-container"> </div>
+										<div class="product-flags">
+																	</div>
+									</div>
+				
+	 				<div class="functional-buttons clearfix">
+						
+						
+						
+						
+															<a class="button btn btn-ver-detalhes " href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/288-rolamentos-axiais-de-rolos-cilindricos-skf.html" rel="nofollow" title="Ver detalhes">
+									<span>Ver detalhes</span>
+								</a>
+								<a class="button solicitar-orcamento btn-quickview btn-comprar" data-fancybox-type="ajax" href="https://www.atibrasil.com.br/orcamento-enviado-com-sucesso?id_product=288" rel="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/288-rolamentos-axiais-de-rolos-cilindricos-skf.html">
+									<span>Or&ccedil;amento</span>
+								</a>
+                            						
+					</div>
+				
+			</div><!-- .product-container> -->
+		</li>
+	    			
+		
+		
+								<li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 last-item-of-tablet-line first-item-of-mobile-line last-mobile-line">
+			<div class="product-container" itemscope itemtype="http://schema.org/Product">
+				<meta itemprop="sku" content="0000" />
+				<meta itemprop="mpn" content="0" />			
+				<meta itemprop="name" content="Rolamentos Axiais Autocompensadores de Rolos SKF" />
+				
+								<span itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="availability">
+					<meta itemprop="priceCurrency" content="BRL" />
+					<link itemprop="url" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/289-rolamentos-axiais-autocompensadores-de-rolos-skf.html" />
+					<meta itemprop="priceValidUntil" content="2021-02-16" />								
+				</span>
+								
+				<div class="left-block">
+					<div class="product-image-container">
+						<!--                        	<a href="https://www.atibrasil.com.br/_"></a>
+                        -->
+						<div itemprop="brand" itemscope itemtype="http://schema.org/Thing">
+							<meta itemprop="name" content="0" />
+						</div>							
+
+                        <a class="product_img_link"	href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/289-rolamentos-axiais-autocompensadores-de-rolos-skf.html" title="Rolamentos Axiais Autocompensadores de Rolos SKF">
+							<img class="replace-2x img-responsive" src="https://cdn.atibrasil.com.br/423-home_default/rolamentos-axiais-autocompensadores-de-rolos-skf.jpg" alt="Rolamentos Axiais Autocompensadores de Rolos SKF" title="Rolamentos Axiais Autocompensadores de Rolos SKF"  width="270" height="270" itemprop="image" />
+						</a>
+																													</div>
+				</div>
+				<div class="right-block">
+					<div>
+												<!--Link para ver as avaliações-->
+
+												
+						 
+						<div class="score-avaliacao-produto pBot5" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+
+																								
+
+												<meta itemprop="reviewCount" content="1" />												<meta itemprop="ratingValue" content="1" />					</div>
+					
+					<div itemprop="review" itemscope itemtype="https://schema.org/Review">
+					  <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+						<span itemprop="ratingValue" style="display:none;">1</span>
+					  </span> 
+					  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<span itemprop="name" style="display:none;">A.T.I. Brasil</span>
+					  </span>
+					</div>				
+				
+					<h5>
+												<a class="product-name" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/289-rolamentos-axiais-autocompensadores-de-rolos-skf.html" title="Rolamentos Axiais Autocompensadores de Rolos SKF">
+							Rolamentos Axiais Autocompensadores de Rolos SKF
+						</a>
+					</h5>
+					
+										  <meta itemprop="description" content="Rolamentos Axiais Autocompensadores de Rolos SKF" />
+					  <p class="product-desc">
+						  Os  rolamentos axiais autocompensadores de rolos SKF  possuem pistas especialmente projetadas e contém um grande número de rolos assimétricos. Os rolos têm conformidade ideal com as pistas da arruela para otimizar a distribuição de carga ao longo do comprimento do rolo. Portanto, eles podem suportar velocidades relativamente altas, cargas axiais pesadas...
+					  </p>
+										
+                    					<div style="min-height: 85px">
+					</div>
+										<div class="button-container">
+												<a class="button lnk_view btn btn-default" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/289-rolamentos-axiais-autocompensadores-de-rolos-skf.html" title="Exibir">
+							<span>Mais</span>
+						</a>
+					</div>
+											<div class="color-list-container"> </div>
+										<div class="product-flags">
+																	</div>
+									</div>
+				
+	 				<div class="functional-buttons clearfix">
+						
+						
+						
+						
+															<a class="button btn btn-ver-detalhes " href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/289-rolamentos-axiais-autocompensadores-de-rolos-skf.html" rel="nofollow" title="Ver detalhes">
+									<span>Ver detalhes</span>
+								</a>
+								<a class="button solicitar-orcamento btn-quickview btn-comprar" data-fancybox-type="ajax" href="https://www.atibrasil.com.br/orcamento-enviado-com-sucesso?id_product=289" rel="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/289-rolamentos-axiais-autocompensadores-de-rolos-skf.html">
+									<span>Or&ccedil;amento</span>
+								</a>
+                            						
+					</div>
+				
+			</div><!-- .product-container> -->
+		</li>
+	    			
+		
+		
+								<li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 first-item-of-tablet-line last-mobile-line">
+			<div class="product-container" itemscope itemtype="http://schema.org/Product">
+				<meta itemprop="sku" content="0000" />
+				<meta itemprop="mpn" content="0" />			
+				<meta itemprop="name" content="Caixas de Mancal SKF" />
+				
+								<span itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="availability">
+					<meta itemprop="priceCurrency" content="BRL" />
+					<link itemprop="url" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/290-caixa-de-mancal-skf.html" />
+					<meta itemprop="priceValidUntil" content="2021-02-16" />								
+				</span>
+								
+				<div class="left-block">
+					<div class="product-image-container">
+						<!--                        	<a href="https://www.atibrasil.com.br/_"></a>
+                        -->
+						<div itemprop="brand" itemscope itemtype="http://schema.org/Thing">
+							<meta itemprop="name" content="0" />
+						</div>							
+
+                        <a class="product_img_link"	href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/290-caixa-de-mancal-skf.html" title="Caixas de Mancal SKF">
+							<img class="replace-2x img-responsive" src="https://cdn.atibrasil.com.br/424-home_default/caixa-de-mancal-skf.jpg" alt="Caixas de Mancal SKF" title="Caixas de Mancal SKF"  width="270" height="270" itemprop="image" />
+						</a>
+																													</div>
+				</div>
+				<div class="right-block">
+					<div>
+												<!--Link para ver as avaliações-->
+
+												
+						 
+						<div class="score-avaliacao-produto pBot5" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+
+																								
+
+												<meta itemprop="reviewCount" content="1" />												<meta itemprop="ratingValue" content="1" />					</div>
+					
+					<div itemprop="review" itemscope itemtype="https://schema.org/Review">
+					  <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+						<span itemprop="ratingValue" style="display:none;">1</span>
+					  </span> 
+					  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<span itemprop="name" style="display:none;">A.T.I. Brasil</span>
+					  </span>
+					</div>				
+				
+					<h5>
+												<a class="product-name" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/290-caixa-de-mancal-skf.html" title="Caixas de Mancal SKF">
+							Caixas de Mancal SKF
+						</a>
+					</h5>
+					
+										  <meta itemprop="description" content="Caixas de Mancal SKF" />
+					  <p class="product-desc">
+						  Uma  caixa de mancal SKF  com os rolamentos apropriados, constitui unidades de rolamentos econômicas e intercambiáveis que atendem à demanda por projetos de fácil manutenção. Os  mancais SKF  permitem que os rolamentos incorporados obtenham o máximo de vida útil, com menor necessidade de manutenção. 
+ A SKF produz caixas de mancal em uma grande variedade...
+					  </p>
+										
+                    					<div style="min-height: 85px">
+					</div>
+										<div class="button-container">
+												<a class="button lnk_view btn btn-default" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/290-caixa-de-mancal-skf.html" title="Exibir">
+							<span>Mais</span>
+						</a>
+					</div>
+											<div class="color-list-container"> </div>
+										<div class="product-flags">
+																	</div>
+									</div>
+				
+	 				<div class="functional-buttons clearfix">
+						
+						
+						
+						
+															<a class="button btn btn-ver-detalhes " href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/290-caixa-de-mancal-skf.html" rel="nofollow" title="Ver detalhes">
+									<span>Ver detalhes</span>
+								</a>
+								<a class="button solicitar-orcamento btn-quickview btn-comprar" data-fancybox-type="ajax" href="https://www.atibrasil.com.br/orcamento-enviado-com-sucesso?id_product=290" rel="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/290-caixa-de-mancal-skf.html">
+									<span>Or&ccedil;amento</span>
+								</a>
+                            						
+					</div>
+				
+			</div><!-- .product-container> -->
+		</li>
+	    			
+		
+		
+								<li class="ajax_block_product col-xs-12 col-sm-6 col-md-4 last-item-of-tablet-line last-item-of-mobile-line last-mobile-line">
+			<div class="product-container" itemscope itemtype="http://schema.org/Product">
+				<meta itemprop="sku" content="0000" />
+				<meta itemprop="mpn" content="0" />			
+				<meta itemprop="name" content="Ferramentas de Manutenção SKF" />
+				
+								<span itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="availability">
+					<meta itemprop="priceCurrency" content="BRL" />
+					<link itemprop="url" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/291-ferramentas-de-manutencao-skf.html" />
+					<meta itemprop="priceValidUntil" content="2021-02-16" />								
+				</span>
+								
+				<div class="left-block">
+					<div class="product-image-container">
+						<!--                        	<a href="https://www.atibrasil.com.br/_"></a>
+                        -->
+						<div itemprop="brand" itemscope itemtype="http://schema.org/Thing">
+							<meta itemprop="name" content="0" />
+						</div>							
+
+                        <a class="product_img_link"	href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/291-ferramentas-de-manutencao-skf.html" title="Ferramentas de Manutenção SKF">
+							<img class="replace-2x img-responsive" src="https://cdn.atibrasil.com.br/425-home_default/ferramentas-de-manutencao-skf.jpg" alt="Ferramentas de Manutenção SKF" title="Ferramentas de Manutenção SKF"  width="270" height="270" itemprop="image" />
+						</a>
+																													</div>
+				</div>
+				<div class="right-block">
+					<div>
+												<!--Link para ver as avaliações-->
+
+												
+						 
+						<div class="score-avaliacao-produto pBot5" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+
+																								
+
+												<meta itemprop="reviewCount" content="1" />												<meta itemprop="ratingValue" content="1" />					</div>
+					
+					<div itemprop="review" itemscope itemtype="https://schema.org/Review">
+					  <span itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+						<span itemprop="ratingValue" style="display:none;">1</span>
+					  </span> 
+					  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<span itemprop="name" style="display:none;">A.T.I. Brasil</span>
+					  </span>
+					</div>				
+				
+					<h5>
+												<a class="product-name" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/291-ferramentas-de-manutencao-skf.html" title="Ferramentas de Manutenção SKF">
+							Ferramentas de Manutenção SKF
+						</a>
+					</h5>
+					
+										  <meta itemprop="description" content="Ferramentas de Manutenção SKF" />
+					  <p class="product-desc">
+						  Como atingir o máximo de vida útil dos rolamentos SKF 
+ Alguns estágios tem grande impacto sobre a vida útil do rolamento. Esses estágios são: 
+  Montagem 
+ Lubrificação 
+ Alinhamento 
+ Monitoramento básico 
+ Desmontagem 
+  Esses estágios são extremamente importantes para se obter o máximo de vida útil dos rolamentos. Aplicando as práticas de manutenção...
+					  </p>
+										
+                    					<div style="min-height: 85px">
+					</div>
+										<div class="button-container">
+												<a class="button lnk_view btn btn-default" href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/291-ferramentas-de-manutencao-skf.html" title="Exibir">
+							<span>Mais</span>
+						</a>
+					</div>
+											<div class="color-list-container"> </div>
+										<div class="product-flags">
+																	</div>
+									</div>
+				
+	 				<div class="functional-buttons clearfix">
+						
+						
+						
+						
+															<a class="button btn btn-ver-detalhes " href="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/291-ferramentas-de-manutencao-skf.html" rel="nofollow" title="Ver detalhes">
+									<span>Ver detalhes</span>
+								</a>
+								<a class="button solicitar-orcamento btn-quickview btn-comprar" data-fancybox-type="ajax" href="https://www.atibrasil.com.br/orcamento-enviado-com-sucesso?id_product=291" rel="https://www.atibrasil.com.br/rolamentos-e-ferramentas-skf/291-ferramentas-de-manutencao-skf.html">
+									<span>Or&ccedil;amento</span>
+								</a>
+                            						
+					</div>
+				
+			</div><!-- .product-container> -->
+		</li>
+		</ul>
+
+
+
+
+
+			<div class="content_sortPagiBar">
+				<div class="bottom-pagination-content clearfix">
+					
+                    
+	
+												<!-- Pagination -->
+	<div id="pagination_bottom" class="pagination clearfix">
+	    			</div>
+    <div class="product-count">
+    	        	                        	                        	Mostrando 1 a 12 de 12 itens
+		    </div>
+	<!-- /Pagination -->
+
+				</div>
+			</div>
+								</div><!-- #center_column -->
+										</div><!-- .row -->
+				</div><!-- #columns -->
+			</div><!-- .columns-container -->
+			<!-- Footer -->
+
+            <div></div>
+
+            
+	       
+	        
+
+        	
+
+			<div class="footer-container">
+				<footer id="footer"  class="container">
+					<div class="row"><!-- Sendy Newsletter module-->
+<!--
+<div id="newsletter_block_left" class="block">
+	
+	<center>
+		<h4 class="bloco_newsletter">Receba nossas novidades:</h4>
+		<div class="block_content">
+			<form action="https://www.atibrasil.com.br/" method="post">
+				<div class="form-group" >
+					<input class="inputNew form-control grey newsletter-input" id="newsletter-input" type="text" name="email" size="18" value="Nome" />
+
+					<input class="inputNew form-control grey newsletter-input" id="newsletter-input" type="text" name="email" size="18" value="E-mail" />
+	                <button type="submit" name="submitNewsletter" class="btn btn-default button button-small">
+	                    <span>Enviar</span>
+	                </button>
+					<input type="hidden" name="action" value="0" />
+				</div>
+			</form>
+		</div>
+	</center>
+</div>
+-->
+
+  <div id="newsletter_block_left" class="block">
+    <div class=" col-md-5 titulo">
+      <h2>Receba nossas novidades</h2>
+    </div>
+    <form action="https://www.atibrasil.com.br/" method="post" class="col-md-7">
+
+      <div class="row formulario-newsletter">
+        <div class="col-sm-4 col-md-4">
+          <div class="form-group" style="margin-bottom: 0;">
+            <div class="input-group newsletter-ig">
+              <input type="text" class="form-control mb-2 mb-sm-0 inputNew form-control grey newsletter-input" id="nome" name="nome" required>
+              <label for="nome">Nome</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-md-5">
+          <div class="form-group" style="margin-bottom: 0;">
+            <div class="input-group newsletter-ig">
+              <input type="text" class="form-controlinputNew form-control grey newsletter-input" id="newsletter-input" name="email" required>
+              <label for="newsletter-input">E-mail</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-md-3">
+          <button type="submit" name="submitNewsletter" class="btn btn-default button button-small">
+            <span>Enviar</span>
+          </button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+          
+<script type="text/javascript">
+  /*var placeholder = "E-mail";
+	var placeholder2 = "Nome";
+    */
+</script>
+	<!-- MODULE Block footer -->
+	<section class="footer-block col-xs-12  col-sm-6 col-md-3 col-lg-2 " id="block_various_links_footer">
+		<h4>Institucionais</h4>
+		<ul class="toggle-footer">
+												<li class="item">
+						<a href="https://www.atibrasil.com.br/content/1-sobre-nos" title="Sobre a A.T.I. Brasil">
+							Sobre a A.T.I. Brasil
+						</a>
+					</li>
+																<li class="item">
+						<a href="https://www.atibrasil.com.br/content/2-politica-de-privacidade" title="Política de Privacidade">
+							Política de Privacidade
+						</a>
+					</li>
+																<li class="item">
+						<a href="https://www.atibrasil.com.br/content/3-trocas-e-devolucoes" title="Trocas e Devoluções">
+							Trocas e Devoluções
+						</a>
+					</li>
+																<li class="item">
+						<a href="https://www.atibrasil.com.br/content/4-como-comprar" title="Como Comprar">
+							Como Comprar
+						</a>
+					</li>
+																<li class="item">
+						<a href="https://www.atibrasil.com.br/content/5-duvidas" title="Dúvidas">
+							Dúvidas
+						</a>
+					</li>
+							            
+		</ul>
+		
+	</section>
+		<!-- /MODULE Block footer -->
+<!-- MODULE BRUC SELOS -->
+<section id="block_selos" class="footer-block col-xs-12 col-sm-6 col-md-3 ">
+	<h4 class="title_block">Formas de pagamento</h4>
+
+<ul class="toggle-footer">
+                        <a href="/content/4-como-comprar" title="Depósito">
+                <img src="https://cdn.atibrasil.com.br/modules/brucbandeiras/images/c410e717c00710984b10d63ca6a170cca34133f8_deposito_ico.jpg"
+                     alt="Dep&oacute;sito"/>
+            </a>
+                    <a href="/content/4-como-comprar" title="Visa">
+                <img src="https://cdn.atibrasil.com.br/modules/brucbandeiras/images/c076cf8075cc6bdad0734e1216ceda665ff9185d_visa.jpg"
+                     alt="Visa"/>
+            </a>
+                    <a href="/content/4-como-comprar" title="MasterCard">
+                <img src="https://cdn.atibrasil.com.br/modules/brucbandeiras/images/2ae70ed3f3eb9d03778c9a0a2c4b00e8a9a7db07_mastercard.jpg"
+                     alt="MasterCard"/>
+            </a>
+                    <a href="/content/4-como-comprar" title="Diners">
+                <img src="https://cdn.atibrasil.com.br/modules/brucbandeiras/images/8a2738ebdc715197a50957e40a7e85ee79fda2db_diners.jpg"
+                     alt="Diners"/>
+            </a>
+                    <a href="/content/4-como-comprar" title="Elo">
+                <img src="https://cdn.atibrasil.com.br/modules/brucbandeiras/images/96d4a95a2e25cad524d410927f7c831338adaf51_elo.jpg"
+                     alt="Elo"/>
+            </a>
+                    <a href="/content/4-como-comprar" title="Amex">
+                <img src="https://cdn.atibrasil.com.br/modules/brucbandeiras/images/4653733ee9345bfba2d5d5b1630d804d4f50e3b2_amex_ico.jpg"
+                     alt="Amex"/>
+            </a>
+                    <a href="/content/4-como-comprar" title="Boleto">
+                <img src="https://cdn.atibrasil.com.br/modules/brucbandeiras/images/5ecd8d9b0267032759eb51afc859af475219c83b_boleto.jpg"
+                     alt="Boleto"/>
+            </a>
+    </ul>
+
+	<!--<h4 class="title_block">Selos</h4>
+	<ul class="toggle-footer">
+            <li class="correios"><img src="https://www.atibrasil.com.br/themes/lojapadrao/img/logo_correio.png" border="0" /></li>            <li class="correios"><a href="//www.google.com.br/safebrowsing/diagnostic?site=atibrasil.com.br" target="_blank"><img src="https://www.atibrasil.com.br/themes/lojapadrao/img/google_safe_browsing.png" border="0" /></a></li>            <li class="correios"><a href="//www.sslshopper.com/ssl-checker.html#hostname=atibrasil.com.br" target="_blank"><img src="//www.atibrasil.com.br/themes/lojapadrao/img/letsencrypt-logo.png" border="0" /></a></li>	</ul>-->
+</section>
+<!-- /MODULE BRUC SELOS -->
+<!-- MODULE BRUC LOCALIZACAO -->
+<section id="block_localizacao" class="footer-block col-xs-12 col-sm-12 col-md-3">
+	    <h1 class="title_block">Sobre a A.T.I.</h1>
+
+  		<ul class="toggle-footer" style="display: none;">
+  			<p class="sobre-ati-footer"><a href="https://www.atibrasil.com.br/content/7-sobre-a-ati" title="Sobre a A.T.I."><p><span>A A.T.I. BRASIL atua no mercado brasileiro há mais de 19 anos. Somos especializados em transmissão de potência industrial representando e distribuindo componentes mecânicos de renomadas marcas europeias.</span></p></a></p>
+  			<!--<li><iframe src="https://www.atibrasil.com.br/mapa.php?end=Rua Carlos Eduardo Nichele, 4254 - Estados - CEP  83830-010 Fazenda Rio Grande - PR" allowtransparency="true" width="400" height="400" scrolling="no" frameborder="0" marginheight="0" marginwidth="0"></iframe></li>-->
+
+  			
+
+
+<section id="social_block">
+	<ul>
+					<li class="facebook">
+				<a target="_blank" href="https://pt-br.facebook.com/pages/ATI-BRASIL/255155664567169">
+					<span>Facebook</span>
+				</a>
+			</li>
+						                	<li class="youtube">
+        		<a href="https://www.youtube.com/channel/UC6lkikHcAiP8IWle9IwngRA">
+        			<span>Youtube</span>
+        		</a>
+        	</li>
+                                		        	<li class="instagram">
+            	<a target="_blank" href="https://www.instagram.com/a.t.i.brasil/">
+                	<span>Instagram</span>
+                </a>
+            </li>
+                        	<li class="linkedin">
+            	<a target="_blank" href="https://pt.linkedin.com/company/a.t.i.-brasil---artigos-t%C3%A9cnicos-industriais-ltda">
+                	<span>linkedin_url</span>
+                </a>
+            </li>
+        	</ul>
+    <h4>Siga-nos</h4>
+</section>
+<div class="clearfix"></div>
+
+		</ul>
+	</section>
+<!-- /MODULE BRUC LOCALIZACAO --><!-- Module Brucbandeiras -->
+<!--
+    <div id="bandeirapage-slider">
+        <ul id="brucbandeiras">
+                                                <li>
+                        <a href="/content/4-como-comprar" title="Depósito">
+                            <img src="https://cdn.atibrasil.com.br/modules/brucbandeiras/images/c410e717c00710984b10d63ca6a170cca34133f8_deposito_ico.jpg"
+                                 alt="Dep&oacute;sito"/>
+                        </a>
+                    </li>
+                                                                <li>
+                        <a href="/content/4-como-comprar" title="Visa">
+                            <img src="https://cdn.atibrasil.com.br/modules/brucbandeiras/images/c076cf8075cc6bdad0734e1216ceda665ff9185d_visa.jpg"
+                                 alt="Visa"/>
+                        </a>
+                    </li>
+                                                                <li>
+                        <a href="/content/4-como-comprar" title="MasterCard">
+                            <img src="https://cdn.atibrasil.com.br/modules/brucbandeiras/images/2ae70ed3f3eb9d03778c9a0a2c4b00e8a9a7db07_mastercard.jpg"
+                                 alt="MasterCard"/>
+                        </a>
+                    </li>
+                                                                <li>
+                        <a href="/content/4-como-comprar" title="Diners">
+                            <img src="https://cdn.atibrasil.com.br/modules/brucbandeiras/images/8a2738ebdc715197a50957e40a7e85ee79fda2db_diners.jpg"
+                                 alt="Diners"/>
+                        </a>
+                    </li>
+                                                                <li>
+                        <a href="/content/4-como-comprar" title="Elo">
+                            <img src="https://cdn.atibrasil.com.br/modules/brucbandeiras/images/96d4a95a2e25cad524d410927f7c831338adaf51_elo.jpg"
+                                 alt="Elo"/>
+                        </a>
+                    </li>
+                                                                <li>
+                        <a href="/content/4-como-comprar" title="Amex">
+                            <img src="https://cdn.atibrasil.com.br/modules/brucbandeiras/images/4653733ee9345bfba2d5d5b1630d804d4f50e3b2_amex_ico.jpg"
+                                 alt="Amex"/>
+                        </a>
+                    </li>
+                                                                <li>
+                        <a href="/content/4-como-comprar" title="Boleto">
+                            <img src="https://cdn.atibrasil.com.br/modules/brucbandeiras/images/5ecd8d9b0267032759eb51afc859af475219c83b_boleto.jpg"
+                                 alt="Boleto"/>
+                        </a>
+                    </li>
+                                    </ul>
+    </div>
+
+	<div class="container-fluid apontador">
+        <div class="bruc">
+            
+            <a href="http://bruc.com.br" target="_blank">Desenvolvido por Bruc Internet</a>
+        </div>
+    </div>    -->
+<!-- /Module Brucbandeiras -->
+
+				<script type="text/javascript">
+					jQuery(document).ready(function(){
+						var MBG = GoogleAnalyticEnhancedECommerce;
+						MBG.setCurrency('BRL');
+						MBG.add({"id":"280","name":"\"Rolamentos R\\u00edgidos de Esferas SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":"0","quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F280-rolamentos-rigidos-de-esferas-skf.html","price":"0.00"},'',true);MBG.add({"id":"281","name":"\"Rolamentos de Esferas de Contato Angular SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":1,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F281-rolamentos-de-esferas-de-contato-angular-skf.html","price":"0.00"},'',true);MBG.add({"id":"282","name":"\"Rolamentos Autocompensadores de Esferas SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":2,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F282-rolamentos-autocompensadores-de-esferas-skf.html","price":"0.00"},'',true);MBG.add({"id":"283","name":"\"Rolamentos de Rolos Cil\\u00edndricos SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":3,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F283-rolamentos-de-rolos-cilindricos-skf.html","price":"0.00"},'',true);MBG.add({"id":"285","name":"\"Rolamentos Autocompensadores de Rolos SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":4,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F285-rolamentos-autocompensadores-de-rolos-skf.html","price":"0.00"},'',true);MBG.add({"id":"284","name":"\"Rolamentos de Rolos C\\u00f4nicos SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":5,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F284-rolamentos-de-rolos-conicos-skf.html","price":"0.00"},'',true);MBG.add({"id":"287","name":"\"Rolamentos Axiais de Esferas SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":6,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F287-rolamentos-axiais-de-esferas-skf.html","price":"0.00"},'',true);MBG.add({"id":"286","name":"\"Rolamentos de Rolos Toroidais CARB SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":7,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F286-rolamentos-de-rolos-toroidais-carb.html","price":"0.00"},'',true);MBG.add({"id":"288","name":"\"Rolamentos Axiais de Rolos Cil\\u00edndricos SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":8,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F288-rolamentos-axiais-de-rolos-cilindricos-skf.html","price":"0.00"},'',true);MBG.add({"id":"289","name":"\"Rolamentos Axiais Autocompensadores de Rolos SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":9,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F289-rolamentos-axiais-autocompensadores-de-rolos-skf.html","price":"0.00"},'',true);MBG.add({"id":"290","name":"\"Caixas de Mancal SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":10,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F290-caixa-de-mancal-skf.html","price":"0.00"},'',true);MBG.add({"id":"291","name":"\"Ferramentas de Manuten\\u00e7\\u00e3o SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":11,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F291-ferramentas-de-manutencao-skf.html","price":"0.00"},'',true);MBG.addProductClick({"id":"280","name":"\"Rolamentos R\\u00edgidos de Esferas SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":"0","quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F280-rolamentos-rigidos-de-esferas-skf.html","price":"0.00"});MBG.addProductClick({"id":"281","name":"\"Rolamentos de Esferas de Contato Angular SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":1,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F281-rolamentos-de-esferas-de-contato-angular-skf.html","price":"0.00"});MBG.addProductClick({"id":"282","name":"\"Rolamentos Autocompensadores de Esferas SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":2,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F282-rolamentos-autocompensadores-de-esferas-skf.html","price":"0.00"});MBG.addProductClick({"id":"283","name":"\"Rolamentos de Rolos Cil\\u00edndricos SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":3,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F283-rolamentos-de-rolos-cilindricos-skf.html","price":"0.00"});MBG.addProductClick({"id":"285","name":"\"Rolamentos Autocompensadores de Rolos SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":4,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F285-rolamentos-autocompensadores-de-rolos-skf.html","price":"0.00"});MBG.addProductClick({"id":"284","name":"\"Rolamentos de Rolos C\\u00f4nicos SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":5,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F284-rolamentos-de-rolos-conicos-skf.html","price":"0.00"});MBG.addProductClick({"id":"287","name":"\"Rolamentos Axiais de Esferas SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":6,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F287-rolamentos-axiais-de-esferas-skf.html","price":"0.00"});MBG.addProductClick({"id":"286","name":"\"Rolamentos de Rolos Toroidais CARB SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":7,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F286-rolamentos-de-rolos-toroidais-carb.html","price":"0.00"});MBG.addProductClick({"id":"288","name":"\"Rolamentos Axiais de Rolos Cil\\u00edndricos SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":8,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F288-rolamentos-axiais-de-rolos-cilindricos-skf.html","price":"0.00"});MBG.addProductClick({"id":"289","name":"\"Rolamentos Axiais Autocompensadores de Rolos SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":9,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F289-rolamentos-axiais-autocompensadores-de-rolos-skf.html","price":"0.00"});MBG.addProductClick({"id":"290","name":"\"Caixas de Mancal SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":10,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F290-caixa-de-mancal-skf.html","price":"0.00"});MBG.addProductClick({"id":"291","name":"\"Ferramentas de Manuten\\u00e7\\u00e3o SKF\"","category":"\"rolamentos-e-ferramentas-skf\"","brand":"","variant":"null","type":"typical","position":11,"quantity":1,"list":"category","url":"https%3A%2F%2Fwww.atibrasil.com.br%2Frolamentos-e-ferramentas-skf%2F291-ferramentas-de-manutencao-skf.html","price":"0.00"});
+					});
+				</script>
+				<script type="text/javascript">
+					ga('send', 'pageview');
+				</script><script type="text/javascript">
+	processDynamicModules = function(data) {
+		for (var key in data) {
+			var tokens = key.split('|');
+			if (tokens>1) {
+				var domNode = $(data[tokens[0]]).filter('#'+tokens[1]);
+				if (domNode.length) {
+					$('#pc_'+tokens[0]+' #'+tokens[1]).replaceWith(domNode.html());
+				}
+				else {
+					$('#pc_'+tokens[0]).replaceWith(data[tokens[0]]);
+				}
+			}
+			else if (key=='js') {
+				$('body').append(data[key]);
+			}
+			else {
+				$('#pc_'+key).replaceWith(data[key]);
+			}
+		}
+					// Force cart to refresh
+$.ajax({ type: 'POST', headers: { "cache-control": "no-cache"}, url: baseUri + '?rand=' + new Date().getTime(), async: true, cache: false, dataType: "json", data: 'controller=cart&ajax=true&token=' + static_token, success: function (jsonData) { ajaxCart.updateCart(jsonData);}
+});
+			};
+</script>
+<!-- MODULE Bruc Block contact infos -->
+<section id="block_contact_infos" class="footer-block col-xs-12 col-sm-6 col-md-3 col-lg-4 ">
+	<h4 class="title_block" style="clear:both">Selos</h4>
+	<ul class="toggle-footer">       
+        <img src="https://www.atibrasil.com.br/themes/lojapadrao/img/logo_correio.png" border="0" />        <a href="//www.google.com.br/safebrowsing/diagnostic?site=atibrasil.com.br" target="_blank"><img src="https://www.atibrasil.com.br/themes/lojapadrao/img/google_safe_browsing.png" border="0" /></a>        <a href="//www.sslshopper.com/ssl-checker.html#hostname=atibrasil.com.br" target="_blank"><img src="//www.atibrasil.com.br/themes/lojapadrao/img/letsencrypt-logo.png" border="0" /></a>        
+        
+
+		<!--<li class="fa-info-circle"><strong>A.T.I.</strong></li>        <li class="ltda">ATI</li>        						<br>
+        <li><i class="fa fa-clock-o fa-2x" aria-hidden="true" style="color:#bbbbbb"></i></li>    -->
+	</ul>
+</section>
+<!-- /MODULE Bruc Block contact infos -->
+</div>
+				</footer>
+			</div><!-- #footer -->
+            
+            <!--
+            <div class="row noLpadding noRpadding ">
+                <div class="container-fluid apontador2">
+                	<div class="container noLpadding noRpadding ">
+	                	<div class="bruc">
+	                        <a href="http://bruc.com.br" target="_blank">Desenvolvido por Bruc Internet</a>
+	                    </div>
+	                </div>
+                </div>
+            </div>
+        	-->
+        	<div class="container">
+				<div class="row contato-footer ">
+    <div class="col-xs-12 ">
+        <h2>Contato</h2>
+
+        <div class="row">
+            
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="contato-localizacao">
+                    <h3>CURITIBA-PR (Sede)</h3>
+                                        <p><a href="mailto:vendas@atibrasil.com.br">vendas@atibrasil.com.br</a></p>                    <p>(41) 3302-3400</p>                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="contato-localizacao">
+                    <h3>BELO HORIZONTE-MG (Filial)</h3>
+                                        <p><a href="mailto:vendas.bh@atibrasil.com.br">vendas.bh@atibrasil.com.br</a></p>                    <p>(31) 2516-6974</p>                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="contato-localizacao">
+                    <h3>CAMPINAS-SP (Filial)</h3>
+                                        <p><a href="mailto:vendas.campinas@atibrasil.com.br">vendas.campinas@atibrasil.com.br</a></p>                    <p>(19) 3238-9098</p>                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="contato-localizacao">
+                    <h3>CHAPECÓ-SC (Filial)</h3>
+                                        <p><a href="mailto:vendas.chapeco@atibrasil.com.br">vendas.chapeco@atibrasil.com.br</a></p>                    <p>(49) 3331-7000</p>                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="contato-localizacao">
+                    <h3>FORTALEZA-CE (Filial)</h3>
+                                        <p><a href="mailto:vendas.for@atibrasil.com.br">vendas.for@atibrasil.com.br</a></p>                    <p>(85) 3099-1500</p>                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="contato-localizacao">
+                    <h3>GOIÂNIA-GO (Filial)</h3>
+                                        <p><a href="mailto:vendas.go@atibrasil.com.br">vendas.go@atibrasil.com.br</a></p>                    <p>(62) 3932-2431</p>                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="contato-localizacao">
+                    <h3>JOINVILLE-SC (Filial)</h3>
+                                        <p><a href="mailto:vendas.joi@atibrasil.com.br">vendas.joi@atibrasil.com.br</a></p>                    <p>(47) 3433-1823</p>                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="contato-localizacao">
+                    <h3>PORTO ALEGRE-RS (Filial)</h3>
+                                        <p><a href="mailto:vendas.poa@atibrasil.com.br">vendas.poa@atibrasil.com.br</a></p>                    <p>(51) 3326-7015</p>                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="contato-localizacao">
+                    <h3>SÃO PAULO-SP (Filial)</h3>
+                                        <p><a href="mailto:vendas.sp@atibrasil.com.br">vendas.sp@atibrasil.com.br</a></p>                    <p>(11) 3577-5300</p>                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="contato-localizacao">
+                    <h3>SERRA-ES (Filial)</h3>
+                                        <p><a href="mailto:vendas.es@atibrasil.com.br">vendas.es@atibrasil.com.br</a></p>                    <p>(27) 3328-0028</p>                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="contato-localizacao">
+                    <h3></h3>
+                                                                            </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="contato-localizacao">
+                    <h3></h3>
+                                                                            </div>
+            </div>
+                
+        </div>
+    </div>
+</div>
+        	</div>
+            
+            <div class="row noRmargin noLmargin ">
+            	<div class="container-fluid desenvolvido-por">
+            		<div class="row noRmargin noLmargin">
+            			<div class="container noLpadding noRpadding">
+	            			<div class="col-xs-12 col-sm-6  noLpadding noRpadding">
+	            				<a href="http://bruc.com.br" target="_blank">Desenvolvido por Bruc Internet</a>
+	            			</div>
+
+							    <div class="col-xs-12 col-sm-6 noLpadding noRpadding">
+							      <div class="col-lg-6 col-lg-push-6 col-md-6 col-md-push-6 col-sm-10 col-sm-push-2 col-xs-12 noLpadding noRpadding">
+							        <div class="pull-right hidden-xs visible-sm visible-md visible-lg">Todos os direitos reservados</div>
+							        <div class="pull-left visible-xs hidden-sm hidden-md hidden-lg">Todos os direitos reservados</div>
+							      </div>
+							    </div>
+							</div>
+					</div>
+            	</div>
+        	</div>
+			
+		</div><!-- #page -->
+
+	<script type="text/javascript">
+var CUSTOMIZE_TEXTFIELD = 1;
+var FancyboxI18nNext = 'Pr&oacute;ximo';
+var FancyboxI18nPrev = 'Anterior';
+var FancyboxboxI18nClose = 'Fechar';
+var ajaxsearch = true;
+var baseDir = 'https://www.atibrasil.com.br/';
+var baseUri = 'https://www.atibrasil.com.br/';
+var blocksearch_type = 'top';
+var comparator_max_item = 3;
+var comparedProductsIds = [];
+var contentOnly = false;
+var customizationIdMessage = 'Personalização #';
+var delete_txt = 'Apagar';
+var freeProductTranslation = 'Grátis!';
+var freeShippingTranslation = 'Frete à calcular!';
+var generated_date = 1613491871;
+var id_lang = 1;
+var img_dir = 'https://cdn.atibrasil.com.br/themes/lojapadrao/img/';
+var instantsearch = false;
+var isGuest = 0;
+var isLogged = 0;
+var max_item = 'Você não pode adicionar mais de 3 produtos para comparar.';
+var min_item = 'Por favor selecione pelo menos um produto.';
+var page_name = 'category';
+var priceDisplayMethod = 0;
+var priceDisplayPrecision = 2;
+var quickView = true;
+var removingLinkText = 'Retirar este produto do meu carrinho';
+var request = 'https://www.atibrasil.com.br/40-rolamentos-e-ferramentas-skf?User-Agent=Mozilla%2F5.0+%28Windows+NT+6.4%3B+WOW64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F41.0.2225.0+Safari%2F537.36';
+var roundMode = 2;
+var search_url = 'https://www.atibrasil.com.br/pesquisa';
+var static_token = '5466771e161a7312bb458aeaeee8668d';
+var token = '0c35a211d3194b89a189f52e365e9c21';
+var usingSecureMode = true;
+</script>
+
+	    
+    		    
+    	<script type="text/javascript" src="/js/jquery/jquery-migrate-1.2.1.min.js"></script>	    
+    	<script type="text/javascript" src="/js/jquery/plugins/jquery.easing.js"></script>	    
+    	<script type="text/javascript" src="/js/jquery/plugins/fancybox/jquery.fancybox.js"></script>	    
+    	<script type="text/javascript" src="/js/jquery/plugins/jquery.scrollTo.js"></script>	    
+    	<script type="text/javascript" src="/js/jquery/plugins/jquery.serialScroll.js"></script>	    
+    	<script type="text/javascript" src="/js/jquery/plugins/bxslider/jquery.bxslider.js"></script>	    
+    	<script type="text/javascript" src="/js/jquery/plugins/autocomplete/jquery.autocomplete.js"></script>	    
+    	<script type="text/javascript" src="/js/jquery/plugins/jquery.cooki-plugin.js"></script>	    
+    	<script type="text/javascript" src="/modules/pagecache/views/js/pagecache.js"></script>	    
+    	<script type="text/javascript" src="/js/tools.js"></script>	    
+    	<script type="text/javascript" src="/themes/lojapadrao/js/global.js"></script>	    
+    	<script type="text/javascript" src="/themes/lojapadrao/js/autoload/10-bootstrap.min.js"></script>	    
+    	<script type="text/javascript" src="/themes/lojapadrao/js/autoload/15-jquery.total-storage.min.js"></script>	    
+    	<script type="text/javascript" src="/themes/lojapadrao/js/autoload/15-jquery.uniform-modified.js"></script>	    
+    	<script type="text/javascript" src="/themes/lojapadrao/js/products-comparison.js"></script>	    
+    	<script type="text/javascript" src="/themes/lojapadrao/js/category.js"></script>	    
+    	<script type="text/javascript" src="/themes/lojapadrao/js/modules/blockcart/ajax-cart.js"></script>	    
+    	<script type="text/javascript" src="/themes/lojapadrao/js/tools/treeManagement.js"></script>	    
+    	<script type="text/javascript" src="/themes/lojapadrao/js/modules/sendynewsletter/sendynewsletter.js"></script>	    
+    	<script type="text/javascript" src="/modules/revsliderprestashop/views/js/rs-plugin/js/jquery.themepunch.tools.min.js"></script>	    
+    	<script type="text/javascript" src="/modules/revsliderprestashop/views/js/rs-plugin/js/jquery.themepunch.revolution.js"></script>	    
+    	<script type="text/javascript" src="/modules/bamegamenu/views/js/megamenu.js"></script>	    
+    	<script type="text/javascript" src="/modules/leomanufacturerscroll/assets/jquery.flexisel.js"></script>	    
+    	<script type="text/javascript" src="/modules/leomanufacturerscroll/assets/owl-carousel/owl.carousel.js"></script>	    
+    	<script type="text/javascript" src="/themes/lojapadrao/js/modules/blocksearch/blocksearch.js"></script>	    
+    	<script type="text/javascript" src="/modules/ganalytics/views/js/GoogleAnalyticActionLib.js"></script>	    
+    	<script type="text/javascript" src="/modules/fkcorreiosg2/js/fkcorreiosg2_fancybox.js"></script>	    
+    	<script type="text/javascript" src="/modules/fkcorreiosg2/js/fkcorreiosg2_front.js"></script>	    
+    	<script type="text/javascript" src="/modules/fkcorreiosg2/js/jquery.maskedinput.js"></script>
+</body></html>

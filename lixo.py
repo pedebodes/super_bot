@@ -67,9 +67,9 @@ from bs4 import BeautifulSoup
 # r = requests.get(goog_search)
 # soup = BeautifulSoup(r.text)
 # import pdb; pdb.set_trace()
-for link in soup.find_all("a"):
-    print ("++===== = "+link.get("href"))
-import pdb; pdb.set_trace()
+# for link in soup.find_all("a"):
+#     print ("++===== = "+link.get("href"))
+# import pdb; pdb.set_trace()
 
 
 
