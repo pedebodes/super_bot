@@ -71,35 +71,45 @@ def getUrls(busca,n_results=3000):
                 result = list(filter(lambda x: str(ext).lower() in x, ignorarExtensoes))  
                 
                 addUrl = UrlBase()
-                if len(result) > 0:
-                    addUrl.dominio = urlparse(x.group(1)).netloc
-                    addUrl.url = x.group(1)
-                else:
-                    addUrl.dominio = urlparse(x.group(1)).netloc
-                    addUrl.url = urlparse(x.group(1)).scheme+"://"+urlparse(x.group(1)).netloc
+                if bool(urlparse(x.group(1)).netloc.strip()):
+                    if len(result) > 0:
+                        addUrl.dominio = urlparse(x.group(1)).netloc
+                        addUrl.url = x.group(1)
+                    else:
+                        addUrl.dominio = urlparse(x.group(1)).netloc
+                        addUrl.url = urlparse(x.group(1)).scheme+"://"+urlparse(x.group(1)).netloc
+
+                    session.add(addUrl)
+                    session.commit()
                 
-                session.add(addUrl)
-                session.commit() #TODO: bolsonaro retorna NONE no dominio VERIFICAR - ULTIMO RESGISTRO RETORNA NONE nem sempre
-                
-                it_url = itemUrl()
-                it_url.url_id =addUrl.id
-                it_url.item_pesquisa_id = item_pesquisa.id
-                session.add(it_url)
-                
+                    it_url = itemUrl()
+                    it_url.url_id =addUrl.id
+                    it_url.item_pesquisa_id = item_pesquisa.id
+                    session.add(it_url)
+                    
                 
     session.commit()
     return (links)    
 
+    
 def pesquisa(busca):
-    ignorar = session.query(UrlIgnorar).all()
-    x = nltk.edit_distance(str(busca), "rolamento")
-    print(x)
+    ignorar = session.query(ItemPesquisa).all()
     
-    import pdb; pdb.set_trace()
-    # getUrls(busca)
-    pass
+    id_similares = []
+    for i in ignorar:
+        # verifica distancia de similaridade da palavra buscada
+        x = nltk.edit_distance(str(busca), i.item)
+        if x < 3:
+            id_similares.append(i.id)
     
-
+    if len(id_similares) > 0:
+        # TODO: PENDETE 
+        
+        return getUrls(busca) # isso vai sair daqui
+    else:
+        print("Busca o pelo nome")
+        # return getUrls(busca)
+        return getUrls(busca)
 
 
 

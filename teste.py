@@ -1,3 +1,3 @@
 from scrapy import pesquisa
 
-print(pesquisa("bolsonaro"))
+print(pesquisa("rolamentos"))
