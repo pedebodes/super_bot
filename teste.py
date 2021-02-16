@@ -1,3 +1,3 @@
-from scrapy import getUrls
+from scrapy import pesquisa
 
-print(getUrls("bolsonaro"))
+print(pesquisa("bolsonaro"))

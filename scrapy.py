@@ -9,6 +9,8 @@ from fake_useragent import UserAgent
 import pathlib
 from time import sleep
 import random
+import nltk
+
 header = Headers(
         headers=True
     )
@@ -24,9 +26,6 @@ def getUrls(busca,n_results=3000):
     n_results = int(n_results)
 
     url = "https://www.google.com/search?q=" + busca + "&num=" + str(n_results)
-    
-    
-    # TODO: pesquisar se ja tem pesquisa com o mesmo assunto e retornar os resultados, e parar o processamento
     
     item_pesquisa = ItemPesquisa()
     item_pesquisa.item = busca
@@ -44,9 +43,6 @@ def getUrls(busca,n_results=3000):
     
     it_url = itemUrl()
     
-    print(response)
-    # import pdb; pdb.set_trace()
-    
     soup = BeautifulSoup(response.text, "html.parser")
     result = soup.find_all('div', attrs = {'class': 'ZINbbc'})
     
@@ -55,7 +51,6 @@ def getUrls(busca,n_results=3000):
         ln = i.find('a', href = True)            
         if ln is not None:
             results.append(re.search('\/url\?q\=(.*)\&sa',str(ln['href'])))
-    # results=[re.search('\/url\?q\=(.*)\&sa',str(i.find('a', href = True)['href'])) for i in result]
     results = res = [i for i in results if i] 
     
     links=[i.group(1) for i in results if i != None]
@@ -84,7 +79,7 @@ def getUrls(busca,n_results=3000):
                     addUrl.url = urlparse(x.group(1)).scheme+"://"+urlparse(x.group(1)).netloc
                 
                 session.add(addUrl)
-                session.commit()
+                session.commit() #TODO: bolsonaro retorna NONE no dominio VERIFICAR - ULTIMO RESGISTRO RETORNA NONE nem sempre
                 
                 it_url = itemUrl()
                 it_url.url_id =addUrl.id
@@ -95,7 +90,21 @@ def getUrls(busca,n_results=3000):
     session.commit()
     return (links)    
 
+def pesquisa(busca):
+    ignorar = session.query(UrlIgnorar).all()
+    x = nltk.edit_distance(str(busca), "rolamento")
+    print(x)
+    
+    import pdb; pdb.set_trace()
+    # getUrls(busca)
+    pass
+    
+
+
+
+
 
 def getDados():
     # TODO:  Pendente
     pass
+
