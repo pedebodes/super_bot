@@ -56,12 +56,17 @@ def getUrls(busca,n_results=3000):
         if ln is not None:
             results.append(re.search('\/url\?q\=(.*)\&sa',str(ln['href'])))
     # results=[re.search('\/url\?q\=(.*)\&sa',str(i.find('a', href = True)['href'])) for i in result]
+    results = res = [i for i in results if i] 
     
     links=[i.group(1) for i in results if i != None]
     for x in results:
         if x != None:
-            
-            ignorar = session.query(UrlIgnorar).filter(UrlIgnorar.dominio.ilike(urlparse(x.group(1)).netloc.split('.')[1])).all()
+
+            ul =urlparse(x.group(1)).netloc.split('.')[0]
+            if ul == 'www':
+                ul =urlparse(x.group(1)).netloc.split('.')[1]
+
+            ignorar = session.query(UrlIgnorar).filter(UrlIgnorar.dominio.ilike(ul)).all()
             if len(ignorar) == 0:
                 
                 ext = pathlib.Path(x.group(1)).suffix
@@ -70,7 +75,6 @@ def getUrls(busca,n_results=3000):
 
                 result = list(filter(lambda x: str(ext).lower() in x, ignorarExtensoes))  
                 
-              
                 addUrl = UrlBase()
                 if len(result) > 0:
                     addUrl.dominio = urlparse(x.group(1)).netloc
@@ -89,13 +93,7 @@ def getUrls(busca,n_results=3000):
                 
                 
     session.commit()
-    
-    
-    
-    
     return (links)    
-
-
 
 
 def getDados():
