@@ -1,4 +1,18 @@
-filename = '1.txt'
+# pesquisar
+url ='http://www.lucios.com/'
+# url ='https://rolimac.com.br'
+# url ='https://rolemarolamentos.com.br'
+# url ='http://www.casadorolamentobh.amawebs.com'
+url = 'https://www.cofermeta.com.br/'
+
+filename = '2.txt'
+
+# import requests
+# r = requests.get(url)  
+# with open(filename, 'wb') as f:
+#     f.write(r.content)
+
+
 
 #re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", part1, part2) #EmAIL
 # return re.search("\d{2}.\d{3}.\d{3}/\d{4}-\d{2}", part1).group() #CNPJ
@@ -11,8 +25,15 @@ filename = '1.txt'
 
 cnpj = "\d{2}.\d{3}.\d{3}/\d{4}-\d{2}"
 email1 = r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+"
-tel1 = '\(\d{2}\)\s\d{4,5}\-\d{4}'
-tel2 = '(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})'
+tel1 = '(?:\\+?(\\d{1,2}))?[-.(]*(\\d{3})?[-. )]*(\\d{4})[-. ]*(\\d{4,5})?'
+
+# tel1 = '^(\+?[01])?[-.\s]?\(?[1-9]\d{2}\)?[-.\s]?\d{3}[-.\s]?\d{4}'
+# tel1 = '^(\+5?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$'
+
+
+
+# tel1 = '\(\d{2}\)\s\d{4,5}\-\d{4}'
+tel1 = '(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})'
 cep = 'CEP\s*(\d{5})-(\d{3})'
  
 
@@ -20,8 +41,8 @@ cep = 'CEP\s*(\d{5})-(\d{3})'
 
 
 
-# CEP 32010-040 
-# CEP  83830-010 
+# Tel: +55 27 3232 4242
+# Fax: +55 27 3232-4214
 
 
 import re
@@ -36,7 +57,7 @@ textfile.close()
 CEP = removeDuplicado(re.findall(cep, filetext))
 CNPJ = removeDuplicado(re.findall(cnpj, filetext))
 TEL1 = removeDuplicado(re.findall(tel1, filetext))
-TEL2 = removeDuplicado(re.findall(tel2, filetext))
+# TEL2 = removeDuplicado(re.findall(tel2, filetext))
 Email1 = removeDuplicado(re.findall(email1, filetext))
 
 # print(CEP)
@@ -44,6 +65,11 @@ Email1 = removeDuplicado(re.findall(email1, filetext))
 # print(TEL1) #OK
 # # print(TEL2) #OK
 # print(Email1) #OK
+
+print(type(TEL1)) 
+print(TEL1) 
+
+
 
 def removeDuplicado(valor):
     return list(dict.fromkeys(valor))
@@ -63,14 +89,7 @@ def regex(opcao,arquivo):
     return tipoRegex.get(
         opcao
         ,"Opcao invalida")
-    # return tipoRegex.get(
-    #     json.dumps(
-    #     removeDuplicado(
-    #         re.findall(opcao, arquivo)
-    #         )
-    #     ),"Opcao invalida")
-
-print (regex('email',filetext))
+# print (regex('email',filetext))
 
 # import pdb; pdb.set_trace()
 

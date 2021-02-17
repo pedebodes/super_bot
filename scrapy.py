@@ -34,10 +34,10 @@ def getUrls(busca,n_results=3000):
     session.commit()
 
     ua = UserAgent()
-    sleep(random.randint(0,10)) 
+    sleep(random.randint(2,30)) 
     response = requests.get(url, {"User-Agent": ua.random} )  
     if response.status_code != 200:
-        sleep(random.randint(0,10)) 
+        sleep(random.randint(2,30)) 
         response = requests.get(url, headers=header.generate() ) 
     
     it_url = itemUrl()
@@ -120,7 +120,7 @@ def getDados(item_pesquisa_id):
     emails = set()  
 
     result = session.query(UrlBase)\
-        .filter(UrlBase.id > 7 )\
+        .filter(UrlBase.id > 35 )\
         .distinct()\
         .all()
         # .filter(UrlBase.dominio == 'www.cofermeta.com.br')\
@@ -190,10 +190,10 @@ def getDados(item_pesquisa_id):
             #     response = requests.get(url, headers=header.generate() ) 
 
             ua = UserAgent(cache=False)    
-            sleep(random.randint(2,20)) 
+            sleep(random.randint(2,30)) 
             response = requests.get(url, {"User-Agent": ua.random} )  
             if response.status_code != 200:
-                sleep(random.randint(2,20)) 
+                sleep(random.randint(2,30)) 
                 response = requests.get(url, headers=header.generate() ) 
                 
             parts = urlsplit(url)
