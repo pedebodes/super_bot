@@ -9,7 +9,8 @@ from fake_useragent import UserAgent
 import pathlib
 from time import sleep
 import random
-import nltk
+# import nltk
+import util
 from collections import deque 
 header = Headers(
         headers=True
@@ -93,21 +94,21 @@ def getUrls(busca,n_results=3000):
 def pesquisa(busca):
     ignorar = session.query(ItemPesquisa).all()
     
-    id_similares = []
-    for i in ignorar:
-        # verifica distancia de similaridade da palavra buscada
-        x = nltk.edit_distance(str(busca), i.item)
-        if x < 3:
-            id_similares.append(i.id)
+    # id_similares = []
+    # for i in ignorar:
+    #     # verifica distancia de similaridade da palavra buscada
+    #     x = nltk.edit_distance(str(busca), i.item)
+    #     if x < 3:
+    #         id_similares.append(i.id)
     
-    if len(id_similares) > 0:
-        # TODO: PENDETE 
+    # if len(id_similares) > 0:
+    #     # TODO: PENDETE 
         
-        return getUrls(busca) # isso vai sair daqui
-    else:
-        print("Busca o pelo nome")
-        # return getUrls(busca)
-        return getUrls(busca)
+    return getUrls(busca) # isso vai sair daqui
+    # else:
+    #     print("Busca o pelo nome")
+    #     # return getUrls(busca)
+    #     return getUrls(busca)
 
 
 
@@ -119,56 +120,56 @@ def getDados(item_pesquisa_id):
     emails = set()  
 
     result = session.query(UrlBase)\
+        .filter(UrlBase.id > 7 )\
         .distinct()\
         .all()
         # .filter(UrlBase.dominio == 'www.cofermeta.com.br')\
-        # .filter(UrlBase.id == 2 )\
 
             
-    def getEmail(part1, part2):
-        try:
-            return list(
-                dict.fromkeys(
-                    re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", part1, part2)
-                    )
-                )
-        except:
-            return None
+    # def getEmail(part1, part2):
+    #     try:
+    #         return list(
+    #             dict.fromkeys(
+    #                 re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", part1, part2)
+    #                 )
+    #             )
+    #     except:
+    #         return None
 
-    def getCnpj(part1):
-        try:
-            return re.search("\d{2}.\d{3}.\d{3}/\d{4}-\d{2}", part1).group()
-        except:
-            return None
+    # def getCnpj(part1):
+    #     try:
+    #         return re.search("\d{2}.\d{3}.\d{3}/\d{4}-\d{2}", part1).group()
+    #     except:
+    #         return None
         
-        pass
-    def getTelefoneFixo(part1):
-        try:
-            return re.search('\(\d{2}\) \s\d{4}\-\d{4}', part1).group()
-        except:
-            return None
+    #     pass
+    # def getTelefoneFixo(part1):
+    #     try:
+    #         return re.search('\(\d{2}\) \s\d{4}\-\d{4}', part1).group()
+    #     except:
+    #         return None
         
-    def getCelular(part1):
-        try:
-            return re.search('\(\d{2}\) \s\d{5}\-\d{4}', part1).group()
-        except:
-            return None
-    def getCelularAPI(part1):
-        try:
-            return re.search('\d{13}', part1).group()
-        except:
-            return None
+    # def getCelular(part1):
+    #     try:
+    #         return re.search('\(\d{2}\) \s\d{5}\-\d{4}', part1).group()
+    #     except:
+    #         return None
+    # def getCelularAPI(part1):
+    #     try:
+    #         return re.search('\d{13}', part1).group()
+    #     except:
+    #         return None
         
-    def getCep(part1):
-        try:
-            return re.search(r"CEP: \d{5}.\d{3}", part1).group()
-        except:
-            return None
-    def getCep1(part1):
-        try:
-            return re.search(r"\d{5}-\d{3}", part1).group()
-        except:
-            return None
+    # def getCep(part1):
+    #     try:
+    #         return re.search(r"CEP: \d{5}.\d{3}", part1).group()
+    #     except:
+    #         return None
+    # def getCep1(part1):
+    #     try:
+    #         return re.search(r"\d{5}-\d{3}", part1).group()
+    #     except:
+    #         return None
 
 
     for row in result:
@@ -201,17 +202,20 @@ def getDados(item_pesquisa_id):
             base_url = "{0.scheme}://{0.netloc}".format(parts)  
             path = url[:url.rfind('/')+1] if '/' in parts.path else url     
             
-            new_emails = set(re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", response.text, re.I))  
-            emails.update(new_emails)  
+            # new_emails = set(re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", response.text, re.I))  
+            # emails.update(new_emails)  
             
-
-            email = getEmail(response.text, re.I)
-            if email is not None and len(email) > 0:
-                session.query(UrlBase).filter(UrlBase.id == row.id).update({"email": str(email)})
+            email = util.regex('email',response.text)
+            # import pdb; pdb.set_trace()
+            # email = getEmail(response.text, re.I)
+            if email is not None and email != '[]':
+                # session.query(UrlBase).filter(UrlBase.id == row.id).update({"email": str(email)})
+                session.query(UrlBase).filter(UrlBase.id == row.id).update({"email": email})
             
-            import pdb; pdb.set_trace()
-            cnpj = getCnpj(response.text)
-            if cnpj is not None:
+            
+            # cnpj = getCnpj(response.text)
+            cnpj = util.regex('cnpj',response.text)
+            if cnpj is not None and cnpj != '[]':
                 session.query(UrlBase).filter(UrlBase.id == row.id).update({"cnpj": cnpj})
                 # try:
                 #     session.query(UrlBase).filter(UrlBase.id == row.id).update({"dados_cnpj": str(consulta(cnpj))})
@@ -219,8 +223,9 @@ def getDados(item_pesquisa_id):
                 #     pass
 
 
-            cep = getCep1(response.text)
-            if cep is not None:
+            cep = util.regex('cep',response.text)
+            # cep = getCep1(response.text)
+            if cep is not None and cep != '[]':
                 session.query(UrlBase).filter(UrlBase.id == row.id).update({"cep": cep})
                 # try:
                 #     d = viacep.ViaCEP(cep.replace("-","").replace(".",""))
@@ -230,9 +235,9 @@ def getDados(item_pesquisa_id):
                 # except:
                 #     pass
                 
-            cep = getCep(response.text)
-            if cep is not None:
-                session.query(UrlBase).filter(UrlBase.id == row.id).update({"cep": cep.split()[1]})
+            # cep = getCep(response.text)
+            # if cep is not None:
+            #     session.query(UrlBase).filter(UrlBase.id == row.id).update({"cep": cep.split()[1]})
                 # try:
                 #     d = viacep.ViaCEP(cep.replace("-","").replace(".",""))
                 #     endereco = d.getDadosCEP()
@@ -243,21 +248,23 @@ def getDados(item_pesquisa_id):
                 
                 
 
-            fixo =getTelefoneFixo(response.text)  
-            if fixo is not None:
+            fixo =util.regex('telefone',response.text) 
+            # fixo =getTelefoneFixo(response.text)  
+            if fixo is not None and fixo != '[]':
                 session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_fixo": fixo})
                 
             
-            celularAPI =getCelularAPI(response.text)                 
-            if celularAPI is not None:
+            celularAPI =util.regex('telefoneAPI',response.text) 
+            # celularAPI =getCelularAPI(response.text)                 
+            if celularAPI is not None and celularAPI != '[]':
                 celularAPI = celularAPI if celularAPI[:2] == '55' else None
                 if celularAPI is not None:
                     session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": celularAPI })
             
-            celular =getCelular(response.text) 
+            # celular =getCelular(response.text) 
                                                     
-            if celular is not None:
-                session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": celular })
+            # if celular is not None:
+            #     session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": celular })
                 
                 
                 
