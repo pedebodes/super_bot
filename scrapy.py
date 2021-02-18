@@ -13,7 +13,6 @@ import random
 import util
 import json
 from collections import deque 
-from requisicao import getRequest
 
 header = Headers(
         headers=True
@@ -42,7 +41,8 @@ def getUrls(busca,n_results=3000):
     if response.status_code != 200:
         sleep(random.randint(2,30)) 
         response = requests.get(url, headers=header.generate() ) 
-    
+    # response = util.getRequest(url)
+    # print(url)
     it_url = itemUrl()
     
     soup = BeautifulSoup(response.text, "html.parser")
@@ -126,9 +126,9 @@ def getDados(item_pesquisa_id):
     emails = set()  
 
     result = session.query(UrlBase)\
+        .filter(UrlBase.id > 97 )\
         .distinct()\
         .all()
-        # .filter(UrlBase.id >= 15 )\
         # .filter(UrlBase.dominio == 'www.cofermeta.com.br')\
 
 
@@ -148,11 +148,11 @@ def getDados(item_pesquisa_id):
             #         response = requests.get(url, headers=header.generate() ) 
             #     else:
             #         status = True
-            response = getRequest(url)    
+            response = util.getRequest(url)    
             print("############################")    
             print(response)
             if response:
-                if response.status_code != 200:
+                if response.status_code != 200:#403 404
                     print("DEU ERRO")
                     import pdb; pdb.set_trace()
                 print("############################")    
