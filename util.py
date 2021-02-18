@@ -5,6 +5,8 @@ from time import sleep
 import random
 import re
 import json
+from fake_useragent import UserAgent
+
 
 def removeDuplicado(valor):
     return list(dict.fromkeys(valor))
@@ -30,8 +32,16 @@ def getRequest(url):
         header = Headers(
             headers=True
         )
+        # sleep(random.randint(2,30)) 
+        # return requests.get(url, headers=header.generate()) # timeout=5,verify = False
+        ua = UserAgent()
         sleep(random.randint(2,30)) 
-        return requests.get(url, headers=header.generate()) # timeout=5,verify = False
+        response = requests.get(url, {"User-Agent": ua.random} )  
+        if response.status_code != 200:
+            sleep(random.randint(2,30)) 
+            response = requests.get(url, headers=header.generate() ) 
+        return response
+
     except HTTPError as http_err:
         print(f'Erro HTTP: {http_err}')
         return False

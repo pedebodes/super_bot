@@ -1,4 +1,4 @@
 from scrapy import pesquisa, getDados
 
-# print(pesquisa("rolamento 6602"))
-print(getDados(3))
+print(pesquisa("rolamentos"))
+# print(getDados(14))

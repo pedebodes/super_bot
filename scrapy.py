@@ -1,14 +1,15 @@
-import requests
+import requests  # aqui
 import re
 import urllib
 from urllib.parse import urlparse, urlsplit
 from bs4 import BeautifulSoup
+from requests.models import Response # aqui
 from migrate import session,UrlBase,UrlIgnorar,itemUrl,ItemPesquisa
 from fake_headers import Headers
 from fake_useragent import UserAgent
 import pathlib
-from time import sleep
-import random
+from time import sleep # aqui
+import random # aqui
 # import nltk
 import util
 import json
@@ -34,17 +35,16 @@ def getUrls(busca,n_results=3000):
     item_pesquisa.item = busca
     session.add(item_pesquisa)
     session.commit()
-# TODO: remover 
-    ua = UserAgent()
-    sleep(random.randint(2,30)) 
-    response = requests.get(url, {"User-Agent": ua.random} )  
-    if response.status_code != 200:
-        sleep(random.randint(2,30)) 
-        response = requests.get(url, headers=header.generate() ) 
-    # response = util.getRequest(url)
-    # print(url)
-    it_url = itemUrl()
-    
+
+    # ua = UserAgent()
+    # sleep(random.randint(2,30)) 
+    # response = requests.get(url, {"User-Agent": ua.random} )  
+    # if response.status_code != 200:
+    #     sleep(random.randint(2,30)) 
+    #     response = requests.get(url, headers=header.generate() ) 
+
+    # it_url = itemUrl()
+    response = util.getRequest(url)
     soup = BeautifulSoup(response.text, "html.parser")
     result = soup.find_all('div', attrs = {'class': 'ZINbbc'})
     
@@ -63,7 +63,7 @@ def getUrls(busca,n_results=3000):
             if ul == 'www':
                 ul =urlparse(x.group(1)).netloc.split('.')[1]
 
-            ignorar = session.query(UrlIgnorar).filter(UrlIgnorar.dominio.ilike(ul)).all()
+            ignorar = session.query(UrlIgnorar).filter(UrlIgnorar.dominio.ilike(ul)).all() #TODO: validar
             if len(ignorar) == 0:
                 
                 ext = pathlib.Path(x.group(1)).suffix
@@ -91,63 +91,45 @@ def getUrls(busca,n_results=3000):
                     
                 
     session.commit()
+    return (item_pesquisa.id)    
     return (links)    
 
     
 def pesquisa(busca):
-    ignorar = session.query(ItemPesquisa).all()
     
-    # id_similares = []
-    # for i in ignorar:
-    #     # verifica distancia de similaridade da palavra buscada
-    #     x = nltk.edit_distance(str(busca), i.item)
-    #     if x < 3:
-    #         id_similares.append(i.id)
+    item_pesquisa =  getUrls(busca)
+    # TODO: com o id da pesquisa, rodar query para remover duplicados, depois coletar os dados passando o id do item pesquisa
+    getDados(item_pesquisa)
     
-    # if len(id_similares) > 0:
-    #     # TODO: PENDETE 
     
-    # x = getRequest('https://www.lojadomecanico.com.br/mundo-dos-rolamentos-belo-horizonte-mg')
-    # import pdb; pdb.set_trace()
-            
-    return getUrls(busca) # isso vai sair daqui
-    # else:
-    #     print("Busca o pelo nome")
-    #     # return getUrls(busca)
-    #     return getUrls(busca)
+    return "aui"
 
 
 
 
-def getDados(item_pesquisa_id):
+def getDados(item_pesquisa):
 
     VARRER_TODO_SITE =  False
     processed_urls = set() 
     emails = set()  
 
-    result = session.query(UrlBase)\
-        .filter(UrlBase.id > 97 )\
-        .distinct()\
-        .all()
+    # result = session.query(UrlBase)\
+    #     .filter(UrlBase.id == 1 )\
+    #     .distinct()\
+    #     .all()
         # .filter(UrlBase.dominio == 'www.cofermeta.com.br')\
 
-
+    result = session.query(UrlBase)\
+        .join(itemUrl,UrlBase.id == itemUrl.url_id)\
+        .filter(itemUrl.item_pesquisa_id== item_pesquisa)\
+        .all()
+        
     for row in result:
         new_urls = deque([row.url])
         while len(new_urls):  
             url = new_urls.popleft()  
             processed_urls.add(url)  
 
-            # status = True
-            # while status:
-            #     ua = UserAgent(cache=False)    
-            #     sleep(random.randint(2,30)) 
-            #     response = requests.get(url, {"User-Agent": ua.random} )  
-            #     if response.status_code != 200:
-            #         sleep(random.randint(2,30)) 
-            #         response = requests.get(url, headers=header.generate() ) 
-            #     else:
-            #         status = True
             response = util.getRequest(url)    
             print("############################")    
             print(response)
@@ -225,8 +207,9 @@ def getDados(item_pesquisa_id):
      
      
 def getDadosCEP(cep):
-    url_api = ('http://www.viacep.com.br/ws/%s/json' % cep)
-    req = requests.get(url_api)
+    url = ('http://www.viacep.com.br/ws/%s/json' % cep)
+    
+    req = util.getRequest(url) 
     if req.status_code == 200:
         dados_json = json.loads(req.text)
         return dados_json
@@ -250,16 +233,8 @@ def getDadosCNPJ(cnpj):
     cnpj = parse_input(cnpj)
 
     url = 'http://receitaws.com.br/v1/cnpj/{0}'.format(cnpj)
-    opener = urllib.request.build_opener()
-    opener.addheaders = [
-        ('User-agent',
-         " Mozilla/5.0 (Windows NT 6.2; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0")]
-
-    with opener.open(url) as fd:
-        content = fd.read().decode()
-
-    dic = json.loads(content)
-
-    return dic
+    req = util.getRequest(url)  
+    if req.status_code == 200:
+        return json.loads(req.text)
    
     
