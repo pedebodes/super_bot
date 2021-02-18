@@ -11,7 +11,10 @@ from time import sleep
 import random
 # import nltk
 import util
+import json
 from collections import deque 
+from requisicao import getRequest
+
 header = Headers(
         headers=True
     )
@@ -32,7 +35,7 @@ def getUrls(busca,n_results=3000):
     item_pesquisa.item = busca
     session.add(item_pesquisa)
     session.commit()
-
+# TODO: remover 
     ua = UserAgent()
     sleep(random.randint(2,30)) 
     response = requests.get(url, {"User-Agent": ua.random} )  
@@ -103,7 +106,10 @@ def pesquisa(busca):
     
     # if len(id_similares) > 0:
     #     # TODO: PENDETE 
-        
+    
+    # x = getRequest('https://www.lojadomecanico.com.br/mundo-dos-rolamentos-belo-horizonte-mg')
+    # import pdb; pdb.set_trace()
+            
     return getUrls(busca) # isso vai sair daqui
     # else:
     #     print("Busca o pelo nome")
@@ -120,56 +126,10 @@ def getDados(item_pesquisa_id):
     emails = set()  
 
     result = session.query(UrlBase)\
-        .filter(UrlBase.id > 35 )\
         .distinct()\
         .all()
+        # .filter(UrlBase.id >= 15 )\
         # .filter(UrlBase.dominio == 'www.cofermeta.com.br')\
-
-            
-    # def getEmail(part1, part2):
-    #     try:
-    #         return list(
-    #             dict.fromkeys(
-    #                 re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", part1, part2)
-    #                 )
-    #             )
-    #     except:
-    #         return None
-
-    # def getCnpj(part1):
-    #     try:
-    #         return re.search("\d{2}.\d{3}.\d{3}/\d{4}-\d{2}", part1).group()
-    #     except:
-    #         return None
-        
-    #     pass
-    # def getTelefoneFixo(part1):
-    #     try:
-    #         return re.search('\(\d{2}\) \s\d{4}\-\d{4}', part1).group()
-    #     except:
-    #         return None
-        
-    # def getCelular(part1):
-    #     try:
-    #         return re.search('\(\d{2}\) \s\d{5}\-\d{4}', part1).group()
-    #     except:
-    #         return None
-    # def getCelularAPI(part1):
-    #     try:
-    #         return re.search('\d{13}', part1).group()
-    #     except:
-    #         return None
-        
-    # def getCep(part1):
-    #     try:
-    #         return re.search(r"CEP: \d{5}.\d{3}", part1).group()
-    #     except:
-    #         return None
-    # def getCep1(part1):
-    #     try:
-    #         return re.search(r"\d{5}-\d{3}", part1).group()
-    #     except:
-    #         return None
 
 
     for row in result:
@@ -177,115 +137,129 @@ def getDados(item_pesquisa_id):
         while len(new_urls):  
             url = new_urls.popleft()  
             processed_urls.add(url)  
-            # ua = UserAgent(cache=False)
-            # url = "https://rolamentoscbf.com.br/"
-            # print("Processando %s" % url)  
 
-            # sleep(random.randint(0,10)) 
-            # headers = {"User-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"}
-            # response = requests.get(url, headers=headers )  
-            # response = requests.get(url, {"User-Agent": ua.random} )  
-            # if response.status_code != 200:
-            #     sleep(random.randint(0,10)) 
-            #     response = requests.get(url, headers=header.generate() ) 
+            # status = True
+            # while status:
+            #     ua = UserAgent(cache=False)    
+            #     sleep(random.randint(2,30)) 
+            #     response = requests.get(url, {"User-Agent": ua.random} )  
+            #     if response.status_code != 200:
+            #         sleep(random.randint(2,30)) 
+            #         response = requests.get(url, headers=header.generate() ) 
+            #     else:
+            #         status = True
+            response = getRequest(url)    
+            print("############################")    
+            print(response)
+            if response:
+                if response.status_code != 200:
+                    print("DEU ERRO")
+                    import pdb; pdb.set_trace()
+                print("############################")    
+                parts = urlsplit(url)
+                # ua.update()
+                
+                base_url = "{0.scheme}://{0.netloc}".format(parts)  
+                path = url[:url.rfind('/')+1] if '/' in parts.path else url     
+                
+                email = util.regex('email',response.text)
+                if email is not None and email != '[]':
+                    session.query(UrlBase).filter(UrlBase.id == row.id).update({"email": email})
+                
+                
+                cnpj = util.regex('cnpj',response.text)
+                if cnpj is not None and cnpj != '[]':
+                    session.query(UrlBase).filter(UrlBase.id == row.id).update({"cnpj": cnpj})
+                    try:
+                        session.query(UrlBase).filter(UrlBase.id == row.id).update({"dados_cnpj": str(getDadosCNPJ(cnpj))})
+                    except:
+                        pass
 
-            ua = UserAgent(cache=False)    
-            sleep(random.randint(2,30)) 
-            response = requests.get(url, {"User-Agent": ua.random} )  
-            if response.status_code != 200:
-                sleep(random.randint(2,30)) 
-                response = requests.get(url, headers=header.generate() ) 
-                
-            parts = urlsplit(url)
-            ua.update()
-            
-            base_url = "{0.scheme}://{0.netloc}".format(parts)  
-            path = url[:url.rfind('/')+1] if '/' in parts.path else url     
-            
-            # new_emails = set(re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", response.text, re.I))  
-            # emails.update(new_emails)  
-            
-            email = util.regex('email',response.text)
-            # import pdb; pdb.set_trace()
-            # email = getEmail(response.text, re.I)
-            if email is not None and email != '[]':
-                # session.query(UrlBase).filter(UrlBase.id == row.id).update({"email": str(email)})
-                session.query(UrlBase).filter(UrlBase.id == row.id).update({"email": email})
-            
-            
-            # cnpj = getCnpj(response.text)
-            cnpj = util.regex('cnpj',response.text)
-            if cnpj is not None and cnpj != '[]':
-                session.query(UrlBase).filter(UrlBase.id == row.id).update({"cnpj": cnpj})
-                # try:
-                #     session.query(UrlBase).filter(UrlBase.id == row.id).update({"dados_cnpj": str(consulta(cnpj))})
-                # except:
-                #     pass
+                cep = util.regex('cep',response.text)
+                if cep is not None and cep != '[]':
+                    session.query(UrlBase).filter(UrlBase.id == row.id).update({"cep": cep})
+                    try:
+                        endereco = getDadosCEP(parse_input(cep))
+                        if not "erro" in endereco:
+                            session.query(UrlBase).filter(UrlBase.id == row.id).update({"endereco": endereco})
+                    except:
+                        pass
 
+                fixo =util.regex('telefone',response.text) 
+                if fixo is not None and fixo != '[]':
+                    session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_fixo": fixo})
+                    
+                
+                celularAPI =util.regex('telefoneAPI',response.text) 
+                if celularAPI is not None and celularAPI != '[]':
+                    celularAPI = celularAPI if celularAPI[:2] == '55' else None
+                    if celularAPI is not None:
+                        session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": celularAPI })
+                
+                # celular =getCelular(response.text) 
+                                                        
+                # if celular is not None:
+                #     session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": celular })
+                    
+                    
+                    
+                session.commit()
 
-            cep = util.regex('cep',response.text)
-            # cep = getCep1(response.text)
-            if cep is not None and cep != '[]':
-                session.query(UrlBase).filter(UrlBase.id == row.id).update({"cep": cep})
-                # try:
-                #     d = viacep.ViaCEP(cep.replace("-","").replace(".",""))
-                #     endereco = d.getDadosCEP()
-                #     if not "erro" in endereco:
-                #         session.query(UrlBase).filter(UrlBase.id == row.id).update({"endereco": str(endereco)})
-                # except:
-                #     pass
+        
+                soup = BeautifulSoup(response.text ,"html.parser") #lxml
                 
-            # cep = getCep(response.text)
-            # if cep is not None:
-            #     session.query(UrlBase).filter(UrlBase.id == row.id).update({"cep": cep.split()[1]})
-                # try:
-                #     d = viacep.ViaCEP(cep.replace("-","").replace(".",""))
-                #     endereco = d.getDadosCEP()
-                #     if not "erro" in endereco:
-                #         session.query(UrlBase).filter(UrlBase.id == row.id).update({"endereco": str(endereco)})
-                # except:
-                #     pass
-                
-                
+                for anchor in soup.find_all("a"):  
+                    link = anchor.attrs["href"] if "href" in anchor.attrs else ''  
+                    if link.startswith('/'):  
+                        link = base_url + link  
+                    elif not link.startswith('http'):  
+                        link = path + link  
+                    if not link in new_urls and not link in processed_urls and VARRER_TODO_SITE:  
+                        print(link)
+                        aux = urlparse(link)
+                        if row.dominio == aux.netloc :
+                            new_urls.append(link)  
+            else:
+                # TODO: incluir a na url caso não retorne nada , ou seja entrou aqui
+                continue
+     
+     
+def getDadosCEP(cep):
+    url_api = ('http://www.viacep.com.br/ws/%s/json' % cep)
+    req = requests.get(url_api)
+    if req.status_code == 200:
+        dados_json = json.loads(req.text)
+        return dados_json
 
-            fixo =util.regex('telefone',response.text) 
-            # fixo =getTelefoneFixo(response.text)  
-            if fixo is not None and fixo != '[]':
-                session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_fixo": fixo})
-                
-            
-            celularAPI =util.regex('telefoneAPI',response.text) 
-            # celularAPI =getCelularAPI(response.text)                 
-            if celularAPI is not None and celularAPI != '[]':
-                celularAPI = celularAPI if celularAPI[:2] == '55' else None
-                if celularAPI is not None:
-                    session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": celularAPI })
-            
-            # celular =getCelular(response.text) 
-                                                    
-            # if celular is not None:
-            #     session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": celular })
-                
-                
-                
-            session.commit()
-
+def parse_input(i):
+    'Retira caracteres de separação do CNPJ'
+    i = str(i)
+    i = i.replace('.', '')
+    i = i.replace(',', '')
+    i = i.replace('/', '')
+    i = i.replace('-', '')
+    i = i.replace('\\', '')
+    i = i.replace('"', '')
+    i = i.replace('[', '')
+    i = i.replace(']', '')
+    i = i.replace(' ', '')
     
-            soup = BeautifulSoup(response.text ,"html.parser") #lxml
-            
-            for anchor in soup.find_all("a"):  
-                link = anchor.attrs["href"] if "href" in anchor.attrs else ''  
-                if link.startswith('/'):  
-                    link = base_url + link  
-                elif not link.startswith('http'):  
-                    link = path + link  
-                if not link in new_urls and not link in processed_urls and VARRER_TODO_SITE:  
-                    print(link)
-                    aux = urlparse(link)
-                    if row.dominio == aux.netloc :
-                        new_urls.append(link)  
+    return i
 
+def getDadosCNPJ(cnpj):
+    cnpj = parse_input(cnpj)
 
-            
-    #TODO: Incluir arquivo .env com as configurações do banco etc
-    #TODO: limpar o codigo de forma funcionar como pacote        
+    url = 'http://receitaws.com.br/v1/cnpj/{0}'.format(cnpj)
+    opener = urllib.request.build_opener()
+    opener.addheaders = [
+        ('User-agent',
+         " Mozilla/5.0 (Windows NT 6.2; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0")]
+
+    with opener.open(url) as fd:
+        content = fd.read().decode()
+
+    dic = json.loads(content)
+
+    return dic
+   
+    
