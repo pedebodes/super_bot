@@ -32,15 +32,15 @@ def getRequest(url):
         header = Headers(
             headers=True
         )
-        # sleep(random.randint(2,30)) 
-        # return requests.get(url, headers=header.generate()) # timeout=5,verify = False
-        ua = UserAgent()
         sleep(random.randint(2,30)) 
-        response = requests.get(url, {"User-Agent": ua.random} )  
-        if response.status_code != 200:
-            sleep(random.randint(2,30)) 
-            response = requests.get(url, headers=header.generate() ) 
-        return response
+        return requests.get(url, headers=header.generate()) # timeout=5,verify = False
+        # ua = UserAgent()
+        # sleep(random.randint(2,30)) 
+        # response = requests.get(url, {"User-Agent": ua.random} )  
+        # if response.status_code != 200:
+        #     sleep(random.randint(2,30)) 
+        #     response = requests.get(url, headers=header.generate() ) 
+        # return response
 
     except HTTPError as http_err:
         print(f'Erro HTTP: {http_err}')

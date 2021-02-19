@@ -3,7 +3,7 @@ import re
 import urllib
 from urllib.parse import urlparse, urlsplit
 from bs4 import BeautifulSoup
-from requests.models import Response # aqui
+# from requests.models import Response # aqui
 from migrate import session,UrlBase,UrlIgnorar,itemUrl,ItemPesquisa
 from fake_headers import Headers
 from fake_useragent import UserAgent
@@ -14,6 +14,7 @@ import random # aqui
 import util
 import json
 from collections import deque 
+from sqlalchemy import func
 
 header = Headers(
         headers=True
@@ -36,15 +37,14 @@ def getUrls(busca,n_results=3000):
     session.add(item_pesquisa)
     session.commit()
 
-    # ua = UserAgent()
-    # sleep(random.randint(2,30)) 
-    # response = requests.get(url, {"User-Agent": ua.random} )  
-    # if response.status_code != 200:
-    #     sleep(random.randint(2,30)) 
-    #     response = requests.get(url, headers=header.generate() ) 
+    ua = UserAgent()
+    sleep(random.randint(2,30)) 
+    response = requests.get(url, {"User-Agent": ua.random} )  
+    if response.status_code != 200:
+        sleep(random.randint(2,30)) 
+        response = requests.get(url, headers=header.generate() ) 
 
-    # it_url = itemUrl()
-    response = util.getRequest(url)
+    # response = util.getRequest(url)
     soup = BeautifulSoup(response.text, "html.parser")
     result = soup.find_all('div', attrs = {'class': 'ZINbbc'})
     
@@ -64,6 +64,8 @@ def getUrls(busca,n_results=3000):
                 ul =urlparse(x.group(1)).netloc.split('.')[1]
 
             ignorar = session.query(UrlIgnorar).filter(UrlIgnorar.dominio.ilike(ul)).all() #TODO: validar
+            
+            import pdb; pdb.set_trace()
             if len(ignorar) == 0:
                 
                 ext = pathlib.Path(x.group(1)).suffix
@@ -91,15 +93,23 @@ def getUrls(busca,n_results=3000):
                     
                 
     session.commit()
+    
+    # Removendo registros duplicados
+    result = session.query(UrlBase)\
+    .group_by(UrlBase.dominio)\
+    .having(func.count(UrlBase.dominio) > 1)\
+    .all()
+    for i in result:
+        session.query(UrlBase).filter(UrlBase.id==i.id).delete()
+    session.commit()
+    
     return (item_pesquisa.id)    
-    return (links)    
+    
 
     
 def pesquisa(busca):
-    
-    item_pesquisa =  getUrls(busca)
-    # TODO: com o id da pesquisa, rodar query para remover duplicados, depois coletar os dados passando o id do item pesquisa
-    getDados(item_pesquisa)
+    item_pesquisa = getUrls(busca)
+    # getDados(item_pesquisa)
     
     
     return "aui"
