@@ -109,8 +109,10 @@ def getUrls(busca,n_results=3000):
     
 def pesquisa(busca):
     item_pesquisa = getUrls(busca)
-    # getDados(item_pesquisa)
+    getDados(item_pesquisa)
     
+    
+    # getDados(1)
     
     return "aui"
 
@@ -123,16 +125,16 @@ def getDados(item_pesquisa):
     processed_urls = set() 
     emails = set()  
 
-    # result = session.query(UrlBase)\
-    #     .filter(UrlBase.id == 1 )\
-    #     .distinct()\
-    #     .all()
-        # .filter(UrlBase.dominio == 'www.cofermeta.com.br')\
-
     result = session.query(UrlBase)\
         .join(itemUrl,UrlBase.id == itemUrl.url_id)\
         .filter(itemUrl.item_pesquisa_id== item_pesquisa)\
         .all()
+
+    # result = session.query(UrlBase)\
+    #     .filter(UrlBase.id == 7 )\
+    #     .distinct()\
+    #     .all()
+        # .filter(UrlBase.dominio == 'www.cofermeta.com.br')\
         
     for row in result:
         new_urls = deque([row.url])
@@ -178,21 +180,21 @@ def getDados(item_pesquisa):
                         pass
 
                 fixo =util.regex('telefone',response.text) 
+                fixo2 =util.regex('telefone2',response.text) 
+                
+                if len(json.loads(fixo2)) > 0:
+                    fixo = json.dumps(json.loads(fixo) + (json.loads(fixo2)))
+                    
+                    
                 if fixo is not None and fixo != '[]':
                     session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_fixo": fixo})
                     
-                
                 celularAPI =util.regex('telefoneAPI',response.text) 
                 if celularAPI is not None and celularAPI != '[]':
-                    celularAPI = celularAPI if celularAPI[:2] == '55' else None
+                    # celularAPI = celularAPI if celularAPI[:2] == '55' else None
                     if celularAPI is not None:
                         session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": celularAPI })
                 
-                # celular =getCelular(response.text) 
-                                                        
-                # if celular is not None:
-                #     session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": celular })
-                    
                     
                     
                 session.commit()
