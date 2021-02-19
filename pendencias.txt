@@ -1,9 +1,11 @@
-verificar filtro de url ignorar, esta ocorrendo erro no filtro
-verificar para remover as url duplicadas no url_base
+verificar filtro de url ignorar, esta ocorrendo erro no filtro ---- OK
+verificar para remover as url duplicadas no url_base --- OK
+configurar rota para adicionar url ignorar -- OK
+
+
 verificar melhorias no regex
 pesquisar forma de pesquisa no google com somente 1 requestes.get conforme util
 configurar retorno das url em json 
 configurar retorno de item_pesquisa json
 configurar retorno de url_base conforme item_pesquisa informado como parametro
-configurar rota para adicionar url ignorar
 verificar campos do banco esta sendo salvo com chaves ver se tem como remover 

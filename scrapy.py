@@ -66,7 +66,6 @@ def getUrls(busca,n_results=3000):
             ignorar = session.query(UrlIgnorar)\
                 .filter(UrlIgnorar.dominio == urlparse(x.group(1)).scheme+"://"+urlparse(x.group(1)).netloc)\
                     .all() 
-            
             if len(ignorar) == 0:
                 
                 ext = pathlib.Path(x.group(1)).suffix
@@ -251,11 +250,11 @@ def getDadosCNPJ(cnpj):
 
 # Adicionar Url na tabela URL_IGNORAR
 def addUrlIgnorar(url):
-    
-    url_ignorar = UrlIgnorar()
-    url_ignorar.dominio = url
-    session.add(url_ignorar)
-    session.commit()
+    for i in url:    
+        url_ignorar = UrlIgnorar()
+        url_ignorar.dominio = i if i[-1] != '/' else i[:-1]
+        session.add(url_ignorar)
+        session.commit()
 
     return "Adicionado com sucesso"
     
