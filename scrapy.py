@@ -131,9 +131,11 @@ def getDados(item_pesquisa):
         .all()
 
     # result = session.query(UrlBase)\
-    #     .filter(UrlBase.id == 7 )\
+    #     .filter(UrlBase.id.in() )\
     #     .distinct()\
     #     .all()
+        # .filter(UrlBase.id == 21 )\
+        # .filter(UrlBase.cnpj == "" and UrlBase.telefone_fixo == "" and UrlBase.telefone_celular == "" and UrlBase.cep == "")\
         # .filter(UrlBase.dominio == 'www.cofermeta.com.br')\
         
     for row in result:

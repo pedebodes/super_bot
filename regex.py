@@ -9,17 +9,17 @@ url ='http://www.lucios.com/'
 # url ='https://rolemarolamentos.com.br'
 # url ='http://www.casadorolamentobh.amawebs.com'
 # url = 'https://www.cofermeta.com.br/'
-url = 'https://rolimac.com.br/'
+url = 'http://www.cldrolamentos.com.br/'
 
 
 
 # https://rolimac.com.br/ # tem zap https://api.whatsapp.com/send?phone=5531984199002&amp;text=Ol%C3%A1!%20Vim%20através%20do%20site
 filename = '1.txt'
 
-# import requests
-# r = requests.get(url)  
-# with open(filename, 'wb') as f:
-#     f.write(r.content)
+import requests
+r = requests.get(url)  
+with open(filename, 'wb') as f:
+    f.write(r.content)
 
 
 
@@ -87,13 +87,18 @@ def regex(opcao,arquivo):
         'cnpj': '\d{2}.\d{3}.\d{3}/\d{4}-\d{2}',
         'telefone': '\(\d{2}\)\s\d{4,5}\-\d{4}',
         'telefoneAPI': r"\+?[\d]{2}\s*[\d]{2}\s*[\d]{4,5}\s*[\d]{4}",
-        'telefoneAPIw': '\d{1}'
+        'telefoneAPIw': r'\=?[\d]{13}'
         }
     
     return json.dumps(removeDuplicado(re.findall(tipoRegex.get(opcao), filetext)))
     
 
+print (regex('email',filetext))
+print (regex('cep',filetext))
+print (regex('cnpj',filetext))
 print (regex('telefone',filetext))
+print (regex('telefoneAPI',filetext))
+print (regex('telefoneAPIw',filetext))
 
 # import pdb; pdb.set_trace()
 
