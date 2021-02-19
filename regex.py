@@ -97,11 +97,11 @@ print (regex('telefone',filetext))
 
 # import pdb; pdb.set_trace()
 
-# regex = '\d{13}'
 # regex ='(\d{2})\D*(\d{4,5})\D*(\d{4})'
 
 regex =r"\+?[\d]{2}\s*[\d]{2}\s*[\d]{4,5}\s*[\d]{4}"
 regex = r'\+[\d]{2}\D*[\d]{2}\D*[\d]{4,5}\D*[\d]{4}'
+regex = r'\=?[\d]{13}'
 
 print (json.dumps(removeDuplicado(re.findall(regex, filetext))))
 

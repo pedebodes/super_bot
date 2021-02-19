@@ -190,10 +190,17 @@ def getDados(item_pesquisa):
                     session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_fixo": fixo})
                     
                 celularAPI =util.regex('telefoneAPI',response.text) 
+                
                 if celularAPI is not None and celularAPI != '[]':
                     # celularAPI = celularAPI if celularAPI[:2] == '55' else None
                     if celularAPI is not None:
-                        session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": celularAPI })
+                        z = []
+                        celularAPI = json.loads(celularAPI)
+                        for i in celularAPI:
+                            if i[:3] == '=55':
+                                z.append(i[1:])
+                        z = json.dumps(z)                        
+                        session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": z })
                 
                     
                     
