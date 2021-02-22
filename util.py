@@ -19,11 +19,13 @@ def regex(opcao,arquivo):
 # r = r'\D(\d{5})-(\d{3})\D'
 # r = r'\D(\d{5})[- ](\d{3})\D'
         'cnpj': '\d{2}.\d{3}.\d{3}/\d{4}-\d{2}',
-        'telefone': '(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})',
+        'telefone': r'\+?5?5?[\-\.\s]*\(?(\d{2})\)?\s+(\d{4,5})[-. ]?(\d{4})',
+        # 'telefone': '(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})',
         'telefone2': r'\+[\d]{2}\D*[\d]{2}\D*[\d]{4,5}\D*[\d]{4}',  #r'\+?5?5?\W*(\d{2})\W*(\d{4,5})\W*(\d{4})' Testar esse
         'telefoneAPI': r'\=?[\d]{13}'
         # 'telefoneAPI': r"\+?[\d]{2}\s*[\d]{2}\s*[\d]{4,5}\s*[\d]{4}"
         }
+    
     return json.dumps(
         removeDuplicado(
             re.findall(
@@ -31,6 +33,8 @@ def regex(opcao,arquivo):
                 )
             )
         )
+    
+
     
 def getRequest(url):
     try:

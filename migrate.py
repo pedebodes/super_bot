@@ -7,6 +7,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref
 
+# from sqlalchemy.dialects.postgresql import JSONB
+
 load_dotenv(find_dotenv())
 Base = declarative_base()
 
@@ -27,6 +29,14 @@ class UrlBase(Base):
     email = Column(String)
     endereco = Column(JSON)
     dados_cnpj = Column(JSON)
+    status = Column(Integer, default=0)
+    
+"""
+Status:
+0: pendente
+1: processado
+2: site não responde
+"""    
     
 
 class ItemPesquisa(Base):
@@ -60,6 +70,8 @@ def create_tables():
 
 
 def main():
+    Base.metadata.create_all(engine)
+
     create_tables()
     
 

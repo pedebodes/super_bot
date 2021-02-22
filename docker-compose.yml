@@ -1,0 +1,17 @@
+version: "3.1"
+services:
+  db:
+    image: postgres:12
+    environment:
+      POSTGRES_USER: teste
+      POSTGRES_PASSWORD: teste
+      POSTGRES_DB: scrapy_db
+    ports:
+      - "55432:5432"
+    volumes:
+      - "./data:/var/lib/postgresql/data"
+
+  adminer:
+    image: adminer
+    ports:
+      - "81:8080"

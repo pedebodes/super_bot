@@ -1,300 +1,687 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://rolimac.com.br/wp-content/themes/rolimac/assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="https://rolimac.com.br/wp-content/themes/rolimac/style.css">
-    <link rel="stylesheet" type="text/css" href="https://rolimac.com.br/wp-content/themes/rolimac/assets/css/fonts.css">
-    <link rel="stylesheet" type="text/css" href="https://rolimac.com.br/wp-content/themes/rolimac/assets/css/root.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Rolimac Rolamentos | Desde 1965</title>
-<link rel='dns-prefetch' href='//s.w.org' />
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/rolimac.com.br\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.3"}};
-			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-	<link rel='stylesheet' id='wp-block-library-css'  href='https://rolimac.com.br/wp-includes/css/dist/block-library/style.min.css?ver=5.5.3' type='text/css' media='all' />
-<link rel='stylesheet' id='contact-form-7-css'  href='https://rolimac.com.br/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.3.2' type='text/css' media='all' />
-<link rel='stylesheet' id='msl-main-css'  href='https://rolimac.com.br/wp-content/plugins/master-slider/public/assets/css/masterslider.main.css?ver=3.6.7' type='text/css' media='all' />
-<link rel='stylesheet' id='msl-custom-css'  href='https://rolimac.com.br/wp-content/uploads/master-slider/custom.css?ver=1.9' type='text/css' media='all' />
-<script type='text/javascript' src='https://rolimac.com.br/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-core-js'></script>
-<link rel="https://api.w.org/" href="https://rolimac.com.br/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://rolimac.com.br/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://rolimac.com.br/wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 5.5.3" />
-<script>var ms_grabbing_curosr = 'https://rolimac.com.br/wp-content/plugins/master-slider/public/assets/css/common/grabbing.cur', ms_grab_curosr = 'https://rolimac.com.br/wp-content/plugins/master-slider/public/assets/css/common/grab.cur';</script>
-<meta name="generator" content="MasterSlider 3.6.7 - Responsive Touch Image Slider | avt.li/msf" />
-<link rel="icon" href="https://rolimac.com.br/wp-content/uploads/2021/02/cropped-ESFERAS-DO-DRAGAO-1-32x32.png" sizes="32x32" />
-<link rel="icon" href="https://rolimac.com.br/wp-content/uploads/2021/02/cropped-ESFERAS-DO-DRAGAO-1-192x192.png" sizes="192x192" />
-<link rel="apple-touch-icon" href="https://rolimac.com.br/wp-content/uploads/2021/02/cropped-ESFERAS-DO-DRAGAO-1-180x180.png" />
-<meta name="msapplication-TileImage" content="https://rolimac.com.br/wp-content/uploads/2021/02/cropped-ESFERAS-DO-DRAGAO-1-270x270.png" />
-   
-    <title>Rolimac - Desde 1965</title>
-</head>
-<body data-rsssl=1>
-    <header>
-    <div class="content">
-        <div class="header-int">
-            <div class="logotipo">
-            <a href="https://rolimac.com.br" title="Olá, mundo!"><img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/logotipo-rolimac.png" alt="logotipo-rolimac"  title="Rolimac - Desde 1965"></a>
-
-            </div><!-- logotipo -->
-
-            <input type="checkbox" id="home">
-                <label for="home" class="home"><i class="fa fa-bars"></i>
-                </label>
-                <nav>
-                                            <div id=""><div class="menu-menu-topo-container"><ul id="menu-menu-topo" class="menu"><li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-8"><a href="https://rolimac.com.br/" aria-current="page">home</a></li>
-<li id="menu-item-7" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7"><a href="https://rolimac.com.br/a-empresa/">A Empresa</a></li>
-<li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="https://rolimac.com.br/produtos/">Produtos</a></li>
-<li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="https://rolimac.com.br/portal-do-cliente/">Portal do cliente</a></li>
-<li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"><a href="https://rolimac.com.br/contato/">Contato</a></li>
-</ul></div></div>                                    </nav><!-- nav -->
-                
-        </div><!-- header int -->
-    </div><!-- content -->
-</header><!-- header -->
-
-<div class="slider">
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<base href="http://www.lucios.com/" />
     
-		<!-- MasterSlider -->
-		<div id="P_MS602fc3bcc5556" class="master-slider-parent msl ms-parent-id-1"  >
+	<!-- Metas para o Google -->
+	<meta name="description" content="Lúcio's Rolamentos - Soluções em Movimento - Rolamentos, Transmissão de Potência e Manutenção – Correntes, Polias, Engrenagens, Motoredutores, Alinhadores a laser, - Distribuidor NSK, TIMKEM, NTN, BGL, DODGE, MARTIN, TSUBAKI, EASYLASER, 01DB, ACOEM">
+	<meta name="keywords" content="rolamentos,  rolamento, mancal, serviços, produtos, equipamentos, mancais, lubrificantes, lucios, lucio's, buchas, ferramentas, indústria, ferramentas industriais, NSK, TIMKEM, NTN, INA, BGL">	
+	<title>Lúcios Rolamentos</title>
 
-			
-			<!-- MasterSlider Main -->
-			<div id="MS602fc3bcc5556" class="master-slider ms-skin-default" >
-				 				 
-				<div  class="ms-slide" data-delay="3" data-fill-mode="fill"  >
-					<img src="https://rolimac.com.br/wp-content/plugins/master-slider/public/assets/css/blank.gif" alt="" title="" data-src="https://rolimac.com.br/wp-content/uploads/2021/02/banner-05.jpg" />
+	<!-- Metas para o Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Lúcios Rolamentos" />
+	<meta property="og:url" content="http%253A%252F%252Fwww.lucios.com%252F"/>
+	<meta property="og:site_name" content="Lúcios Rolamentos" />
+	<meta property="og:description" content="Lúcio's Rolamentos - Soluções em Movimento - Rolamentos, Transmissão de Potência e Manutenção"/>
+	<meta property="og:image" content="http://www.lucios.com/inc/img/imgFacebook.jpg" />
 
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	<div class="ms-thumb" ><div class="ms-tab-context"><div class=&quot;ms-tab-context&quot;></div></div>
-</div>
-				</div>
-				<div  class="ms-slide" data-delay="3" data-fill-mode="fill"  >
-					<img src="https://rolimac.com.br/wp-content/plugins/master-slider/public/assets/css/blank.gif" alt="" title="" data-src="https://rolimac.com.br/wp-content/uploads/2021/02/banner-04.jpg" />
+		ga('create', 'UA-12338986-2', 'auto');
+		ga('require', 'displayfeatures');
+		ga('send', 'pageview');
+	</script>
+	
+</head>
 
+<body>
 
-	<div class="ms-thumb" ><div class="ms-tab-context"><div class=&quot;ms-tab-context&quot;></div></div>
-</div>
-				</div>
-				<div  class="ms-slide" data-delay="3" data-fill-mode="fill"  >
-					<img src="https://rolimac.com.br/wp-content/plugins/master-slider/public/assets/css/blank.gif" alt="" title="" data-src="https://rolimac.com.br/wp-content/uploads/2021/02/banner-03.jpg" />
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 
+	<style>
+		#loading{background-color: #fff;height: 100%;width: 100%;position: fixed;z-index: 999;margin-top: 0px;top: 0px;}
+		#loading #loading-center{width: 100%;height: 100%;position: relative;}
+		#loading #loading-center-absolute {position: absolute;left: 50%;top: 50%;height: 150px;width: 150px;margin-top: -75px;margin-left: -75px;}
+		#loading .object{width: 20px;height: 20px;background-color: #074C8A;float: left;margin-right: 20px;margin-top: 65px;-moz-border-radius: 50% 50% 50% 50%;-webkit-border-radius: 50% 50% 50% 50%;border-radius: 50% 50% 50% 50%;}
+		#loading #object_one { -webkit-animation: object_one 1.5s infinite;animation: object_one 1.5s infinite; }
+		#loading #object_two { -webkit-animation: object_two 1.5s infinite;animation: object_two 1.5s infinite;-webkit-animation-delay: 0.25s; animation-delay: 0.25s; }
+		#loading #object_three { -webkit-animation: object_three 1.5s infinite;animation: object_three 1.5s infinite;-webkit-animation-delay: 0.5s;animation-delay: 0.5s; }
+		@-webkit-keyframes object_one {75% { -webkit-transform: scale(0); }}
+		@keyframes object_one {75% {transform: scale(0);-webkit-transform: scale(0);}}
+		@-webkit-keyframes object_two {75% { -webkit-transform: scale(0); }}
+		@keyframes object_two {75% {transform: scale(0);-webkit-transform:  scale(0);}}
+		@-webkit-keyframes object_three {75% { -webkit-transform: scale(0); }}
+		@keyframes object_three {75% {transform: scale(0);-webkit-transform: scale(0);}}
+	</style>
 
-	<div class="ms-thumb" ><div class="ms-tab-context"><div class=&quot;ms-tab-context&quot;></div></div>
-</div>
-				</div>
-				<div  class="ms-slide" data-delay="3" data-fill-mode="fill"  >
-					<img src="https://rolimac.com.br/wp-content/plugins/master-slider/public/assets/css/blank.gif" alt="" title="" data-src="https://rolimac.com.br/wp-content/uploads/2021/02/banner-02.jpg" />
-
-
-	<div class="ms-thumb" ><div class="ms-tab-context"><div class=&quot;ms-tab-context&quot;></div></div>
-</div>
-				</div>
-				<div  class="ms-slide" data-delay="3" data-fill-mode="fill"  >
-					<img src="https://rolimac.com.br/wp-content/plugins/master-slider/public/assets/css/blank.gif" alt="" title="" data-src="https://rolimac.com.br/wp-content/uploads/2021/02/banner-01.jpg" />
-
-
-	<div class="ms-thumb" ><div class="ms-tab-context"><div class=&quot;ms-tab-context&quot;></div></div>
-</div>
-				</div>
-
+	<div id="loading">
+		<div id="loading-center">
+			<div id="loading-center-absolute">
+				<div class="object" id="object_one"></div>
+				<div class="object" id="object_two"></div>
+				<div class="object" id="object_three"></div>
 			</div>
-			<!-- END MasterSlider Main -->
-
-			 
 		</div>
-		<!-- END MasterSlider -->
+	</div>
 
-		<script>
-		(function ( $ ) {
-			"use strict";
+	
+<div id="header">
+	<div class="header_topo">
+		<div class="center">
+			<a href="?lojas" class="pin">
+				<img src="inc/img/header_pin.png" height="15" width="10" alt="">
+			</a>
+			<p class="contato">Atendimento: +55 27 3232 4242 / Fax: +55 27 3232 4214 / <a href="mailto:contato@lucios.com">contato@lucios.com</a></p>
+			<ul class="redes-sociais">
+				<li><a class="fa fa-facebook" href="https://www.facebook.com/LuciosRolamentos" target="_blank"></a></li>				<li><a class="fa fa-instagram" href="https://www.instagram.com/luciosrolamentos" target="_blank"></a></li>				<li><a class="fa fa-linkedin" href="https://www.linkedin.com/company/10012440?trk=hp-feed-company-name" target="_blank"></a></li>			</ul>
+		</div>
+	</div>
+	<div class="header_base">
+		<div class="center">
+			<a href="?home" class="logo">
+				<img src="inc/img/header_logo.png" height="84" width="236" alt="">
+			</a>
+			<div class="nav">
+				<ul>
+					<li><a href="?home">Home</a></li>
+					<li><a href="?institucional">Institucional</a></li>
+					<li><a href="?produtos">Produtos</a></li>
+										<li><a href="?noticias">Notícias</a></li>
+					<li><a href="?videos">Vídeos</a></li>
+					<li><a href="?marcas">MARCAS</a></li>
+					<li><a href="?lojas">LOJAS</a></li>
+					<li><a href="?contato">Contato</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<hr class="linha_escura">
+</div>	
+	<div id="middle" class="layout-default">
+		
+		<div id="home">
+	<div class="banner cycle-slideshow" data-cycle-slides=">*">
+					<a href="?produtos">
+				<span>
+					<img src="upload/foto/banner_1_0f6d01896753d296098eda82f756e4e5_g.jpg" />
+				</span>
+			</a>
+			</div>
+	<div class="noticias_wrap">
+		<div class="center">
+			<h2 class="titulo_grande"><span class="bold">Últimas</span> Notícias</h2>
+		</div>
+		<div class="data_noticias">
+			<div class="center">
+									<div class="data_wrap wow fadeInUp">
+						<p class="dia_azul">24</p>
+						<p class="mes_ano_cinza">Mar <br /> 2020</p>
+					</div>
+									<div class="data_wrap wow fadeInUp">
+						<p class="dia_azul">09</p>
+						<p class="mes_ano_cinza">Ago <br /> 2019</p>
+					</div>
+									<div class="data_wrap wow fadeInUp">
+						<p class="dia_azul">21</p>
+						<p class="mes_ano_cinza">Dez <br /> 2018</p>
+					</div>
+							</div>
+		</div>
 
-			$(function () {
-				var masterslider_5556 = new MasterSlider();
+		<hr />
 
-				// slider controls
-				masterslider_5556.control('arrows'     ,{ autohide:true, overVideo:true  });
-				// slider setup
-				masterslider_5556.setup("MS602fc3bcc5556", {
-						width           : 1920,
-						height          : 550,
-						minHeight       : 0,
-						space           : 0,
-						start           : 1,
-						grabCursor      : true,
-						swipe           : true,
-						mouse           : true,
-						layout          : "fullwidth",
-						wheel           : false,
-						autoplay        : true,
-						instantStartLayers:false,
-						loop            : true,
-						shuffle         : false,
-						preload         : 0,
-						heightLimit     : true,
-						autoHeight      : false,
-						smoothHeight    : true,
-						endPause        : false,
-						overPause       : false,
-						fillMode        : "fill",
-						centerControls  : true,
-						startOnAppear   : false,
-						layersMode      : "center",
-						hideLayers      : false,
-						fullscreenMargin: 0,
-						speed           : 20,
-						dir             : "h",
-						parallaxMode    : 'swipe',
-						view            : "basic"
-				});
+		<div class="center">
+							<div class="noticia wow fadeInUp">
+					<a href="?noticia/80/Comunicado_COVID_19">
+						<div class="foto">
+							<img style="background-image:url(upload/foto/noticia_80_09e96d27d8307e27fc0ff4cbdf183256_m.jpg);width: 100%;" class="bg-cover" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjlDRDhDQTI0NTNCQjExRTdCNjIwOTFGN0VCOTBGQTgyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjlDRDhDQTI1NTNCQjExRTdCNjIwOTFGN0VCOTBGQTgyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OUNEOENBMjI1M0JCMTFFN0I2MjA5MUY3RUI5MEZBODIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OUNEOENBMjM1M0JCMTFFN0I2MjA5MUY3RUI5MEZBODIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7PtUUyAAAAF0lEQVR42mL8//8/AzJgYkADGAIAAQYAkzkDAwxZKisAAAAASUVORK5CYII=" />
+						</div>
+						<span class="titulo_noticia">Comunicado COVID-19</span>
+						<!-- <span class="descricao"></span> -->
+						<span class="saiba_mais">Saiba Mais</span>
+					</a>
+				</div>
+							<div class="noticia wow fadeInUp">
+					<a href="?noticia/79/MEC_SHOW_2019">
+						<div class="foto">
+							<img style="background-image:url(upload/foto/noticia_79_c7a7b29ac7df9fc834c49e49a38856f5_m.jpg);width: 100%;" class="bg-cover" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjlDRDhDQTI0NTNCQjExRTdCNjIwOTFGN0VCOTBGQTgyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjlDRDhDQTI1NTNCQjExRTdCNjIwOTFGN0VCOTBGQTgyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OUNEOENBMjI1M0JCMTFFN0I2MjA5MUY3RUI5MEZBODIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OUNEOENBMjM1M0JCMTFFN0I2MjA5MUY3RUI5MEZBODIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7PtUUyAAAAF0lEQVR42mL8//8/AzJgYkADGAIAAQYAkzkDAwxZKisAAAAASUVORK5CYII=" />
+						</div>
+						<span class="titulo_noticia">MEC SHOW 2019</span>
+						<!-- <span class="descricao"></span> -->
+						<span class="saiba_mais">Saiba Mais</span>
+					</a>
+				</div>
+							<div class="noticia wow fadeInUp">
+					<a href="?noticia/78/Parabens_ao_Instituto_Ponte_pelos_resultados_de_2018">
+						<div class="foto">
+							<img style="background-image:url(upload/foto/noticia_78_7494380ab48f5d1dfc2344c9ac251c4f_m.jpg);width: 100%;" class="bg-cover" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjlDRDhDQTI0NTNCQjExRTdCNjIwOTFGN0VCOTBGQTgyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjlDRDhDQTI1NTNCQjExRTdCNjIwOTFGN0VCOTBGQTgyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OUNEOENBMjI1M0JCMTFFN0I2MjA5MUY3RUI5MEZBODIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OUNEOENBMjM1M0JCMTFFN0I2MjA5MUY3RUI5MEZBODIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7PtUUyAAAAF0lEQVR42mL8//8/AzJgYkADGAIAAQYAkzkDAwxZKisAAAAASUVORK5CYII=" />
+						</div>
+						<span class="titulo_noticia">Parabéns ao Instituto Ponte pelos resultados de 2018!</span>
+						<!-- <span class="descricao"></span> -->
+						<span class="saiba_mais">Saiba Mais</span>
+					</a>
+				</div>
+						<div class="nsk_wrap">
+				<a href="?marcas"><img src="inc/img/index_snk.png" height="414" width="267" /></a>
+			</div>
+		</div>
+	</div>
 
-				
-				window.masterslider_instances = window.masterslider_instances || [];
-				window.masterslider_instances.push( masterslider_5556 );
-			 });
+	<div class="servicos_especiais">
+		<div class="center">
+			<div class="esquerda">
+				<div class="full">
+					<h2>Serviços Especiais</h2>
+					<p>Nosso Departamento de Engenharia oferece Treinamentos e Serviços Especiais para maximizar a vida útil e a produtividade de seus equipamentos, visando eliminar as causas de falhas prematuras dos rolamentos e acessórios. </p>
+				</div>
+				<div class="half">
+					<div class="scroll">
+						<h3>Treinamento</h3>
+						<p>Nossos clientes dispõem de um Centro de Treinamento e Laboratório em nossas instalações, onde profissionais de manutenção e compras são treinados para especificar, manusear e instalar corretamente os produtos. A dinâmica dos cursos emprega uma combinação de recursos audiovisuais, literaturas e exercícios que simulam situações de manuseio. Os temas abordados são: especificação, aplicação e manutenção de rolamentos, lubrificação, desgastes prematuros, montagem, desmontagem, ajustes, cargas, lubrificação, análise de falhas. Centenas de alunos (usuários, compradores, engenheiros e técnicos de manutenção) já se capacitaram em nosso CT e também, em cursos in company.</p>
+					</div>
+				</div>
+				<div class="half">
+					<div class="scroll">
+						<h3>Suporte Técnico</h3>
+						<p>Através de um corpo próprio de engenheiros e técnicos, a Lúcio’s oferece um suporte de alto nível a seus clientes através de estudos de aplicação, acompanhamento de montagens, análise de falhas prematuras e treinamento in loco de usuários solucionando rapidamente problemas de aplicação inadequada e garantia. Normalmente é possível aumentar a vida útil das peças e reduzir custos de manutenção com ações simples.</p>
+					</div>
+				</div>
+			</div>
+			<div class="direita">
+				<img src="inc/img/index_suporte.png" height="447" width="504" alt="Suporte Tecnico Computador Tablet Celular" />
+			</div>
+		</div>
+	</div>
 
-		})(jQuery);
-		</script>
+	<div class="linha_produtos">
+		<div class="center">
+			<div class="carousel"></div>
+		</div>
+	</div>
+	<div class="linha_produtos">
+		<div class="center">
+			<div class="distribuidores"></div>
+		</div>
+	</div>
 
-</div><!-- slider -->
+	<div class="carousel_produtos">
+	<h2>Linha de Produtos</h2>
+	<ul class="carousel">
+					<li>
+				<a href="?produto/1/Rolamentos">
+					<span class="texto">
+						<p>Rolamentos</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_1_d374bcf45a0ed7d178ff48fa3a90138a_g.jpg" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/2/Mancais">
+					<span class="texto">
+						<p>Mancais</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_2_790b26a8f1d09ae82dcdbd83de596bc1_g.jpg" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/16/Alinhadores_a_Laser">
+					<span class="texto">
+						<p>Alinhadores a Laser</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_16_8ec4ef2ad8bb217ed5cd38f0d60ae374_g.png" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/17/Monitoramento_e_Analise_de_Vibracoes">
+					<span class="texto">
+						<p>Monitoramento e Análise de Vibrações</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_17_9c06e9ad5ece14870ac18c03077b8581_g.jpg" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/5/Sprockets">
+					<span class="texto">
+						<p>Sprockets</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_16_3c03d21f0d78122f7a291d972e425914_g.png" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/20/Correntes_de_Transmissao">
+					<span class="texto">
+						<p>Correntes de Transmissão</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_20_541749adcedb33b801285e4268818fd3_g.png" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/15/Transporte_de_Materiais">
+					<span class="texto">
+						<p>Transporte de Materiais</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_15_db418fc44bb687d54a264bd1daf23d6e_g.jpg" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/6/Redutores">
+					<span class="texto">
+						<p>Redutores</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_6_d3cc0903e12ba71b055cbdbd926e2918_g.jpg" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/13/Quimicos_e_Revestimentos">
+					<span class="texto">
+						<p>Químicos e Revestimentos</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_13_ec6175b63df82fc9b7ba1395e1797bf5_g.jpg" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/7/Acoplamentos">
+					<span class="texto">
+						<p>Acoplamentos</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_7_7e17a5d2fa9c35549953a68f46bd60cb_g.jpg" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/18/Polias">
+					<span class="texto">
+						<p>Polias</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_18_bc1a379dcbb6f8d8e46eae8d5ef623d2_g.jpg" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/19/Equipamentos_para_Lubrificacao">
+					<span class="texto">
+						<p>Equipamentos para Lubrificação</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_19_33db05767941de5515f932062f52b56b_g.jpg" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/14/Lubrificantes">
+					<span class="texto">
+						<p>Lubrificantes</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_14_9cc83def25cdcf781e8a75e7106bfddf_g.jpg" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/11/Ferramentas">
+					<span class="texto">
+						<p>Ferramentas</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_11_cc09ed5db38d02f5d6d932cfd15aabae_g.jpg" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/12/Vedacoes">
+					<span class="texto">
+						<p>Vedações</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_12_472bf64eb622d0ebbc9b397bbe2f1b62_g.jpg" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/10/Buchas_para_Rolamentos">
+					<span class="texto">
+						<p>Buchas para Rolamentos</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_10_d23f8e9f0a50da70630c99f973ac103f_g.jpg" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/21/Buchas">
+					<span class="texto">
+						<p>Buchas</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_21_c9b03950cc748bf634d335ce853bee6a_g.jpg" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/22/Roletes">
+					<span class="texto">
+						<p>Roletes</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_22_e213f8a5958e9fde5e36c9b536616a00_g.jpg" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/23/Helicoidais">
+					<span class="texto">
+						<p>Helicoidais</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_23_67e22000ba4d424db2d3841d2b61276d_g.JPG" alt="">
+					</span>
+				</a>
+			</li>
+					<li>
+				<a href="?produto/24/Elevadores_de_Canecas">
+					<span class="texto">
+						<p>Elevadores de Canecas</p>
+					</span>
+					<span class="azul"></span>
+					<span class="foto">
+						<img src="upload/foto/produto_24_ee872bb6fb6d40cc34de286fdf333f7f_g.png" alt="">
+					</span>
+				</a>
+			</li>
+			</ul>
+</div>
+	<div class="carousel_marca">
+	<div class="center">
+		<h2>Distribuidores & Importadores</h2>
+		<ul class="carousel">
+							<li>
+					<span>
+						<img src="upload/foto/marca_1_4d59e2dab7e4d3edfc21312a88fe2616_m.jpg" alt="Baldor Dodge">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_6_c9811827735fed9cde2f5859de8246bb_m.jpg" alt="BGL">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_3_88961ea251567f69da5470d151f00beb_m.jpg" alt="TIMKEN">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_8_3f2dc4ebbacf3085832bdc20fe738d08_m.png" alt="DAIDO">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_15_c2dfe10b7eb716e9f1fcf6ed76d025c2_m.JPG" alt="KTR">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_19_0e697c6f4fe15fe646a0d91afa56b359_m.jpg" alt="FRM">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_12_83744203b6eff9c4aab21c4cc855ffa8_m.JPG" alt="ZKL">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_2_0a778a2208ab4f2626dd4c933d90232f_m.jpg" alt="NSK">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_7_2d480d5d6bef79b5cf6b627dda7047a6_m.jpg" alt="Devcon">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_21_92ee12145255cc1459c026aed8e39676_m.JPG" alt="Martin Sprocket and Gear">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_11_b3d64f178248092ba29ad3ddbbc3251c_m.jpg" alt="Bozza">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_18_47ed4cfee68c56bac8e1a4b6fdb7df07_m.jpg" alt="Burger">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_25_5abc854124492726249e92a0763306f8_m.jpg" alt="DRIVES">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_23_6f55b4f53ced2bbdddaffa31189aed74_m.png" alt="FAG">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_17_65b641a3308e9acf23d19ff2510d9195_m.jpg" alt="Permatex">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_22_7fdd42929a48f74aa7ee2a762346ab73_m.jpg" alt="Fixturlaser">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_24_769fb5ea928d5809921823e1910b448b_m.png" alt="INA">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_4_81a8d55b6a7b77b482712f2fb9e6ed91_m.jpg" alt="NTN">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_10_eb7bb04c8db1028802ee1e9be566165c_m.jpg" alt="NORD">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_16_b8997880278e0afafcead94620f94a7c_m.png" alt="IKO">
+					</span>
+				</li>
+							<li>
+					<span>
+						<img src="upload/foto/marca_20_ad33f6a05e827200270e92467c74c849_m.jpg" alt="ASAHI">
+					</span>
+				</li>
+					</ul>
+	</div>
+</div>
 
-<section class="rolimac-index">
-    <div class="content">
-        <article class="rolimac-index-text">
-            <h1>rolimac rolamentos</h1>
-            <h2>soluções em performance e durabilidade em rolamentos para a indústria</h2>
-            <p>Há 55 anos atuamos na importação e distribuição de rolamentos e componentes para os diferentes setores da indústria no Brasil, com atendimento personalizado para as necessidades próprias de cada cliente e suas operações, combinando inovação, expertise e produtos de alta qualidade.</p>
-        </article><!-- rolimac index title -->
-        <article class="rolimac-index-areas">
-            <div class="rolimac-index-logos">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/mineracao.png" alt="mineracao">
-                <h3>Mineiração</h3>                    
-            </div><!-- rolimac index logos -->
-            <div class="rolimac-index-logos">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/siderurgia.png" alt="siderurgia">
-                <h3>siderurgia</h3>                    
-            </div><!-- rolimac index logos -->
-            <div class="rolimac-index-logos">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/textil.png" alt="textil">
-                <h3>Têxtil</h3>                    
-            </div><!-- rolimac index logos -->
-            <div class="rolimac-index-logos">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/cimento.png" alt="cimento">
-                <h3>Cimento</h3>                    
-            </div><!-- rolimac index logos -->
-            <div class="rolimac-index-logos">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/agricola.png" alt="agricola">
-                <h3>Agrícola</h3>                    
-            </div><!-- rolimac index logos -->
-            <div class="rolimac-index-logos">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/construcao.png" alt="construcao">
-                <h3>Construção</h3>                    
-            </div><!-- rolimac index logos -->
-            <div class="rolimac-index-logos">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/automotiva.png" alt="automotiva">
-                <h3>Automotiva</h3>                    
-            </div><!-- rolimac index logos -->
-            <div class="rolimac-index-logos">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/celulose.png" alt="celulose">
-                <h3>Celulose</h3>                    
-            </div><!-- rolimac index logos -->
-            <div class="rolimac-index-logos">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/sucroalcooleiro.png" alt="sucroalcooleiro">
-                <h3>Sucroalcooleiro</h3>                    
-            </div><!-- rolimac index logos -->
-        </article><!-- rolimac index areas -->
-    </div><!-- content -->
-</section><!-- rolimac index -->
+	<div class="nossas_lojas">
+		<div class="center">
+			<div class="esquerda">
+				<p><b>Lucio's Rolamentos</b>. Há 43 anos importador e distribuidor de rolamentos, peças e equipamentos para transmissão de potência e manutenção preditiva.<br></p>
+			</div>
+			<div class="direita">
+				<a href="?lojas" class="botao">NOSSA LOJAS</a>
+			</div>
+		</div>
+	</div>
+</div>		
+	</div>
+	
+	<div id="footer">
+	<div class="footer_topo">
+		<div class="center">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="institucional">
+						<a href="?home">
+							<img src="inc/img/footer_logo.png" height="68" width="182" alt="Logo da Lucio's Rolamentos">
+						</a>
+						<p>Desde 1973 a <span style="font-weight: 700;">Lúcio's Rolamentos</span> atende o mercado de peças industriais.</p> 
+						<ul class="social">
+							<li><a class="fa fa-facebook" href="https://www.facebook.com/LuciosRolamentos" target="_blank"></a></li>							<li><a class="fa fa-instagram" href="https://www.instagram.com/luciosrolamentos" target="_blank"></a></li>							<li><a class="fa fa-linkedin" href="https://www.linkedin.com/company/10012440?trk=hp-feed-company-name" target="_blank"></a></li>						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="noticias">
+						<h2>Notícias</h2>
+						<ul>
+															<li>
+									<a href="?noticia/80/Comunicado_COVID_19">
+										<p class="titulo">Comunicado COVID-19</p>
+										<p class="data">24 de Março 2020</p>
+									</a>
+								</li>
+															<li>
+									<a href="?noticia/79/MEC_SHOW_2019">
+										<p class="titulo">MEC SHOW 2019</p>
+										<p class="data">09 de Agosto 2019</p>
+									</a>
+								</li>
+															<li>
+									<a href="?noticia/78/Parabens_ao_Instituto_Ponte_pelos_resultados_de_2018">
+										<p class="titulo">Parabéns ao Instituto Ponte pelos resultados de 2018!</p>
+										<p class="data">21 de Dezembro 2018</p>
+									</a>
+								</li>
+														<li><a href="?noticias">Outras Notícias</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="facebook">
+						<h2>Siga-nos no Facebook</h2>
+						<div class="faces">
+							<div class="fb-like-box" data-href="https://www.facebook.com/LuciosRolamentos" data-width="360" data-height="300" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+						</div>
+						<!-- <div class="like"><div class="fb-like" data-href="https://www.facebook.com/LuciosRolamentos" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></div> -->
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="contato">
+						<h2>Contato</h2>
+						<div class="endereco"><div>Rua Antonio Aleixo , 765,</div><div>Consolação – Vitória/ES</div><div>Tel: +55 27 3232 4242</div><div>Fax: +55 27 3232-4214</div></div>
+						<h2>Informativo</h2>
+						<form id="frmInformativo" action="#" onsubmit="return false;">
+							<input class="email" type="email" name="email_i"  placeholder="Seu e-mail...">
+							<input class="enviar" type="submit" name="enviar" value="ENVIAR">
+						</form>
 
-<section class="escopo-index">
-    <div class="content">
-        <div class="escopo-index-inter">
-            <button><a href="https://rolimac.com.br/produtos/">clique aqui e veja nosso escopo de marcas e produtos</a></button>
-        </div><!-- escopo index inter -->
-    </div><!-- content -->
-</section><!-- escopo index -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer_base">
+		<div class="center">
+			<div class="nav coluna">
+				<ul>
+					<li><a href="?home">PRINCIPAL</a></li>
+					<li><a href="?noticias">NOTÍCIAS</a></li>
+					<li><a href="?marcas">MARCAS</a></li>
+					<li><a href="?contato">CONTATO</a></li>
+				</ul>
+			</div>
+			<div class="copyright coluna">
+				<p>
+					© 2014 - Lúcio’s Rolamentos  |  Todos os direitos reservados.
+					Desenvolvido por <script type="text/javascript" src="//www.surrealgroup.com.br/insertLogo/insertLogo.php?cliente=lucios.com"></script>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
 
-<section class="clientes-index">
-    <div class="content">
-        <article class="clientes-index-title">
-        <h1>distribuidor autorizado</h1>
-            <div class="linha"></div><!-- linha -->  
-            <div class="clientes-slider">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/distribuidor/4.png" alt="" srcset="">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/distribuidor/2.png" alt="" srcset="">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/distribuidor/10.png" alt="" srcset="">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/distribuidor/7.png" alt="" srcset="">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/distribuidor/8.png" alt="" srcset="">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/distribuidor/9.png" alt="" srcset="">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/distribuidor/6.png" alt="" srcset="">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/distribuidor/5.png" alt="" srcset="">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/distribuidor/3.png" alt="" srcset="">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/distribuidor/1.png" alt="" srcset="">
-                <img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/distribuidor/11.png" alt="" srcset="">
-            </div><!-- clientes slider -->
-            </article><!-- clientes title -->
-    </div><!-- content -->
-</section><!-- clientes index -->
+	<!-- Sessão de CSS -->
+	<link rel="stylesheet" type="text/css" href="inc/css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="inc/css/animate.min.css"/>
+	<link rel="stylesheet" type="text/css" href="inc/css/placeholder.css"/>
+	<link rel="stylesheet" type="text/css" href="inc/css/jqueryui/style.css"/>
+	<link rel="stylesheet" type="text/css" href="inc/css/jquery-ui-timepicker-addon.css"/>
+	<link rel="stylesheet" type="text/css" href="inc/css/jquery.jscrollpane.css"/>
+	<link rel="stylesheet" type="text/css" href="inc/js/chosen/chosen.min.css"/>
+	<link rel="stylesheet" type="text/css" href="inc/js/fancybox/jquery.fancybox.css"/>
+	<link rel="stylesheet" type="text/css" href="inc/css/style.css"/>
+	
+	<!-- Sessão de javascript's -->
+	<script type="text/javascript" src="inc/js/jquery.js"></script>
+	<script type="text/javascript" src="inc/js/jquery.jqueryui.localize.js"></script>
+	<script type="text/javascript" src="inc/js/jquery.jqueryui.js"></script>
+	<script type="text/javascript" src="inc/js/jquery-ui-timepicker-addon.js"></script>
+	<script type="text/javascript" src="inc/js/jquery.animate-shadow-min.js"></script>
+	<script type="text/javascript" src="inc/js/jquery.backgroundpos.min.js"></script>
+	<script type="text/javascript" src="inc/js/jquery.cycle2.min.js"></script>
+	<script type="text/javascript" src="inc/js/jquery.fred.gmaps.js"></script>
+	<script type="text/javascript" src="inc/js/jquery.fred.tabs.js"></script>
+	<script type="text/javascript" src="inc/js/jquery.jcarousel.min.js"></script>
+	<script type="text/javascript" src="inc/js/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="inc/js/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="inc/js/jquery.maskedinput.js"></script>
+	<script type="text/javascript" src="inc/js/jquery.pajinate.js"></script>
+	<script type="text/javascript" src="inc/js/chosen/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src="inc/js/jquery.fred.util.js"></script>
+	<script type="text/javascript" src="inc/js/fancybox/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="inc/js/wow.min.js"></script>
+	<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?v=3&key=AIzaSyCjU6qNFbBecSYqHN-u0U-TWDSHLdkS3v8"></script>
+	<script type="text/javascript" src="inc/js/functions.js"></script>
+	<script>
+		if(checkMobile()) window.location = './mobile/?home';
+	</script>
+	<script>new WOW().init();</script>
 
-<footer>
-    <div class="content">
-        <div class="whatsapp">
-        <a href="https://api.whatsapp.com/send?phone=5531984199002&text=Ol%C3%A1!%20Vim%20através%20do%20site. Preciso de uma cotação." target="_blank"><i class="fab fa-whatsapp"></i></a>
-        </div><!-- whatsapp -->
-        <div class="footer-int">
-
-            <div class="footer-int-divs logo-footer">
-            <a href="https://rolimac.com.br" title="Olá, mundo!"><img src="https://rolimac.com.br/wp-content/themes/rolimac/assets/images/logotipo-rolimac-branco.png" alt="logotipo-rolimac"  title="Rolimac - Desde 1965"></a>
-            </div><!-- footer int divs -->
-            
-            <div class="footer-int-divs">
-                <h4>+55 (31) 2105.9900</h4>
-                <p>Avenida Dom Pedro II, 4615</p>
-                <p>Belo Horizonte - MG - 30750-000</p>
-            </div><!-- footer int divs -->
-
-            <div class="footer-int-divs">
-                <h4>+55 (34) 3233.9700</h4>
-                <p>Avenida Floriano Peixoto, 3.783</p>
-                <p>Uberlândia - MG - 38400-704</p>
-            </div><!-- footer int divs -->
-
-            <div class="footer-int-divs">
-                <h4>+55 (16) 3979.7009</h4>
-                <p>Rua José de Alencar, 782</p>
-                <p>Ribeirão Preto - SP - 14080-360</p>
-            </div><!-- footer int divs -->
-
-        </div><!-- footer int -->
-    </div><!-- content -->
-</footer><!-- footer -->
-<script type='text/javascript' id='contact-form-7-js-extra'>
-/* <![CDATA[ */
-var wpcf7 = {"apiSettings":{"root":"https:\/\/rolimac.com.br\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://rolimac.com.br/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.3.2' id='contact-form-7-js'></script>
-<script type='text/javascript' src='https://rolimac.com.br/wp-includes/js/wp-embed.min.js?ver=5.5.3' id='wp-embed-js'></script>
-<script type='text/javascript' src='https://rolimac.com.br/wp-content/plugins/master-slider/public/assets/js/jquery.easing.min.js?ver=3.6.7' id='jquery-easing-js'></script>
-<script type='text/javascript' src='https://rolimac.com.br/wp-content/plugins/master-slider/public/assets/js/masterslider.min.js?ver=3.6.7' id='masterslider-core-js'></script>
-   
 </body>
-</html></body>
 </html>

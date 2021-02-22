@@ -45,7 +45,9 @@ def getUrls(busca,n_results=3000):
         response = requests.get(url, headers=header.generate() ) 
 
     # response = util.getRequest(url)
+    # import pdb; pdb.set_trace()
     soup = BeautifulSoup(response.text, "html.parser")
+    # result = soup.find_all('div', attrs = {'class': 'g'})
     result = soup.find_all('div', attrs = {'class': 'ZINbbc'})
     
     results = []
@@ -108,11 +110,11 @@ def getUrls(busca,n_results=3000):
 
     
 def pesquisa(busca):
-    # item_pesquisa = getUrls(busca)
-    # getDados(item_pesquisa)
+    item_pesquisa = getUrls(busca)
+    getDados(item_pesquisa)
     
     
-    getDados(1)
+    # getDados(1)
     
     return "aui"
 
@@ -130,10 +132,10 @@ def getDados(item_pesquisa):
         .filter(itemUrl.item_pesquisa_id== item_pesquisa)\
         .all()
 
-    result = session.query(UrlBase)\
-        .filter(UrlBase.id == 13 )\
-        .distinct()\
-        .all()
+    # result = session.query(UrlBase)\
+    #     .filter(UrlBase.id == 13 )\
+    #     .distinct()\
+    #     .all()
         # .filter(UrlBase.cnpj == "" and UrlBase.telefone_fixo == "" and UrlBase.telefone_celular == "" and UrlBase.cep == "")\
         # .filter(UrlBase.dominio == 'www.cofermeta.com.br')\
         
