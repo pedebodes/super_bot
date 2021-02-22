@@ -107,7 +107,7 @@ print (regex('telefoneAPIw',filetext))
 regex =r"\+?[\d]{2}\s*[\d]{2}\s*[\d]{4,5}\s*[\d]{4}"
 regex = r'\+[\d]{2}\D*[\d]{2}\D*[\d]{4,5}\D*[\d]{4}'
 regex = r'\=?[\d]{13}'
-
+r'\+?5?5?\W*(\d{2})\W*(\d{4,5})\W*(\d{4})'
 print (json.dumps(removeDuplicado(re.findall(regex, filetext))))
 
 import pdb; pdb.set_trace()
