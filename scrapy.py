@@ -150,7 +150,7 @@ def getDados(item_pesquisa):
             print(response)
             if response:
                 if response.status_code != 200:#403 404
-                    print("DEU ERRO")
+                    print("DEU ERRO") #<Response [999]>
                     import pdb; pdb.set_trace()
                 print("############################")    
                 parts = urlsplit(url)
