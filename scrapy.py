@@ -183,27 +183,27 @@ def getDados(item_pesquisa):
                         pass
 
                 fixo =util.regex('telefone',response.text) 
-                fixo2 =util.regex('telefone2',response.text) 
+                # fixo2 =util.regex('telefone2',response.text) 
                 
-                if len(json.loads(fixo2)) > 0:
-                    fixo = json.dumps(json.loads(fixo) + (json.loads(fixo2)))
+                # if len(json.loads(fixo2)) > 0:
+                #     fixo = json.dumps(json.loads(fixo) + (json.loads(fixo2)))
                     
                     
                 if fixo is not None and fixo != '[]':
                     session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_fixo": fixo})
                     
-                celularAPI =util.regex('telefoneAPI',response.text) 
+                # celularAPI =util.regex('telefoneAPI',response.text) 
                 
-                if celularAPI is not None and celularAPI != '[]':
-                    # celularAPI = celularAPI if celularAPI[:2] == '55' else None
-                    if celularAPI is not None:
-                        z = []
-                        celularAPI = json.loads(celularAPI)
-                        for i in celularAPI:
-                            if i[:3] == '=55':
-                                z.append(i[1:])
-                        z = json.dumps(z)                        
-                        session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": z })
+                # if celularAPI is not None and celularAPI != '[]':
+                #     # celularAPI = celularAPI if celularAPI[:2] == '55' else None
+                #     if celularAPI is not None:
+                #         z = []
+                #         celularAPI = json.loads(celularAPI)
+                #         for i in celularAPI:
+                #             if i[:3] == '=55':
+                #                 z.append(i[1:])
+                #         z = json.dumps(z)                        
+                #         session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": z })
                 
                     
                     

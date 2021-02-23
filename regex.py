@@ -7,14 +7,15 @@ def removeDuplicado(valor):
 url ='http://www.lucios.com/'
 url ='https://rolimac.com.br'
 # url ='https://rolemarolamentos.com.br'
-# url ='http://www.casadorolamentobh.amawebs.com'
+url ='https://rolemarolamentos.com.br/contato/'
 # url = 'https://www.cofermeta.com.br/'
 # url = 'http://www.cldrolamentos.com.br/'
+url= 'https://www.irsa.com.br/'
 
-
+url = 'https://www.oliveirarolamentos.com.br/'
 
 # https://rolimac.com.br/ # tem zap https://api.whatsapp.com/send?phone=5531984199002&amp;text=Ol%C3%A1!%20Vim%20através%20do%20site
-filename = '3.txt'
+filename = '4.txt'
 
 # import requests
 # r = requests.get(url)  
@@ -29,24 +30,37 @@ def removeDuplicado(valor):
     return list(dict.fromkeys(valor))
 
 def regex(opcao,arquivo):
+    # tipoRegex={
+    #     'email':r'[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+',
+    #     'cep': 'CEP\s*(\d{5})-(\d{3})',
+    #     'cnpj': '\d{2}.\d{3}.\d{3}/\d{4}-\d{2}',
+    #     'telefone': '\(\d{2}\)\s\d{4,5}\-\d{4}',
+    #     'telefoneAPI': r"\+?[\d]{2}\s*[\d]{2}\s*[\d]{4,5}\s*[\d]{4}",
+    #     'telefoneAPIw': r'\=?[\d]{13}'
+    #     }
+    
     tipoRegex={
-        'email':r'[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+',
-        'cep': 'CEP\s*(\d{5})-(\d{3})',
-        'cnpj': '\d{2}.\d{3}.\d{3}/\d{4}-\d{2}',
-        'telefone': '\(\d{2}\)\s\d{4,5}\-\d{4}',
-        'telefoneAPI': r"\+?[\d]{2}\s*[\d]{2}\s*[\d]{4,5}\s*[\d]{4}",
-        'telefoneAPIw': r'\=?[\d]{13}'
+        'email':re.compile(r'[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+'),
+        'cep': re.compile(r'\s+(\d{5})[- ](\d{3})\s*'),
+        'cnpj': re.compile(r'\d{2}.\d{3}.\d{3}/\d{4}-\d{2}'),
+        'telefone': re.compile(r'\+?5?5?[\-\.\s]*\(?(\d{2})\)?\s+(\d{4,5})[-. ]?(\d{4})'),
+        'telefoneAPI': re.compile(r'\=+[\d]{13}\&+')
         }
     
     return json.dumps(removeDuplicado(re.findall(tipoRegex.get(opcao), filetext)))
-    
 
-# print ("Email " + regex('email',filetext))
-# print ("cep " +regex('cep',filetext))
+    return json.dumps(removeDuplicado(re.findall(tipoRegex.get(opcao), filetext)))
 
-# print ("cnpj " +regex('cnpj',filetext))
-# print ("telefone " +regex('telefone',filetext))
-# print ("telefoneAPI " +regex('telefoneAPI',filetext))
+
+# print(regex('email',filetext))
+# r = re.compile(regex)
+# x = (re.findall(r,filetext))
+
+print ("Email " + regex('email',filetext))
+print ("cep " +regex('cep',filetext))
+print ("cnpj " +regex('cnpj',filetext))
+print ("telefone " +regex('telefone',filetext))
+print ("telefoneAPI " +regex('telefoneAPI',filetext))
 # print ("telefoneAPIw " + regex('telefoneAPIw',filetext))
 
 
@@ -70,13 +84,25 @@ def validaTelefoneDDD(valor):
 # regex = r'\+?5?5?\W*(\d{2})\W*(\d{4,5})\W*(\d{4})'
 # regex = r'\(\d{2}\)\s\d{4,5}\-\d{4}'
 # regex = r"\+?[\d]{2}\s*[\d]{2}\s*[\d]{4,5}\s*[\d]{4}"
-regex = r'\+?5?5?\d*(\d{2})\W*(\d{4,5})\W*(\d{4})\D'
+# regex = r'\+?5?5?\d*(\d{2})\W*(\d{4,5})\W*(\d{4})\D'
 # regex = r'\+?5?5?\d*(\d{2})\W*(\d{4,5})\W*(\d{4})'
-regex = r'\+?5?5?[\-\.\s]*\(?(\d{2})\)?[\-\.\s]+(\d{4,5})[-. ]?(\d{4})'
-regex = r'\+?5?5?[\-\.\s]*\(?(\d{2})\)?\s+(\d{4,5})[-. ]?(\d{4})'
-# +55 (31) 2105.9900
-# regex = r'\+?5?5?\d*(\d{2})\W*(\d{4,5})\W*(\d{4})'
+# regex = r'\+?5?5?[\-\.\s]*\(?(\d{2})\)?[\-\.\s]+(\d{4,5})[-. ]?(\d{4})'
+# regex = r'\+?5?5?[\-\.\s]*\(?(\d{2})\)?\s+(\d{4,5})[-. ]?(\d{4})'  #FUNCIONANDO
 
+# regex = r'\=+[\d]{13}\&+' # web zap
+# regex = r"\=+\+?[\d]{2}\s*[\d]{2}\s*[\d]{4,5}\s*[\d]{4}\&+"
+
+# CEP
+# regex = 'CEP\s*(\d{5})-(\d{3})'
+# regex = r'\s+(\d{5})[- ](\d{3})\s*'
+
+
+
+# 3  CEP: 30710-040
+# 2  CEP 32010-040
+
+
+regex = r'\d{2}.\d{3}.\d{3}/\d{4}-\d{2}'
 
 
 # print (json.dumps(removeDuplicado(re.findall(regex, filetext))))
@@ -84,14 +110,6 @@ regex = r'\+?5?5?[\-\.\s]*\(?(\d{2})\)?\s+(\d{4,5})[-. ]?(\d{4})'
 r = re.compile(regex)
 x = (re.findall(r,filetext))
 # +55 (16) 3979.7009
-
-
-
-
-
-
-
-
-print(x)
+# print(x)
 # for i in x:
 #     print(validaTelefoneDDD(i))
