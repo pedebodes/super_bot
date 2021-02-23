@@ -2,15 +2,14 @@ verificar filtro de url ignorar, esta ocorrendo erro no filtro ---- OK
 verificar para remover as url duplicadas no url_base --- OK
 configurar rota para adicionar url ignorar -- OK
 verificar melhorias no regex -- ok
+verificar possibilidade de docker postgree e salvar nele ok 
 
-
+configurar retorno regex ser json
+verificar campos do banco esta sendo salvo com chaves ver se tem como remover 
 pesquisar forma de pesquisa no google com somente 1 requestes.get conforme util
 verificar possibilidade de scrap pela pagia home e contato  aom inves do resltado da pesquisa do google
-verificar campos do banco esta sendo salvo com chaves ver se tem como remover 
-
 api cep pegar muiltiplos cep
 api cnpj pegar muiltiplos cnpj
-verificar possibilidade de docker postgree e salvar nele
 criar registro de status na tabela
 ver imagem no downloads
 
