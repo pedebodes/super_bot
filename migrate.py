@@ -7,7 +7,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref
 
-# from sqlalchemy.dialects.postgresql import JSONB
+from sqlalchemy.dialects.postgresql import JSONB
 
 load_dotenv(find_dotenv())
 Base = declarative_base()
@@ -22,13 +22,13 @@ class UrlBase(Base):
     id = Column(Integer, primary_key=True)
     dominio = Column(String)    
     url =Column(String) 
-    cnpj = Column(String)
-    telefone_fixo = Column(String)
-    telefone_celular = Column(String)
-    cep = Column(String)
-    email = Column(String)
-    endereco = Column(JSON)
-    dados_cnpj = Column(JSON)
+    cnpj = Column(JSONB)
+    telefone_fixo = Column(JSONB)
+    telefone_celular = Column(JSONB)
+    cep = Column(JSONB)
+    email = Column(JSONB)
+    endereco = Column(JSONB)
+    dados_cnpj = Column(JSONB)
     status = Column(Integer, default=0)
     
 """

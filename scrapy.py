@@ -14,7 +14,6 @@ import random # aqui
 import util
 import json
 from collections import deque 
-from sqlalchemy import func
 
 header = Headers(
         headers=True
@@ -84,27 +83,18 @@ def getUrls(busca,n_results=3000):
                     else:
                         addUrl.dominio = urlparse(x.group(1)).netloc
                         addUrl.url = urlparse(x.group(1)).scheme+"://"+urlparse(x.group(1)).netloc
+                        session.add(addUrl)
+                        session.commit()
 
-                    session.add(addUrl)
-                    session.commit()
-                
-                    it_url = itemUrl()
-                    it_url.url_id =addUrl.id
-                    it_url.item_pesquisa_id = item_pesquisa.id
-                    session.add(it_url)
+                        it_url = itemUrl()
+                        it_url.url_id =addUrl.id
+                        it_url.item_pesquisa_id = item_pesquisa.id
+                        session.add(it_url)
                     
                 
     session.commit()
-    
-    # Removendo registros duplicados
-    result = session.query(UrlBase)\
-    .group_by(UrlBase.dominio)\
-    .having(func.count(UrlBase.dominio) > 1)\
-    .all()
-    for i in result:
-        session.query(UrlBase).filter(UrlBase.id==i.id).delete()
-    session.commit()
-    
+  
+   
     return (item_pesquisa.id)    
     
 
@@ -112,10 +102,10 @@ def getUrls(busca,n_results=3000):
 def pesquisa(busca):
     item_pesquisa = getUrls(busca)
     getDados(item_pesquisa)
-    
+
     
     # getDados(1)
-    
+
     return "aui"
 
 
@@ -267,7 +257,4 @@ def addUrlIgnorar(url):
         url_ignorar.dominio = i if i[-1] != '/' else i[:-1]
         session.add(url_ignorar)
         session.commit()
-
-    return "Adicionado com sucesso"
-    
     
