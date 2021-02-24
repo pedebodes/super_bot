@@ -78,7 +78,7 @@ def pesquisa(busca):
     getDados(item_pesquisa)
 
     
-    # getDados(2)
+    # getDados(1)
 
     return "aui"
 
@@ -97,7 +97,7 @@ def getDados(item_pesquisa):
         .all()
 
     # result = session.query(UrlBase)\
-    #     .filter(UrlBase.id == 13 )\
+    #     .filter(UrlBase.id == 18 )\
     #     .distinct()\
     #     .all()
         # .filter(UrlBase.cnpj == "" and UrlBase.telefone_fixo == "" and UrlBase.telefone_celular == "" and UrlBase.cep == "")\
@@ -113,12 +113,7 @@ def getDados(item_pesquisa):
             print("############################")    
             print(response)
             if response:
-                if response.status_code != 200:#403 404
-                    print("DEU ERRO") #<Response [999]>
-                    import pdb; pdb.set_trace()
-                print("############################")    
                 parts = urlsplit(url)
-                # ua.update()
                 
                 base_url = "{0.scheme}://{0.netloc}".format(parts)  
                 path = url[:url.rfind('/')+1] if '/' in parts.path else url     
@@ -140,41 +135,40 @@ def getDados(item_pesquisa):
                 if cep is not None and cep != '[]':
                     session.query(UrlBase).filter(UrlBase.id == row.id).update({"cep": cep})
                     try:
-                        endereco = getDadosCEP(parse_input(cep))
-                        if not "erro" in endereco:
-                            session.query(UrlBase).filter(UrlBase.id == row.id).update({"endereco": endereco})
+                        aux = json.loads(cep)
+                        if len(aux) > 0:
+                            endereco = []
+                            for i in aux:
+                                end = getDadosCEP(parse_input(i))
+                                if not "erro" in end:
+                                    endereco.append(end)
+                        
+                        session.query(UrlBase).filter(UrlBase.id == row.id).update({"endereco": json.dumps(endereco)})
                     except:
                         pass
-
-                fixo =util.regex('telefone',response.text) 
-                # fixo2 =util.regex('telefone2',response.text) 
                 
-                # if len(json.loads(fixo2)) > 0:
-                #     fixo = json.dumps(json.loads(fixo) + (json.loads(fixo2)))
-                    
-                    
+                
+                fixo =util.regex('telefone',response.text) 
                 if fixo is not None and fixo != '[]':
                     session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_fixo": fixo})
                     
-                # celularAPI =util.regex('telefoneAPI',response.text) 
-                
-                # if celularAPI is not None and celularAPI != '[]':
-                #     # celularAPI = celularAPI if celularAPI[:2] == '55' else None
-                #     if celularAPI is not None:
-                #         z = []
-                #         celularAPI = json.loads(celularAPI)
-                #         for i in celularAPI:
-                #             if i[:3] == '=55':
-                #                 z.append(i[1:])
-                #         z = json.dumps(z)                        
-                #         session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": z })
+                celularAPI =util.regex('telefoneAPI',response.text) 
+                if celularAPI is not None and celularAPI != '[]':
+                    if celularAPI is not None:
+                        z = []
+                        celularAPI = json.loads(celularAPI)
+                        for i in celularAPI:
+                            if i[:3] == '=55':
+                                z.append(i[1:])
+                        z = json.dumps(z)                        
+                        session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": z })
                 
                     
                     
                 session.commit()
 
         
-                soup = BeautifulSoup(response.text ,"html.parser") #lxml
+                soup = BeautifulSoup(response.text ,"html.parser")
                 
                 for anchor in soup.find_all("a"):  
                     link = anchor.attrs["href"] if "href" in anchor.attrs else ''  
@@ -188,7 +182,6 @@ def getDados(item_pesquisa):
                         if row.dominio == aux.netloc :
                             new_urls.append(link)  
             else:
-                # TODO: incluir a na url caso não retorne nada , ou seja entrou aqui
                 continue
      
      
@@ -212,6 +205,7 @@ def parse_input(i):
     i = i.replace('[', '')
     i = i.replace(']', '')
     i = i.replace(' ', '')
+    i = i.replace("'","")
     
     return i
 

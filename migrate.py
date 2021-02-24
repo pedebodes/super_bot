@@ -22,7 +22,7 @@ class UrlBase(Base):
     id = Column(Integer, primary_key=True)
     dominio = Column(String)    
     url =Column(String) 
-    cnpj = Column(String)
+    cnpj = Column(JSONB)
     telefone_fixo = Column(JSONB)
     telefone_celular = Column(JSONB)
     cep = Column(JSONB)
