@@ -47,10 +47,16 @@ def regex(opcao,arquivo):
         'telefoneAPI': re.compile(r'\=+[\d]{13}\&+')
         }
     
-    return json.dumps(removeDuplicado(re.findall(tipoRegex.get(opcao), filetext)))
+    return json.dumps({'results': removeDuplicado(re.findall(tipoRegex.get(opcao), filetext))})
+
 
     return json.dumps(removeDuplicado(re.findall(tipoRegex.get(opcao), filetext)))
 
+x= regex('email',filetext)
+print(type(x))
+print(x)
+
+import pdb; pdb.set_trace()
 
 # print(regex('email',filetext))
 # r = re.compile(regex)
@@ -63,7 +69,7 @@ print ("telefone " +regex('telefone',filetext))
 print ("telefoneAPI " +regex('telefoneAPI',filetext))
 # print ("telefoneAPIw " + regex('telefoneAPIw',filetext))
 
-
+import pdb; pdb.set_trace()
 def validaTelefoneDDD(valor):
     for x in valor:
         x = [x for x in list(valor) if x != ' ']

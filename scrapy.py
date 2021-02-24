@@ -14,6 +14,7 @@ import random # aqui
 import util
 import json
 from collections import deque 
+import numpy as np
 
 header = Headers(
         headers=True
@@ -36,75 +37,48 @@ def getUrls(busca,n_results=3000):
     session.add(item_pesquisa)
     session.commit()
 
-    ua = UserAgent()
-    sleep(random.randint(2,30)) 
-    response = requests.get(url, {"User-Agent": ua.random} )  
-    if response.status_code != 200:
-        sleep(random.randint(2,30)) 
-        response = requests.get(url, headers=header.generate() ) 
-
-    # response = util.getRequest(url)
-    # import pdb; pdb.set_trace()
+    response = util.getRequest(url)
     soup = BeautifulSoup(response.text, "html.parser")
-    # result = soup.find_all('div', attrs = {'class': 'g'})
-    result = soup.find_all('div', attrs = {'class': 'ZINbbc'})
-    
     results = []
-    for i in result:
-        ln = i.find('a', href = True)            
-        if ln is not None:
-            results.append(re.search('\/url\?q\=(.*)\&sa',str(ln['href'])))
-    results = res = [i for i in results if i] 
     
-    links=[i.group(1) for i in results if i != None]
-    for x in results:
-        if x != None:
-
-            ul =urlparse(x.group(1)).netloc.split('.')[0]
-            if ul == 'www':
-                ul =urlparse(x.group(1)).netloc.split('.')[1]
-
-            ignorar = session.query(UrlIgnorar)\
-                .filter(UrlIgnorar.dominio == urlparse(x.group(1)).scheme+"://"+urlparse(x.group(1)).netloc)\
+    links = [a['href'] for a in soup.find_all('a', href=True)]
+    for i in links:
+        if i.startswith('https') or i.startswith('http'):
+            ignorar = session.query(UrlIgnorar).\
+                filter(UrlIgnorar.dominio == urlparse(i).scheme+"://"+urlparse(i).netloc)\
                     .all() 
             if len(ignorar) == 0:
-                
-                ext = pathlib.Path(x.group(1)).suffix
-                
-                ignorarExtensoes = ['.xls','.xlsx', '.pdf', '.rar', '.exe']
+                url = urlparse(i).scheme+"://"+urlparse(i).netloc
+                results.append(url)
+    
+    
+    semDuplicados = np.unique(results).tolist()
+    
+    for i in semDuplicados:
+        if i.find('blog') == -1: #removendo url de blog
+            addUrl = UrlBase()
+            addUrl.dominio = i
+            addUrl.url = i
+            session.add(addUrl)
+            session.commit()
 
-                result = list(filter(lambda x: str(ext).lower() in x, ignorarExtensoes))  
-                
-                addUrl = UrlBase()
-                if bool(urlparse(x.group(1)).netloc.strip()):
-                    if len(result) > 0:
-                        addUrl.dominio = urlparse(x.group(1)).netloc
-                        addUrl.url = x.group(1)
-                    else:
-                        addUrl.dominio = urlparse(x.group(1)).netloc
-                        addUrl.url = urlparse(x.group(1)).scheme+"://"+urlparse(x.group(1)).netloc
-                        session.add(addUrl)
-                        session.commit()
-
-                        it_url = itemUrl()
-                        it_url.url_id =addUrl.id
-                        it_url.item_pesquisa_id = item_pesquisa.id
-                        session.add(it_url)
-                    
-                
-    session.commit()
-  
-   
-    return (item_pesquisa.id)    
+            it_url = itemUrl()
+            it_url.url_id =addUrl.id
+            it_url.item_pesquisa_id = item_pesquisa.id
+            session.add(it_url)
     
 
+    session.commit()
+    return (item_pesquisa.id) 
+    
     
 def pesquisa(busca):
+    
     item_pesquisa = getUrls(busca)
     getDados(item_pesquisa)
 
     
-    # getDados(1)
+    # getDados(2)
 
     return "aui"
 
