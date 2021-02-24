@@ -28,8 +28,6 @@ def regex(opcao,arquivo):
             )
         )
     
-
-    
 def getRequest(url):
     try:
         header = Headers(
@@ -48,4 +46,19 @@ def getRequest(url):
     except:
         print('Erro indefinido')
         return False
-       
+
+def parse_input(i):
+    'Retira caracteres de separação do CNPJ'
+    i = str(i)
+    i = i.replace('.', '')
+    i = i.replace(',', '')
+    i = i.replace('/', '')
+    i = i.replace('-', '')
+    i = i.replace('\\', '')
+    i = i.replace('"', '')
+    i = i.replace('[', '')
+    i = i.replace(']', '')
+    i = i.replace(' ', '')
+    i = i.replace("'","")
+    
+    return i       

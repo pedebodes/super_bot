@@ -6,5 +6,5 @@ url = ['https://www.casasbahia.com.br/','https://www.carrefour.com.br','https://
 
 
 print (addUrlIgnorar(url))
-print(pesquisa("rolamentos"))
+print(pesquisa("balança"))
 # print(getDados(14))

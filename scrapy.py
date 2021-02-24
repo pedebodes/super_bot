@@ -1,15 +1,15 @@
-import requests  # aqui
-import re
+# import requests  # aqui
+# import re
 import urllib
 from urllib.parse import urlparse, urlsplit
 from bs4 import BeautifulSoup
 # from requests.models import Response # aqui
 from migrate import session,UrlBase,UrlIgnorar,itemUrl,ItemPesquisa
 from fake_headers import Headers
-from fake_useragent import UserAgent
-import pathlib
-from time import sleep # aqui
-import random # aqui
+# from fake_useragent import UserAgent
+# import pathlib
+# from time import sleep # aqui
+# import random # aqui
 # import nltk
 import util
 import json
@@ -74,11 +74,11 @@ def getUrls(busca,n_results=3000):
     
 def pesquisa(busca):
     
-    item_pesquisa = getUrls(busca)
-    getDados(item_pesquisa)
+    # item_pesquisa = getUrls(busca)
+    # getDados(item_pesquisa)
 
     
-    # getDados(1)
+    getDados(1)
 
     return "aui"
 
@@ -94,10 +94,11 @@ def getDados(item_pesquisa):
     result = session.query(UrlBase)\
         .join(itemUrl,UrlBase.id == itemUrl.url_id)\
         .filter(itemUrl.item_pesquisa_id== item_pesquisa)\
+        .filter(UrlBase.status == 0)\
         .all()
 
     # result = session.query(UrlBase)\
-    #     .filter(UrlBase.id == 18 )\
+    #     .filter(UrlBase.id == 100 )\
     #     .distinct()\
     #     .all()
         # .filter(UrlBase.cnpj == "" and UrlBase.telefone_fixo == "" and UrlBase.telefone_celular == "" and UrlBase.cep == "")\
@@ -139,7 +140,7 @@ def getDados(item_pesquisa):
                         if len(aux) > 0:
                             endereco = []
                             for i in aux:
-                                end = getDadosCEP(parse_input(i))
+                                end = getDadosCEP(util.parse_input(i))
                                 if not "erro" in end:
                                     endereco.append(end)
                         
@@ -164,7 +165,7 @@ def getDados(item_pesquisa):
                         session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": z })
                 
                     
-                    
+                session.query(UrlBase).filter(UrlBase.id == row.id).update({"status": 1 })    
                 session.commit()
 
         
@@ -182,6 +183,8 @@ def getDados(item_pesquisa):
                         if row.dominio == aux.netloc :
                             new_urls.append(link)  
             else:
+                session.query(UrlBase).filter(UrlBase.id == row.id).update({"status": 2 }) #site não responde  
+                session.commit() 
                 continue
      
      
@@ -193,24 +196,10 @@ def getDadosCEP(cep):
         dados_json = json.loads(req.text)
         return dados_json
 
-def parse_input(i):
-    'Retira caracteres de separação do CNPJ'
-    i = str(i)
-    i = i.replace('.', '')
-    i = i.replace(',', '')
-    i = i.replace('/', '')
-    i = i.replace('-', '')
-    i = i.replace('\\', '')
-    i = i.replace('"', '')
-    i = i.replace('[', '')
-    i = i.replace(']', '')
-    i = i.replace(' ', '')
-    i = i.replace("'","")
-    
-    return i
+
 
 def getDadosCNPJ(cnpj):
-    cnpj = parse_input(cnpj)
+    cnpj = util.parse_input(cnpj)
 
     url = 'http://receitaws.com.br/v1/cnpj/{0}'.format(cnpj)
     req = util.getRequest(url)  
