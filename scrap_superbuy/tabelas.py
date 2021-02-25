@@ -8,7 +8,7 @@ Base = declarative_base()
 from sqlalchemy.orm import sessionmaker
 Session = sessionmaker(bind = engine)
 session = Session()
-class UrlBase(Base):
+class Resultados(Base):
    __tablename__='url_base'
    
    id = Column(Integer, primary_key=True)
@@ -23,7 +23,7 @@ class UrlBase(Base):
    dados_cnpj = Column(String)
 
 
-class UrlIgnorar(Base):
+class DominiosIgnorados(Base):
    __tablename__='url_ignorar'
    
    id = Column(Integer, primary_key=True)

@@ -11,7 +11,7 @@ api cep pegar muiltiplos cep --ok
 api cnpj pegar muiltiplos cnpj -- ok
 configurar retorno regex ser json --ok
 
-
+viabilidade de endpoint no arquivo .env
 configurar retorno de item_pesquisa json
 configurar retorno das url em json 
 configurar retorno de url_base conforme item_pesquisa informado como parametro

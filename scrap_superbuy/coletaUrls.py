@@ -4,7 +4,7 @@ import requests
 import re
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup
-from tabelas import session, UrlBase,UrlIgnorar
+from tabelas import session, Resultados,DominiosIgnorados
 import json
 import pathlib
 
@@ -27,7 +27,7 @@ def google_results(busca, n_results,ignorar):
     for x in results:
         if x != None:
             
-            ignorar = session.query(UrlIgnorar).filter(UrlIgnorar.dominio.ilike(urlparse(x.group(1)).netloc.split('.')[1])).all()
+            ignorar = session.query(DominiosIgnorados).filter(DominiosIgnorados.dominio.ilike(urlparse(x.group(1)).netloc.split('.')[1])).all()
                         
             if len(ignorar) == 0:
                 
@@ -37,9 +37,9 @@ def google_results(busca, n_results,ignorar):
 
                 result = list(filter(lambda x: str(ext).lower() in x, ignorarExtensoes))  
                 if len(result) > 0:
-                    session.add(UrlBase(dominio = urlparse(x.group(1)).netloc,url =urlparse(x.group(1)).scheme+"://"+urlparse(x.group(1)).netloc))
+                    session.add(Resultados(dominio = urlparse(x.group(1)).netloc,url =urlparse(x.group(1)).scheme+"://"+urlparse(x.group(1)).netloc))
                 else:
-                    session.add(UrlBase(dominio = urlparse(x.group(1)).netloc,url = x.group(1)))
+                    session.add(Resultados(dominio = urlparse(x.group(1)).netloc,url = x.group(1)))
             
     session.commit()
     
@@ -52,7 +52,7 @@ def google_results(busca, n_results,ignorar):
 
 
 # Consulta URl para ignorar
-ignorar = session.query(UrlIgnorar).all()
+ignorar = session.query(DominiosIgnorados).all()
 
 x = google_results('bbb', 3000,ignorar)
 # print(x)
@@ -65,7 +65,7 @@ x = google_results('bbb', 3000,ignorar)
 # import re
 # import urllib.parse
 # from urllib.parse import urlparse
-# from tabelas import session, UrlBase,UrlIgnorar
+# from tabelas import session, Resultados,DominiosIgnorados
 # import pathlib
 
 # def pesquisaWeb(query,ignorar):
@@ -86,16 +86,16 @@ x = google_results('bbb', 3000,ignorar)
 #                         if(re.search('google.com', domain.netloc)):
 #                             continue
 #                         else:
-#                             ignorar = session.query(UrlIgnorar).filter(UrlIgnorar.dominio.ilike(urlparse(url).netloc.split('.')[1])).all()
+#                             ignorar = session.query(DominiosIgnorados).filter(DominiosIgnorados.dominio.ilike(urlparse(url).netloc.split('.')[1])).all()
 #                             if len(ignorar) == 0:
 #                                 ext = pathlib.Path(url).suffix
 #                                 ignorarExtensoes = ['.xls','.xlsx', '.pdf', '.rar', '.exe'] 
 #                                 result = list(filter(lambda x: str(ext).lower() in x, ignorarExtensoes)) 
 #                                 if len(result) > 0:
 #                                     g_clean.append(url)
-#                                     session.add(UrlBase(dominio = urlparse(url).netloc,url =urlparse(url).scheme+"://"+urlparse(url).netloc))
+#                                     session.add(Resultados(dominio = urlparse(url).netloc,url =urlparse(url).scheme+"://"+urlparse(url).netloc))
 #                                 else:
-#                                     session.add(UrlBase(dominio = urlparse(url).netloc,url = url))
+#                                     session.add(Resultados(dominio = urlparse(url).netloc,url = url))
 #                                 session.commit()
 #                     except:
 #                         continue
@@ -106,7 +106,7 @@ x = google_results('bbb', 3000,ignorar)
 
 
 # # Consulta URl para ignorar
-# ignorar = session.query(UrlIgnorar).all()
+# ignorar = session.query(DominiosIgnorados).all()
 
 # x = (pesquisaWeb("rolamentos",ignorar))
 

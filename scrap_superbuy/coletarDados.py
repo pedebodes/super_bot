@@ -5,7 +5,7 @@ from fake_useragent import UserAgent
 from urllib.parse import urlsplit  
 from collections import deque  
 import re  
-from tabelas import engine, UrlBase,session
+from tabelas import engine, Resultados,session
 from urllib.parse import urlparse
 import random
 from fake_headers import Headers
@@ -27,11 +27,11 @@ processed_urls = set()
 
 emails = set()  
 
-result = session.query(UrlBase)\
+result = session.query(Resultados)\
     .distinct()\
     .all()
-    # .filter(UrlBase.dominio == 'www.cofermeta.com.br')\
-    # .filter(UrlBase.id == 2 )\
+    # .filter(Resultados.dominio == 'www.cofermeta.com.br')\
+    # .filter(Resultados.id == 2 )\
 
 #13  15 26 51
         
@@ -112,36 +112,36 @@ for row in result:
 
             email = getEmail(response.text, re.I)
             if email is not None and len(email) > 0:
-                session.query(UrlBase).filter(UrlBase.id == row.id).update({"email": str(email)})
+                session.query(Resultados).filter(Resultados.id == row.id).update({"email": str(email)})
             
             cnpj = getCnpj(response.text)
             if cnpj is not None:
-                session.query(UrlBase).filter(UrlBase.id == row.id).update({"cnpj": cnpj})
+                session.query(Resultados).filter(Resultados.id == row.id).update({"cnpj": cnpj})
                 try:
-                    session.query(UrlBase).filter(UrlBase.id == row.id).update({"dados_cnpj": str(consulta(cnpj))})
+                    session.query(Resultados).filter(Resultados.id == row.id).update({"dados_cnpj": str(consulta(cnpj))})
                 except:
                     pass
 
 
             cep = getCep1(response.text)
             if cep is not None:
-                session.query(UrlBase).filter(UrlBase.id == row.id).update({"cep": cep})
+                session.query(Resultados).filter(Resultados.id == row.id).update({"cep": cep})
                 try:
                     d = viacep.ViaCEP(cep.replace("-","").replace(".",""))
                     endereco = d.getDadosCEP()
                     if not "erro" in endereco:
-                        session.query(UrlBase).filter(UrlBase.id == row.id).update({"endereco": str(endereco)})
+                        session.query(Resultados).filter(Resultados.id == row.id).update({"endereco": str(endereco)})
                 except:
                     pass
                 
             cep = getCep(response.text)
             if cep is not None:
-                session.query(UrlBase).filter(UrlBase.id == row.id).update({"cep": cep.split()[1]})
+                session.query(Resultados).filter(Resultados.id == row.id).update({"cep": cep.split()[1]})
                 try:
                     d = viacep.ViaCEP(cep.replace("-","").replace(".",""))
                     endereco = d.getDadosCEP()
                     if not "erro" in endereco:
-                        session.query(UrlBase).filter(UrlBase.id == row.id).update({"endereco": str(endereco)})
+                        session.query(Resultados).filter(Resultados.id == row.id).update({"endereco": str(endereco)})
                 except:
                     pass
                 
@@ -149,19 +149,19 @@ for row in result:
 
             fixo =getTelefoneFixo(response.text)  
             if fixo is not None:
-                session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_fixo": fixo})
+                session.query(Resultados).filter(Resultados.id == row.id).update({"telefone_fixo": fixo})
                 
             
             celularAPI =getCelularAPI(response.text)                 
             if celularAPI is not None:
                 celularAPI = celularAPI if celularAPI[:2] == '55' else None
                 if celularAPI is not None:
-                    session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": celularAPI })
+                    session.query(Resultados).filter(Resultados.id == row.id).update({"telefone_celular": celularAPI })
             
             celular =getCelular(response.text) 
                                                       
             if celular is not None:
-                session.query(UrlBase).filter(UrlBase.id == row.id).update({"telefone_celular": celular })
+                session.query(Resultados).filter(Resultados.id == row.id).update({"telefone_celular": celular })
                 
                 
                 

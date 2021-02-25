@@ -7,7 +7,7 @@ import re
 # from urllib.request import Request, urlopen
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup
-from tabelas import engine, UrlBase,session
+from tabelas import engine, Resultados,session
 
 
 
@@ -31,7 +31,7 @@ def google_results(busca, n_results):
             print (x.group(1))
             print (urlparse(x.group(1)).netloc)
             print ("########################")
-            session.add(UrlBase(dominio = urlparse(x.group(1)).netloc,url = x.group(1)))
+            session.add(Resultados(dominio = urlparse(x.group(1)).netloc,url = x.group(1)))
             
     session.commit()
             
@@ -69,7 +69,7 @@ def google_results(busca, n_results):
 #    print ("Name: ",row.name, "Address:",row.address, "Email:",row.email)
 
 
-result = session.query(UrlBase)\
+result = session.query(Resultados)\
     .distinct()\
     .all()
 

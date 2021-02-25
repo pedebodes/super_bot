@@ -20,6 +20,9 @@ def regex(opcao,arquivo):
         'telefoneAPI': re.compile(r'\=+[\d]{13}\&+')
         }
     
+    return re.findall(tipoRegex.get(opcao), arquivo)
+    
+            
     return json.dumps(
         removeDuplicado(
             re.findall(
@@ -29,36 +32,42 @@ def regex(opcao,arquivo):
         )
     
 def getRequest(url):
+    
     try:
         header = Headers(
             headers=False
         )
         sleep(random.randint(2,30)) 
-        return requests.get(url, headers=header.generate())
+        return requests.get(url, headers=header.generate(),timeout=5) # timeout=5,verify = False
+        
+    except requests.exceptions.RequestException as err:
+        return err
+    except requests.exceptions.HTTPError as errh:
+        return errh
+    except requests.exceptions.ConnectionError as errc:
+        return errc
+    except requests.exceptions.Timeout as errt:
+        return errt
+    
+    
+    # try:
+    #     header = Headers(
+    #         headers=False
+    #     )
+    #     sleep(random.randint(2,30)) 
+    #     return requests.get(url, headers=header.generate())
 
 
-    except HTTPError as http_err:
-        print(f'Erro HTTP: {http_err}')
-        return False
-    except Exception as err:
-        print(f'Outro erro desconhecido: {err}')    
-        return False
-    except:
-        print('Erro indefinido')
-        return False
+    # except HTTPError as http_err:
+    #     return (f'Erro HTTP: {http_err}')
+        
+    # except Exception as err:
+    #     return (f'Site fora do ar ou nao responde: {err}')    
+    #     return False
+    # except:
+    #     return ('Erro indefinido')
+    #     return False
 
 def parse_input(i):
-    'Retira caracteres de separação do CNPJ'
-    i = str(i)
-    i = i.replace('.', '')
-    i = i.replace(',', '')
-    i = i.replace('/', '')
-    i = i.replace('-', '')
-    i = i.replace('\\', '')
-    i = i.replace('"', '')
-    i = i.replace('[', '')
-    i = i.replace(']', '')
-    i = i.replace(' ', '')
-    i = i.replace("'","")
-    # ''.join(x for x in b if x.isdigit()).rjust(14, "0")
-    return i       
+    return ''.join(x for x in i if x.isdigit())
+

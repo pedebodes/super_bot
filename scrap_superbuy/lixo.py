@@ -21,7 +21,7 @@ from bs4 import BeautifulSoup
 import re
 import urllib.parse
 from urllib.parse import urlparse
-from tabelas import session, UrlBase,UrlIgnorar
+from tabelas import session, Resultados,DominiosIgnorados
 import pathlib
 
 def pesquisaWeb(query,ignorar):
@@ -42,16 +42,16 @@ def pesquisaWeb(query,ignorar):
                         if(re.search('google.com', domain.netloc)):
                             continue
                         else:
-                            ignorar = session.query(UrlIgnorar).filter(UrlIgnorar.dominio.ilike(urlparse(url).netloc.split('.')[1])).all()
+                            ignorar = session.query(DominiosIgnorados).filter(DominiosIgnorados.dominio.ilike(urlparse(url).netloc.split('.')[1])).all()
                             if len(ignorar) == 0:
                                 ext = pathlib.Path(url).suffix
                                 ignorarExtensoes = ['.xls','.xlsx', '.pdf', '.rar', '.exe'] 
                                 result = list(filter(lambda x: str(ext).lower() in x, ignorarExtensoes)) 
                                 if len(result) > 0:
                                     g_clean.append(url)
-                                    session.add(UrlBase(dominio = urlparse(url).netloc,url =urlparse(url).scheme+"://"+urlparse(url).netloc))
+                                    session.add(Resultados(dominio = urlparse(url).netloc,url =urlparse(url).scheme+"://"+urlparse(url).netloc))
                                 else:
-                                    session.add(UrlBase(dominio = urlparse(url).netloc,url = url))
+                                    session.add(Resultados(dominio = urlparse(url).netloc,url = url))
                                 session.commit()
                     except:
                         continue
@@ -62,7 +62,7 @@ def pesquisaWeb(query,ignorar):
 
 
 # Consulta URl para ignorar
-ignorar = session.query(UrlIgnorar).all()
+ignorar = session.query(DominiosIgnorados).all()
 
 x = (pesquisaWeb("rolamentos",ignorar))
 

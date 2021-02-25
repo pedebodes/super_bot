@@ -47,22 +47,30 @@ def regex(opcao,arquivo):
         'telefoneAPI': re.compile(r'\=+[\d]{13}\&+')
         }
     
+    return re.findall(tipoRegex.get(opcao), filetext)
     return json.dumps({'results': removeDuplicado(re.findall(tipoRegex.get(opcao), filetext))})
 
 
     return json.dumps(removeDuplicado(re.findall(tipoRegex.get(opcao), filetext)))
 
 x= regex('email',filetext)
-print(type(x))
-print(x)
+# print(type(x))
+# print(x)
 
-import pdb; pdb.set_trace()
+# import pdb; pdb.set_trace()
 
 # print(regex('email',filetext))
 # r = re.compile(regex)
 # x = (re.findall(r,filetext))
 
-print ("Email " + regex('email',filetext))
+x = regex('telefone',filetext)
+
+for i in x:
+    print(i)
+    import pdb; pdb.set_trace()
+
+import pdb; pdb.set_trace()
+# print ("Email " + regex('email',filetext))
 print ("cep " +regex('cep',filetext))
 print ("cnpj " +regex('cnpj',filetext))
 print ("telefone " +regex('telefone',filetext))
