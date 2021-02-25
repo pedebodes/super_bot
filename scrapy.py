@@ -36,6 +36,7 @@ def getUrls(busca,n_results=3000):
     item_pesquisa.item = busca
     session.add(item_pesquisa)
     session.commit()
+    # CItext #######################################
 
     response = util.getRequest(url)
     soup = BeautifulSoup(response.text, "html.parser")
@@ -74,11 +75,11 @@ def getUrls(busca,n_results=3000):
     
 def pesquisa(busca):
     
-    # item_pesquisa = getUrls(busca)
-    # getDados(item_pesquisa)
+    item_pesquisa = getUrls(busca)
+    getDados(item_pesquisa)
 
     
-    getDados(1)
+    # getDados(1)
 
     return "aui"
 

@@ -60,5 +60,5 @@ def parse_input(i):
     i = i.replace(']', '')
     i = i.replace(' ', '')
     i = i.replace("'","")
-    
+    # ''.join(x for x in b if x.isdigit()).rjust(14, "0")
     return i       
