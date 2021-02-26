@@ -5,7 +5,7 @@ import urllib
 from urllib.parse import urlparse, urlsplit
 from bs4 import BeautifulSoup
 # from requests.models import Response # aqui
-from migrate import session,Pesquisa,PesquisaFalha,Resultados,PesquisaResultados,ResultadoCNPJ,ResultadoCEP,ResultadoTelefone,DominiosIgnorados,ResultadoEmail,ResultadoFalha,Employee
+from migrate import session,Pesquisa,PesquisaFalha,Resultados,PesquisaResultados,ResultadoCNPJ,ResultadoCEP,ResultadoTelefone,DominiosIgnorados,ResultadoEmail,ResultadoFalha
 from fake_headers import Headers
 # from fake_useragent import UserAgent
 # import pathlib
@@ -66,11 +66,11 @@ def getUrlGoogle(busca,item_pesquisa):
     
 def pesquisa(termo,usuario_id):
     
-    # item_pesquisa = Pesquisa()
-    # item_pesquisa.usuario_id = usuario_id
-    # item_pesquisa.termo = termo
-    # session.add(item_pesquisa)
-    # session.commit()
+    item_pesquisa = Pesquisa()
+    item_pesquisa.usuario_id = usuario_id
+    item_pesquisa.termo = termo
+    session.add(item_pesquisa)
+    session.commit()
     
     
     
@@ -82,11 +82,7 @@ def pesquisa(termo,usuario_id):
     # getDados(10)
     
     
-    result = session.query(Employee).all()
-    for i in result:
-        print(i)
-        import pdb; pdb.set_trace()
-    # discriminator
+
 
     return "aui"
 
