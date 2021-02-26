@@ -1,17 +1,7 @@
-# import requests  # aqui
-# import re
-
 import urllib
 from urllib.parse import urlparse, urlsplit
 from bs4 import BeautifulSoup
-# from requests.models import Response # aqui
 from migrate import session,Pesquisa,PesquisaFalha,Resultados,PesquisaResultados,ResultadoCNPJ,ResultadoCEP,ResultadoTelefone,DominiosIgnorados,ResultadoEmail,ResultadoFalha
-from fake_headers import Headers
-# from fake_useragent import UserAgent
-# import pathlib
-# from time import sleep # aqui
-# import random # aqui
-# import nltk
 import util
 import json
 from collections import deque 

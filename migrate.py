@@ -6,7 +6,6 @@ from sqlalchemy import Column, Integer, String,ForeignKey,DateTime,CHAR
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref
-
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import sessionmaker
 import datetime

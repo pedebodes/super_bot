@@ -1,11 +1,8 @@
 import requests
-from requests.exceptions import HTTPError
 from fake_headers import Headers
 from time import sleep
 import random
 import re
-import json
-from fake_useragent import UserAgent
 
 
 def removeDuplicado(valor):
@@ -21,16 +18,7 @@ def regex(opcao,arquivo):
         }
     
     return re.findall(tipoRegex.get(opcao), arquivo)
-    
-            
-    # return json.dumps(
-    #     removeDuplicado(
-    #         re.findall(
-    #             tipoRegex.get(opcao), arquivo
-    #             )
-    #         )
-    #     )
-    
+
 def getRequest(url):
     
     try:
@@ -49,24 +37,6 @@ def getRequest(url):
     except requests.exceptions.Timeout as errt:
         return errt
     
-    
-    # try:
-    #     header = Headers(
-    #         headers=False
-    #     )
-    #     sleep(random.randint(2,30)) 
-    #     return requests.get(url, headers=header.generate())
-
-
-    # except HTTPError as http_err:
-    #     return (f'Erro HTTP: {http_err}')
-        
-    # except Exception as err:
-    #     return (f'Site fora do ar ou nao responde: {err}')    
-    #     return False
-    # except:
-    #     return ('Erro indefinido')
-    #     return False
 
 def parse_input(i):
     return ''.join(x for x in i if x.isdigit())
