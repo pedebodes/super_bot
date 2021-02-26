@@ -51,112 +51,7 @@ def getUrlGoogle(busca,item_pesquisa):
         falha.mensagem = util.getRequest(url)
     return (item_pesquisa)
     
-    
-def pesquisa(termo,usuario_id):
-    
-    item_pesquisa = Pesquisa()
-    item_pesquisa.usuario_id = usuario_id
-    item_pesquisa.termo = termo
-    session.add(item_pesquisa)
-    session.commit()
-    
-    
-    
-    
-    pesquisa = getUrlGoogle(termo,item_pesquisa.id)
-    getDados(pesquisa)
 
-    
-    # getDados(10)
-    
-    
-
-
-    return "aui"
-
-
-
-
-def getDados(item_pesquisa):
-
-    VARRER_TODO_SITE =  False
-    processed_urls = set() 
-    emails = set()  
-
-    result = session.query(Resultados)\
-        .join(PesquisaResultados,Resultados.id == PesquisaResultados.resultado_id)\
-        .filter(PesquisaResultados.pesquisa_id== item_pesquisa)\
-        .filter(Resultados.status == 0)\
-        .all()
-
-    # result = session.query(Resultados)\
-    #     .filter(Resultados.id > 33 )\
-    #     .all()
-        # 4 22
-        # 61 125 113 145
-        # .distinct()\
-        # .filter(Resultados.cnpj == "" and Resultados.telefone_fixo == "" and Resultados.telefone_celular == "" and Resultados.cep == "")\
-        # .filter(Resultados.dominio == 'www.cofermeta.com.br')\
-        
-    for row in result:
-        
-        new_urls = deque([row.url_base])
-        while len(new_urls):  
-            url = new_urls.popleft()  
-            processed_urls.add(url)  
-
-            # Defininado status para Pesquisando
-            session.query(Resultados).\
-                filter(Resultados.id == row.id).update({"status": 1})
-            session.commit()
-            response = util.getRequest(url)    
-
-            # if response:
-            try:
-                parts = urlsplit(url)
-                
-                base_url = "{0.scheme}://{0.netloc}".format(parts)  
-                path = url[:url.rfind('/')+1] if '/' in parts.path else url     
-                
-                getEmail(response.text,row.id)
-                        
-                getCNPJ(response.text,row.id)
-          
-                getCEP(response.text,row.id)
-              
-                getTelefone(response.text,row.id)
-              
-                # Atualizando status 
-                session.query(Resultados).\
-                    filter(Resultados.id == row.id).update({"status": 2})
-                session.commit()
-
-                soup = BeautifulSoup(response.text ,"html.parser")
-                
-                for anchor in soup.find_all("a"):  
-                    link = anchor.attrs["href"] if "href" in anchor.attrs else ''  
-                    if link.startswith('/'):  
-                        link = base_url + link  
-                    elif not link.startswith('http'):  
-                        link = path + link  
-                    if not link in new_urls and not link in processed_urls and VARRER_TODO_SITE:  
-                        print(link)
-                        aux = urlparse(link)
-                        if row.url_base == aux.netloc :
-                            new_urls.append(link)  
-            except:
-                # Atualizando status 
-                session.query(Resultados).\
-                    filter(Resultados.id == row.id).update({"status": 3})
-                
-                falha = ResultadoFalha()
-                falha.resultado_id = row.id
-                falha.mensagem = str(response)
-                session.add(falha)
-                session.commit()
-                continue
-            
-            
 
 def getDadosCEP(cep):
     url = ('http://www.viacep.com.br/ws/%s/json' % cep)
@@ -175,75 +70,84 @@ def getDadosCNPJ(cnpj):
 
      
 def getCNPJ(response,idResultado):
-    cnpj = np.unique(util.regex('cnpj',response)).tolist()
-    if len(cnpj):
-        for i in cnpj:
-            dadosCnpj =  getDadosCNPJ(util.parse_input(i))
-            addCNPJ = ResultadoCNPJ()
-            addCNPJ.resultado_id = idResultado
-            addCNPJ.cnpj = util.parse_input(i).rjust(14, "0")
-            addCNPJ.dados_cnpj = dadosCnpj
-            addCNPJ.status= 1 if dadosCnpj['status'] == 'OK' else 2
-            
-            session.add(addCNPJ)
-            session.commit()
+    try:
+        cnpj = np.unique(util.regex('cnpj',response)).tolist()
+        if len(cnpj):
+            for i in cnpj:
+                dadosCnpj =  getDadosCNPJ(util.parse_input(i))
+                addCNPJ = ResultadoCNPJ()
+                addCNPJ.resultado_id = idResultado
+                addCNPJ.cnpj = util.parse_input(i).rjust(14, "0")
+                addCNPJ.dados_cnpj = dadosCnpj
+                addCNPJ.status= 1 if dadosCnpj['status'] == 'OK' else 2
+                
+                session.add(addCNPJ)
+                session.commit()
+    except:
+        pass
 
 
 def getCEP(response,idResultado):
-    cep = np.unique([''.join(tups) for tups in util.regex('cep',response)]).tolist()
-    if len(cep):
-        for i in cep:
-            dadosCep = getDadosCEP(util.parse_input(i))
-            if not "erro" in dadosCep:
-                addCep = ResultadoCEP()
-                addCep.resultado_id = idResultado
-                addCep.cep = i.rjust(8, "0") 
-                addCep.dados_cep = dadosCep
-                addCep.status = 1
-                session.add(addCep)
-                session.commit()
-
+    try:
+        cep = np.unique([''.join(tups) for tups in util.regex('cep',response)]).tolist()
+        if len(cep):
+            for i in cep:
+                dadosCep = getDadosCEP(util.parse_input(i))
+                if not "erro" in dadosCep:
+                    addCep = ResultadoCEP()
+                    addCep.resultado_id = idResultado
+                    addCep.cep = i.rjust(8, "0") 
+                    addCep.dados_cep = dadosCep
+                    addCep.status = 1
+                    session.add(addCep)
+                    session.commit()
+    except:
+        pass
 
 def getTelefone(response,idResultado):
-    telefone = util.regex('telefone',response)
-    telefone = [list(elem) for elem in telefone]
-    telefone = np.unique([''.join(tups) for tups in telefone]).tolist()
-    if len(telefone):
-        for i in telefone:
-            addTelefone = ResultadoTelefone()
-            addTelefone.resultado_id = idResultado
-            addTelefone.ddd = i[:2] if len(i) >=10  else None
-            addTelefone.numero = i[2:]  if len(i) >=10 else i
-           
-            session.add(addTelefone)
-            session.commit()
-              
-    # Caso possua alguma url de webwhatsapp, aqui armazena o numero
-    telefoneAPI = util.regex('telefoneAPI',response)
-    telefoneAPI = [list(elem) for elem in telefoneAPI]
-    telefoneAPI = np.unique([''.join(tups) for tups in telefoneAPI]).tolist()
+    try:
+        telefone = util.regex('telefone',response)
+        telefone = [list(elem) for elem in telefone]
+        telefone = np.unique([''.join(tups) for tups in telefone]).tolist()
+        if len(telefone):
+            for i in telefone:
+                addTelefone = ResultadoTelefone()
+                addTelefone.resultado_id = idResultado
+                addTelefone.ddd = i[:2] if len(i) >=10  else None
+                addTelefone.numero = i[2:]  if len(i) >=10 else i
+            
+                session.add(addTelefone)
+                session.commit()
+                
+        # Caso possua alguma url de webwhatsapp, aqui armazena o numero
+        telefoneAPI = util.regex('telefoneAPI',response)
+        telefoneAPI = [list(elem) for elem in telefoneAPI]
+        telefoneAPI = np.unique([''.join(tups) for tups in telefoneAPI]).tolist()
 
-    if len(telefoneAPI):
-        for i in telefoneAPI:
-            addTelefone = ResultadoTelefone()
-            addTelefone.resultado_id = idResultado
-            addTelefone.numero = util.parse_input(i)
-           
-            session.add(addTelefone)
-            session.commit()    
-        
+        if len(telefoneAPI):
+            for i in telefoneAPI:
+                addTelefone = ResultadoTelefone()
+                addTelefone.resultado_id = idResultado
+                addTelefone.numero = util.parse_input(i)
+            
+                session.add(addTelefone)
+                session.commit()    
+    except:
+        pass        
     
 def getEmail(response,idResultado):
-    email = np.unique(util.regex('email',response)).tolist()
-    if len(email):
-        for i in email:
-            if validate_email(i,verify=True): #verifica se e-mail e valido
-                addEmail = ResultadoEmail()
-                addEmail.resultado_id = idResultado
-                addEmail.email = i
-                session.add(addEmail)
-        session.commit()    
-
+    try:
+        email = np.unique(util.regex('email',response)).tolist()
+        if len(email):
+            for i in email:
+                if validate_email(i,verify=True): #verifica se e-mail e valido
+                    addEmail = ResultadoEmail()
+                    addEmail.resultado_id = idResultado
+                    addEmail.email = i
+                    session.add(addEmail)
+            session.commit()    
+    except:
+        pass
 # Adicionar Url na tabela URL_IGNORAR
 def addDominiosIgnorados(url):
     for i in url:    
@@ -251,4 +155,82 @@ def addDominiosIgnorados(url):
         url_ignorar.dominio = i if i[-1] != '/' else i[:-1]
         session.add(url_ignorar)
         session.commit()
+
+
+def coletaDadosUrl(id_url,url_base=False):
+
+    session.query(Resultados).\
+        filter(Resultados.id == id_url).update({"status": 1})
+        
+    if not url_base:
+        row = session.query(Resultados).\
+                filter(Resultados.id == id_url).one()
+        url_base = row.url_base
+        id_url = row.id
+    # import pdb; pdb.set_trace()
+    response = util.getRequest(url_base)    
+
+    try:
+        getEmail(response.text,id_url)
+        getCNPJ(response.text,id_url)
+        getCEP(response.text,id_url)
+        getTelefone(response.text,id_url)
+        
+        # Atualizando status 
+        session.query(Resultados).\
+            filter(Resultados.id == id_url).update({"status": 2})
+        session.commit()
+        
+    except:
+        session.query(Resultados).\
+            filter(Resultados.id == id_url).update({"status": 3})
+        
+        falha = ResultadoFalha()
+        falha.resultado_id = id_url
+        falha.mensagem = str(response)
+        session.add(falha)
+        session.commit()
+            
     
+def getDadosPesquisa(item_pesquisa):
+    
+    result = session.query(Resultados)\
+        .join(PesquisaResultados,Resultados.id == PesquisaResultados.resultado_id)\
+        .filter(PesquisaResultados.pesquisa_id== item_pesquisa)\
+        .filter(Resultados.status == 0)\
+        .all()
+
+    for i in result:
+        coletaDadosUrl(i.id,i.url_base)    
+
+
+def getDadosResultadoFalha(item_pesquisa):
+
+    result = session.query(Resultados).\
+            join(PesquisaResultados,PesquisaResultados.resultado_id == Resultados.id).\
+            join(ResultadoFalha,ResultadoFalha.resultado_id == Resultados.id).\
+            filter(PesquisaResultados.pesquisa_id == item_pesquisa).\
+            all()
+    for i in result:
+        # remove da tabela de falhas o registro que sera reprocessado
+        session.query(ResultadoFalha).filter(ResultadoFalha.resultado_id == i.id).delete()
+        coletaDadosUrl(i.id,i.url_base)    
+        
+        
+    
+def cadastraPesquisa(termo,usuario_id):
+
+    item_pesquisa = Pesquisa()
+    item_pesquisa.usuario_id = usuario_id
+    item_pesquisa.termo = termo
+    session.add(item_pesquisa)
+    session.commit()
+         
+    pesquisa = getUrlGoogle(termo,item_pesquisa.id)
+    getDadosPesquisa(pesquisa)
+    
+    # getDadosPesquisa(3) # coleta dados a partir de id_pesquisa
+    # coletaDadosUrl((185))  Coleta dados informando um id e uma url da tabela resultados
+    # getDadosResultadoFalha(3) # processar Urls que deram falha a partir de id_pesquisa
+
+    return "Processado"
