@@ -14,44 +14,42 @@ def getUrlGoogle(busca,item_pesquisa):
 
     url = "https://www.google.com/search?q=" + busca + "&num=" + str(n_results)
     
-    # item_pesquisa = Pesquisa()
-    # item_pesquisa.item = busca
-    # session.add(item_pesquisa)
-    # session.commit()
-    # CItext #######################################
+    try:
+        response = util.getRequest(url)
+        soup = BeautifulSoup(response.text, "html.parser")
+        results = []
+        
+        links = [a['href'] for a in soup.find_all('a', href=True)]
+        for i in links:
+            if i.startswith('https') or i.startswith('http'):
+                ignorar = session.query(DominiosIgnorados).\
+                    filter(DominiosIgnorados.dominio == urlparse(i).scheme+"://"+urlparse(i).netloc)\
+                        .all() 
+                if len(ignorar) == 0:
+                    url = urlparse(i).scheme+"://"+urlparse(i).netloc
+                    results.append(url)
+        
+        
+        semDuplicados = np.unique(results).tolist()
+        
+        for i in semDuplicados:
+            if i.find('blog') == -1: #removendo url de blog
+                resultado = Resultados()
+                resultado.url_base = i
+                session.add(resultado)
+                session.commit()
 
-    response = util.getRequest(url)
-    soup = BeautifulSoup(response.text, "html.parser")
-    results = []
-    
-    links = [a['href'] for a in soup.find_all('a', href=True)]
-    for i in links:
-        if i.startswith('https') or i.startswith('http'):
-            ignorar = session.query(DominiosIgnorados).\
-                filter(DominiosIgnorados.dominio == urlparse(i).scheme+"://"+urlparse(i).netloc)\
-                    .all() 
-            if len(ignorar) == 0:
-                url = urlparse(i).scheme+"://"+urlparse(i).netloc
-                results.append(url)
-    
-    
-    semDuplicados = np.unique(results).tolist()
-    
-    for i in semDuplicados:
-        if i.find('blog') == -1: #removendo url de blog
-            resultado = Resultados()
-            resultado.url_base = i
-            session.add(resultado)
-            session.commit()
-
-            pesquisa_resultado = PesquisaResultados()
-            pesquisa_resultado.resultado_id =resultado.id
-            pesquisa_resultado.pesquisa_id = item_pesquisa
-            session.add(pesquisa_resultado)
-    
-
-    session.commit()
-    return (item_pesquisa)  #TODO: corrir retorno
+                pesquisa_resultado = PesquisaResultados()
+                pesquisa_resultado.resultado_id =resultado.id
+                pesquisa_resultado.pesquisa_id = item_pesquisa
+                session.add(pesquisa_resultado)
+        
+        session.commit()
+    except :
+        falha = PesquisaFalha()
+        falha.pesquisa_id = item_pesquisa
+        falha.mensagem = util.getRequest(url)
+    return (item_pesquisa)
     
     
 def pesquisa(termo,usuario_id):
@@ -65,8 +63,8 @@ def pesquisa(termo,usuario_id):
     
     
     
-    # item_pesquisa = getUrlGoogle(termo,item_pesquisa.id)
-    # getDados(item_pesquisa)
+    pesquisa = getUrlGoogle(termo,item_pesquisa.id)
+    getDados(pesquisa)
 
     
     # getDados(10)
@@ -91,9 +89,9 @@ def getDados(item_pesquisa):
         .filter(Resultados.status == 0)\
         .all()
 
-    result = session.query(Resultados)\
-        .filter(Resultados.id > 33 )\
-        .all()
+    # result = session.query(Resultados)\
+    #     .filter(Resultados.id > 33 )\
+    #     .all()
         # 4 22
         # 61 125 113 145
         # .distinct()\
@@ -148,9 +146,6 @@ def getDados(item_pesquisa):
                             new_urls.append(link)  
             except:
                 # Atualizando status 
-                # TODO: validando
-                print("FUDEU DE VEZ")
-                import pdb; pdb.set_trace()
                 session.query(Resultados).\
                     filter(Resultados.id == row.id).update({"status": 3})
                 
