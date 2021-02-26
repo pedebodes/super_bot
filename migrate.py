@@ -2,13 +2,13 @@
 import os
 from dotenv import load_dotenv, find_dotenv
 
-from sqlalchemy import Column, Integer, String,ForeignKey,DateTime
+from sqlalchemy import Column, Integer, String,ForeignKey,DateTime,CHAR
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref
 
 from sqlalchemy.dialects.postgresql import JSONB
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker,mapper
 import datetime
 
 from sqlalchemy.sql.expression import column
@@ -104,8 +104,8 @@ class ResultadoTelefone(Base):
     __tablename__='resultados_telefone'
     id = Column(Integer, primary_key=True)
     resultado_id = Column(Integer, ForeignKey('resultados.id'), nullable=True)
-    ddd = Column(Integer)
-    numero = Column(Integer)
+    ddd = Column(CHAR(2))
+    numero = Column(CHAR(13))
     status = Column(Integer, default=0)
     
     id_resultado = relationship(Resultados, backref=backref("resultados_telefone"))
@@ -113,6 +113,15 @@ class ResultadoTelefone(Base):
     # 0 - Não avaliado
     # 1 - Valido
     # 2 - Invalido
+    
+    
+    
+    
+status_bosta = {
+  0: u'Não avaliado',
+  1: u'Valido',
+  2: u'Invalido'
+}    
 class ResultadoEmail(Base):
     __tablename__='resultados_email'
     id = Column(Integer, primary_key=True)
@@ -125,6 +134,37 @@ class ResultadoEmail(Base):
     # 0 - Não avaliado
     # 1 - Valido
     # 2 - Invalido
+
+
+
+class Employee(Base):
+    __tablename__ = 'employee'
+
+    id = Column(Integer, primary_key=True)
+    discriminator = Column(String(50))
+
+
+    @property
+    def tipo_descricao(self):
+        try:
+            s = status_bosta[self.tipo]
+        except KeyError:
+            s = u'Tipo desconhecido'
+        return s
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
     
 class DominiosIgnorados(Base):
     __tablename__='dominios_ignorar'

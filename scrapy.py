@@ -5,7 +5,7 @@ import urllib
 from urllib.parse import urlparse, urlsplit
 from bs4 import BeautifulSoup
 # from requests.models import Response # aqui
-from migrate import session,Pesquisa,PesquisaFalha,Resultados,PesquisaResultados,ResultadoCNPJ,ResultadoCEP,ResultadoTelefone,DominiosIgnorados,ResultadoEmail,ResultadoFalha
+from migrate import session,Pesquisa,PesquisaFalha,Resultados,PesquisaResultados,ResultadoCNPJ,ResultadoCEP,ResultadoTelefone,DominiosIgnorados,ResultadoEmail,ResultadoFalha,Employee
 from fake_headers import Headers
 # from fake_useragent import UserAgent
 # import pathlib
@@ -16,6 +16,7 @@ import util
 import json
 from collections import deque 
 import numpy as np
+from validate_email import validate_email
 
 def getUrlGoogle(busca,item_pesquisa):
     busca = urllib.parse.quote_plus(busca)
@@ -65,20 +66,27 @@ def getUrlGoogle(busca,item_pesquisa):
     
 def pesquisa(termo,usuario_id):
     
-    item_pesquisa = Pesquisa()
-    item_pesquisa.usuario_id = usuario_id
-    item_pesquisa.termo = termo
-    session.add(item_pesquisa)
-    session.commit()
+    # item_pesquisa = Pesquisa()
+    # item_pesquisa.usuario_id = usuario_id
+    # item_pesquisa.termo = termo
+    # session.add(item_pesquisa)
+    # session.commit()
     
     
     
     
-    item_pesquisa = getUrlGoogle(termo,item_pesquisa.id)
-    getDados(item_pesquisa)
+    # item_pesquisa = getUrlGoogle(termo,item_pesquisa.id)
+    # getDados(item_pesquisa)
 
     
     # getDados(10)
+    
+    
+    result = session.query(Employee).all()
+    for i in result:
+        print(i)
+        import pdb; pdb.set_trace()
+    # discriminator
 
     return "aui"
 
@@ -97,10 +105,10 @@ def getDados(item_pesquisa):
         .filter(Resultados.status == 0)\
         .all()
 
-    # result = session.query(Resultados)\
-    #     .filter(Resultados.id == 10 )\
-    #     .all()
-        
+    result = session.query(Resultados)\
+        .filter(Resultados.id > 33 )\
+        .all()
+        # 4 22
         # 61 125 113 145
         # .distinct()\
         # .filter(Resultados.cnpj == "" and Resultados.telefone_fixo == "" and Resultados.telefone_celular == "" and Resultados.cep == "")\
@@ -154,9 +162,12 @@ def getDados(item_pesquisa):
                             new_urls.append(link)  
             except:
                 # Atualizando status 
+                # TODO: validando
+                print("FUDEU DE VEZ")
+                import pdb; pdb.set_trace()
                 session.query(Resultados).\
                     filter(Resultados.id == row.id).update({"status": 3})
-                    
+                
                 falha = ResultadoFalha()
                 falha.resultado_id = row.id
                 falha.mensagem = str(response)
@@ -189,11 +200,10 @@ def getCNPJ(response,idResultado):
             dadosCnpj =  getDadosCNPJ(util.parse_input(i))
             addCNPJ = ResultadoCNPJ()
             addCNPJ.resultado_id = idResultado
-            addCNPJ.cnpj = i.rjust(14, "0")
+            addCNPJ.cnpj = util.parse_input(i).rjust(14, "0")
             addCNPJ.dados_cnpj = dadosCnpj
             addCNPJ.status= 1 if dadosCnpj['status'] == 'OK' else 2
             
-            import pdb; pdb.set_trace()
             session.add(addCNPJ)
             session.commit()
 
@@ -217,12 +227,11 @@ def getTelefone(response,idResultado):
     telefone = util.regex('telefone',response)
     telefone = [list(elem) for elem in telefone]
     telefone = np.unique([''.join(tups) for tups in telefone]).tolist()
-
     if len(telefone):
         for i in telefone:
             addTelefone = ResultadoTelefone()
             addTelefone.resultado_id = idResultado
-            addTelefone.ddd = i[:2] if len(i) >=10 else None
+            addTelefone.ddd = i[:2] if len(i) >=10  else None
             addTelefone.numero = i[2:]  if len(i) >=10 else i
            
             session.add(addTelefone)
@@ -247,10 +256,11 @@ def getEmail(response,idResultado):
     email = np.unique(util.regex('email',response)).tolist()
     if len(email):
         for i in email:
-            addEmail = ResultadoEmail()
-            addEmail.resultado_id = idResultado
-            addEmail.email = i
-            session.add(addEmail)
+            if validate_email(i,verify=True): #verifica se e-mail e valido
+                addEmail = ResultadoEmail()
+                addEmail.resultado_id = idResultado
+                addEmail.email = i
+                session.add(addEmail)
         session.commit()    
 
 # Adicionar Url na tabela URL_IGNORAR

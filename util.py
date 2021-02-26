@@ -23,13 +23,13 @@ def regex(opcao,arquivo):
     return re.findall(tipoRegex.get(opcao), arquivo)
     
             
-    return json.dumps(
-        removeDuplicado(
-            re.findall(
-                tipoRegex.get(opcao), arquivo
-                )
-            )
-        )
+    # return json.dumps(
+    #     removeDuplicado(
+    #         re.findall(
+    #             tipoRegex.get(opcao), arquivo
+    #             )
+    #         )
+    #     )
     
 def getRequest(url):
     
