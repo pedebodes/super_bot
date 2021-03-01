@@ -51,15 +51,12 @@ def getUrlGoogle(busca,item_pesquisa):
         falha.mensagem = util.getRequest(url)
     return (item_pesquisa)
     
-
-
 def getDadosCEP(cep):
     url = ('http://www.viacep.com.br/ws/%s/json' % cep)
     req = util.getRequest(url) 
     if req.status_code == 200:
         dados_json = json.loads(req.text)
         return dados_json
-
 
 def getDadosCNPJ(cnpj):
     cnpj = util.parse_input(cnpj)
@@ -68,7 +65,6 @@ def getDadosCNPJ(cnpj):
     if req.status_code == 200:
         return json.loads(req.text)
 
-     
 def getCNPJ(response,idResultado):
     try:
         cnpj = np.unique(util.regex('cnpj',response)).tolist()
@@ -85,7 +81,6 @@ def getCNPJ(response,idResultado):
                 session.commit()
     except:
         pass
-
 
 def getCEP(response,idResultado):
     try:
@@ -148,6 +143,7 @@ def getEmail(response,idResultado):
             session.commit()    
     except:
         pass
+
 # Adicionar Url na tabela URL_IGNORAR
 def addDominiosIgnorados(url):
     for i in url:    
@@ -155,7 +151,6 @@ def addDominiosIgnorados(url):
         url_ignorar.dominio = i if i[-1] != '/' else i[:-1]
         session.add(url_ignorar)
         session.commit()
-
 
 def coletaDadosUrl(id_url,url_base=False):
 
@@ -191,7 +186,6 @@ def coletaDadosUrl(id_url,url_base=False):
         session.add(falha)
         session.commit()
             
-    
 def getDadosPesquisa(item_pesquisa):
     
     result = session.query(Resultados)\
@@ -202,7 +196,6 @@ def getDadosPesquisa(item_pesquisa):
 
     for i in result:
         coletaDadosUrl(i.id,i.url_base)    
-
 
 def getDadosResultadoFalha(item_pesquisa):
 
@@ -215,22 +208,43 @@ def getDadosResultadoFalha(item_pesquisa):
         # remove da tabela de falhas o registro que sera reprocessado
         session.query(ResultadoFalha).filter(ResultadoFalha.resultado_id == i.id).delete()
         coletaDadosUrl(i.id,i.url_base)    
-        
-        
     
 def cadastraPesquisa(termo,usuario_id):
 
-    item_pesquisa = Pesquisa()
-    item_pesquisa.usuario_id = usuario_id
-    item_pesquisa.termo = termo
-    session.add(item_pesquisa)
-    session.commit()
+    # item_pesquisa = Pesquisa()
+    # item_pesquisa.usuario_id = usuario_id
+    # item_pesquisa.termo = termo
+    # session.add(item_pesquisa)
+    # session.commit()#todo: incluir try para tabela de pesquisa_erro
          
-    pesquisa = getUrlGoogle(termo,item_pesquisa.id)
-    getDadosPesquisa(pesquisa)
+    # pesquisa = getUrlGoogle(termo,item_pesquisa.id)
+    # getDadosPesquisa(pesquisa)
     
     # getDadosPesquisa(3) # coleta dados a partir de id_pesquisa
     # coletaDadosUrl((185))  Coleta dados informando um id e uma url da tabela resultados
     # getDadosResultadoFalha(3) # processar Urls que deram falha a partir de id_pesquisa
 
+    print(retornaPesquisas()) # retorna dados da pesquisa
     return "Processado"
+
+def retornaPesquisas():
+    result = session.query(Pesquisa).\
+            all()
+    
+    for i in result:
+        import pdb; pdb.set_trace()
+
+
+    import pdb; pdb.set_trace()
+    def create_item(item):
+        return {
+            'id':item.id,
+            'termo':item.termo,
+            'status':item.status,
+            'data_pesquisa':item.data_pesquisa,
+            
+        }
+    
+    
+    return json.dumps({u'results': map(create_item,result)})
+   

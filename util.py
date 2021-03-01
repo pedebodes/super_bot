@@ -26,7 +26,7 @@ def getRequest(url):
             headers=False
         )
         sleep(random.randint(2,30)) 
-        return requests.get(url, headers=header.generate(),timeout=5) # timeout=5,verify = False
+        return requests.get(url, headers=header.generate(),timeout=5)
         
     except requests.exceptions.RequestException as err:
         return err
