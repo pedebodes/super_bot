@@ -232,7 +232,8 @@ def retornaPesquisas():
     retorno ={} 
     retorno['resultado'] = [*map(create_item,result)]
     return retorno
- 
+
+#  Retorna os resultados de uma pesquisa
 def retornaResultadosPesquisa(pesquisa_id):
     resultado = session.query(Pesquisa.id.label("pesquisa_id"),Pesquisa.termo,Pesquisa.data_pesquisa,Pesquisa.status.label("status_pesquisa"),Resultados.id.label("resultado_id"),Resultados.url_base,Resultados.status.label("status_resultado")).\
         join(PesquisaResultados,PesquisaResultados.pesquisa_id == Pesquisa.id).\
@@ -252,8 +253,8 @@ def retornaResultadosPesquisa(pesquisa_id):
     }
     retorno ={} 
     retorno['resultado'] = [*map(create_item,resultado)]
-    import pdb; pdb.set_trace()
     return retorno
+
 # retorna dados do resultado
 def retornaDadosResultado(resultado_id):
     resultado = session.query(Resultados).filter(Resultados.id == resultado_id).all()
