@@ -210,41 +210,102 @@ def getDadosResultadoFalha(item_pesquisa):
         coletaDadosUrl(i.id,i.url_base)    
     
 def cadastraPesquisa(termo,usuario_id):
-
-    # item_pesquisa = Pesquisa()
-    # item_pesquisa.usuario_id = usuario_id
-    # item_pesquisa.termo = termo
-    # session.add(item_pesquisa)
-    # session.commit()#todo: incluir try para tabela de pesquisa_erro
-         
-    # pesquisa = getUrlGoogle(termo,item_pesquisa.id)
-    # getDadosPesquisa(pesquisa)
+    item_pesquisa = Pesquisa()
+    item_pesquisa.usuario_id = usuario_id
+    item_pesquisa.termo = termo
+    session.add(item_pesquisa)
+    session.commit()
     
-    # getDadosPesquisa(3) # coleta dados a partir de id_pesquisa
-    # coletaDadosUrl((185))  Coleta dados informando um id e uma url da tabela resultados
-    # getDadosResultadoFalha(3) # processar Urls que deram falha a partir de id_pesquisa
+    return item_pesquisa.id
 
-    print(retornaPesquisas()) # retorna dados da pesquisa
-    return "Processado"
-
+# Retorna  todas as pesquisas ja realizadas         
 def retornaPesquisas():
     result = session.query(Pesquisa).\
             all()
-    
-    for i in result:
-        import pdb; pdb.set_trace()
-
-
-    import pdb; pdb.set_trace()
     def create_item(item):
         return {
             'id':item.id,
             'termo':item.termo,
             'status':item.status,
             'data_pesquisa':item.data_pesquisa,
-            
         }
+    retorno ={} 
+    retorno['resultado'] = [*map(create_item,result)]
+    return retorno
+ 
+def retornaResultadosPesquisa(pesquisa_id):
+    resultado = session.query(Pesquisa.id.label("pesquisa_id"),Pesquisa.termo,Pesquisa.data_pesquisa,Pesquisa.status.label("status_pesquisa"),Resultados.id.label("resultado_id"),Resultados.url_base,Resultados.status.label("status_resultado")).\
+        join(PesquisaResultados,PesquisaResultados.pesquisa_id == Pesquisa.id).\
+        join(Resultados,Resultados.id == PesquisaResultados.resultado_id).\
+        filter(Pesquisa.id == pesquisa_id).\
+        all()
+
+    def create_item(item):
+        return {
+        'pesquisa_id':item.pesquisa_id,
+        'termo':item.termo,
+        'data_pesquisa':str(item.data_pesquisa),
+        'status_pesquisa':item.status_pesquisa,
+        'resultado_id':item.resultado_id,
+        'url_base':item.url_base,
+        'status_resultado':item.status_resultado
+    }
+    retorno ={} 
+    retorno['resultado'] = [*map(create_item,resultado)]
+    import pdb; pdb.set_trace()
+    return retorno
+# retorna dados do resultado
+def retornaDadosResultado(resultado_id):
+    resultado = session.query(Resultados).filter(Resultados.id == resultado_id).all()
+    resultadoCNPJ = session.query(ResultadoCNPJ).filter(ResultadoCNPJ.resultado_id == resultado_id).all()
+    resultadoCEP = session.query(ResultadoCEP).filter(ResultadoCEP.resultado_id == resultado_id).all()
+    resultadoEmail = session.query(ResultadoEmail).filter(ResultadoEmail.resultado_id == resultado_id).all()
+    resultadoTelefone = session.query(ResultadoTelefone).filter(ResultadoTelefone.resultado_id == resultado_id).all()
     
+    def create_resultado(item):
+        return{
+            "id":item.id,
+            "url_base":item.url_base,
+            "status": item.status
+        }
+    def create_CNPJ(item):
+        return {
+            "id":item.id,
+            "cnpj":item.cnpj,
+            "dados_cnpj":item.dados_cnpj,
+            "status":item.status            
+        }
+    def create_CEP(item):
+        return {
+            "id":item.id,
+            "cep":item.cep,
+            "dados_cep":item.dados_cep,
+            "status":item.status
+        }
+    def create_Email(item):
+        return {
+            "id": item.id,
+            "email": item.email,
+            "status": item.status
+        }
+    def create_Telefone(item):
+        return {
+            "id":item.id,
+            "ddd":item.ddd,
+            "numero":item.numero,
+            "status":item.status
+        }
+        
+    resultado = [*map(create_resultado,resultado)]
+    resultadoCNPJ = [*map(create_CNPJ,resultadoCNPJ)]
+    resultadoCEP = [*map(create_CEP,resultadoCEP)]
+    resultadoEmail = [*map(create_Email,resultadoEmail)]
+    resultadoTelefone = [*map(create_Telefone,resultadoTelefone)]
     
-    return json.dumps({u'results': map(create_item,result)})
-   
+    retorno = {}
+    retorno['resultado'] = resultado
+    retorno['resultadoCNPJ'] = resultadoCNPJ if len(resultadoCNPJ)else ["Não foi possivel coletar esta informação"]
+    retorno['resultadoCEP'] = resultadoCEP if len(resultadoCEP)else ["Não foi possivel coletar esta informação"]
+    retorno['resultadoEmail'] = resultadoEmail if len(resultadoEmail)else ["Não foi possivel coletar esta informação"]
+    retorno['resultadoTelefone'] = resultadoTelefone if len(resultadoTelefone)else ["Não foi possivel coletar esta informação"]
+    return retorno
