@@ -14,7 +14,9 @@ viabilidade de endpoint no arquivo .env -- ok
 configurar retorno de item_pesquisa json
 configurar retorno das url em json 
 configurar retorno de url_base conforme item_pesquisa informado como parametro
+definir end point( serachGoogle) -- ok
+definir end point( getDados(url)) recebendo somente a url como parametro -- ok
 
-
-definir end point( serachGoogle)
-definir end point( getDados(url)) recebendo somente a url como parametro
+possibilidade de flask-restfull
+possibilidade de pytest( testar util)
+remover do util funcao removeduplciado
