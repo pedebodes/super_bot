@@ -49,3 +49,25 @@ class Pesquisa(Resource):
                                "itemPesquisa": item_pesquisa}}, 200
         except Exception as e:
             return {"error": str(e)}, 400
+
+
+class DadosUrl(Resource):
+    def post(self):
+        dados = request.get_json()
+        
+        scrapy.coletaDadosUrl(dados['url_id'])
+        return {'sucess': "coletado"}, 200
+
+
+class DadosTermo(Resource):
+    def post(self):
+        dados = request.get_json()
+        
+        scrapy.getDadosPesquisa(dados['termo_id'])
+        return {'sucess': "coletado"}, 200
+
+
+class ReprocessaPesquisaFalha(Resource):
+    def get(sel, termo_id):
+        scrapy.getDadosResultadoFalha(termo_id)
+        return {'sucess': "reprocessado"}, 200

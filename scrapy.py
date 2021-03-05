@@ -223,12 +223,7 @@ def getDadosPesquisa(item_pesquisa):
         .filter(PesquisaResultados.pesquisa_id == item_pesquisa)\
         .filter(Resultados.status == 0)\
         .all()
-
-    import pdb
-    pdb.set_trace()
     for i in result:
-        import pdb
-        pdb.set_trace()
         coletaDadosUrl(i.id, i.url_base)
 
 
