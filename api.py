@@ -7,8 +7,6 @@ CORS(app)
 api = Api(app)
 
 
-        
-        
 # item_pesquisa = cadastraPesquisa("abrasivos",1) #retorna id da pesquisa
 # getDadosPesquisa(item_pesquisa) # processa as urls da pequisa informada com status pendente de processamento
 # getDadosPesquisa(3) # coleta dados a partir de id_pesquisa
@@ -24,4 +22,4 @@ api.add_resource(DominiosIgnoradosRemove,
                  '/dominios_ignorar/<int:url_id>/')
 
 api.add_resource(PesquisaList, '/termos_pesquisados/')
-
+api.add_resource(Pesquisa, '/pesquisa/')

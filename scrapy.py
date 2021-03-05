@@ -162,21 +162,24 @@ def addDominiosIgnorados(url):
         session.add(url_ignorar)
         session.commit()
 
+
 def getDominiosIgnorados():
     result = session.query(DominiosIgnorados).all()
+
     def create_item(item):
         return {
-        'id': item.id,
-        'dominio': item.dominio
-    }
+            'id': item.id,
+            'dominio': item.dominio
+        }
     retorno = {}
     retorno['resultado'] = [*map(create_item, result)]
     return retorno
-    
+
+
 def delDominiosIgnorados(url_id):
-    result = session.query(DominiosIgnorados).filter(DominiosIgnorados.id == url_id).delete()
+    result = session.query(DominiosIgnorados).filter(
+        DominiosIgnorados.id == url_id).delete()
     session.commit()
-    
 
 
 def coletaDadosUrl(id_url, url_base=False):
@@ -215,14 +218,17 @@ def coletaDadosUrl(id_url, url_base=False):
 
 
 def getDadosPesquisa(item_pesquisa):
-
     result = session.query(Resultados)\
         .join(PesquisaResultados, Resultados.id == PesquisaResultados.resultado_id)\
         .filter(PesquisaResultados.pesquisa_id == item_pesquisa)\
         .filter(Resultados.status == 0)\
         .all()
 
+    import pdb
+    pdb.set_trace()
     for i in result:
+        import pdb
+        pdb.set_trace()
         coletaDadosUrl(i.id, i.url_base)
 
 
@@ -241,15 +247,23 @@ def getDadosResultadoFalha(item_pesquisa):
 
 
 def cadastraPesquisa(termo, usuario_id):
-    item_pesquisa = Pesquisa()
-    item_pesquisa.usuario_id = usuario_id
-    item_pesquisa.termo = termo
-    session.add(item_pesquisa)
-    session.commit()
 
-    return item_pesquisa.id
+    result = session.query(Pesquisa).filter(Pesquisa.termo == termo).first()
+    if result:
+        return {"status": "termo ja cadastrado", "item_pesquisa": result.id}
 
-# Retorna  todas as pesquisas ja realizadas
+    else:
+        item_pesquisa = Pesquisa()
+        item_pesquisa.usuario_id = usuario_id
+        item_pesquisa.termo = termo
+        session.add(item_pesquisa)
+        session.commit()
+
+        return {"status": "cadastrado com sucesso", "item_pesquisa": item_pesquisa.id}
+
+
+def getPesquisa(busca, item_pesquisa):
+    return getUrlGoogle(busca, item_pesquisa)
 
 
 def retornaPesquisas():
@@ -266,8 +280,6 @@ def retornaPesquisas():
     retorno = {}
     retorno['resultado'] = [*map(create_item, result)]
     return retorno
-
-#  Retorna os resultados de uma pesquisa
 
 
 def retornaResultadosPesquisa(pesquisa_id):
@@ -290,8 +302,6 @@ def retornaResultadosPesquisa(pesquisa_id):
     retorno = {}
     retorno['resultado'] = [*map(create_item, resultado)]
     return retorno
-
-# retorna dados do resultado
 
 
 def retornaDadosResultado(resultado_id):
