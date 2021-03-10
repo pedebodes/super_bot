@@ -8,13 +8,13 @@ class DominiosIgnorados(Resource):
         try:
             dados = request.get_json()
             x = scrapy.addDominiosIgnorados(dados['url'])
-            return {'sucess': "Cadastro realizado"}, 200
+            return {'success': "Cadastro realizado"}, 200
         except Exception as e:
             return {"error": str(e)}, 400
 
     def get(self):
         try:
-            return {'sucess': scrapy.getDominiosIgnorados()}, 200
+            return {'success': scrapy.getDominiosIgnorados()}, 200
         except Exception as e:
             return {"error": str(e)}, 400
 
@@ -23,15 +23,15 @@ class DominiosIgnoradosRemove(Resource):
     def delete(self, url_id):
         try:
             scrapy.delDominiosIgnorados(url_id)
-            return {'sucess': "Url removida"}, 200
+            return {'success': "Url removida"}, 200
         except Exception as e:
             return {"error": str(e)}, 400
 
 
-class PesquisaList(Resource):
-    def get(self):
+class Resultado(Resource):
+    def get(self,pesquisa_id):
         try:
-            return {'sucess': scrapy.retornaPesquisas()}, 200
+            return {'success': scrapy.retornaResultadosPesquisa(pesquisa_id)}, 200
         except Exception as e:
             return {"error": str(e)}, 400
 
@@ -42,11 +42,17 @@ class Pesquisa(Resource):
             dados = request.get_json()
             item_pesquisa = scrapy.cadastraPesquisa(
                 dados['termo'], dados['user_id'])
-            if item_pesquisa['status'] == 'cadastrado com sucesso':
+            if item_pesquisa['status'] == 'cadastrado com successo':
                 scrapy.getPesquisa(
                     dados['termo'], item_pesquisa['item_pesquisa'])
-            return {'sucess': {"status": item_pesquisa['status'],
+            return {'success': {"status": item_pesquisa['status'],
                                "itemPesquisa": item_pesquisa}}, 200
+        except Exception as e:
+            return {"error": str(e)}, 400
+    
+    def get(self):
+        try:
+            return {'success': scrapy.retornaPesquisas()}, 200
         except Exception as e:
             return {"error": str(e)}, 400
 
@@ -56,7 +62,7 @@ class DadosUrl(Resource):
         dados = request.get_json()
         
         scrapy.coletaDadosUrl(dados['url_id'])
-        return {'sucess': "coletado"}, 200
+        return {'success': "coletado"}, 200
 
 
 class DadosTermo(Resource):
@@ -64,10 +70,10 @@ class DadosTermo(Resource):
         dados = request.get_json()
         
         scrapy.getDadosPesquisa(dados['termo_id'])
-        return {'sucess': "coletado"}, 200
+        return {'success': "coletado"}, 200
 
 
 class ReprocessaPesquisaFalha(Resource):
     def get(sel, termo_id):
         scrapy.getDadosResultadoFalha(termo_id)
-        return {'sucess': "reprocessado"}, 200
+        return {'success': "reprocessado"}, 200

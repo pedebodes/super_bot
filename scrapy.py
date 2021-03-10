@@ -192,7 +192,6 @@ def coletaDadosUrl(id_url, url_base=False):
             filter(Resultados.id == id_url).one()
         url_base = row.url_base
         id_url = row.id
-    # import pdb; pdb.set_trace()
     response = util.getRequest(url_base)
 
     try:
@@ -268,6 +267,7 @@ def retornaPesquisas():
     def create_item(item):
         return {
             'id': item.id,
+            'usuario_id':item.usuario_id,
             'termo': item.termo,
             'status': item.status,
             'data_pesquisa': str(item.data_pesquisa),
@@ -292,7 +292,8 @@ def retornaResultadosPesquisa(pesquisa_id):
             'status_pesquisa': item.status_pesquisa,
             'resultado_id': item.resultado_id,
             'url_base': item.url_base,
-            'status_resultado': item.status_resultado
+            'status_resultado': item.status_resultado,
+            'dados': retornaDadosResultado(item.resultado_id) if item.status_resultado else '{}'
         }
     retorno = {}
     retorno['resultado'] = [*map(create_item, resultado)]
@@ -300,8 +301,6 @@ def retornaResultadosPesquisa(pesquisa_id):
 
 
 def retornaDadosResultado(resultado_id):
-    resultado = session.query(Resultados).filter(
-        Resultados.id == resultado_id).all()
     resultadoCNPJ = session.query(ResultadoCNPJ).filter(
         ResultadoCNPJ.resultado_id == resultado_id).all()
     resultadoCEP = session.query(ResultadoCEP).filter(
@@ -310,13 +309,6 @@ def retornaDadosResultado(resultado_id):
         ResultadoEmail.resultado_id == resultado_id).all()
     resultadoTelefone = session.query(ResultadoTelefone).filter(
         ResultadoTelefone.resultado_id == resultado_id).all()
-
-    def create_resultado(item):
-        return{
-            "id": item.id,
-            "url_base": item.url_base,
-            "status": item.status
-        }
 
     def create_CNPJ(item):
         return {
@@ -345,24 +337,22 @@ def retornaDadosResultado(resultado_id):
         return {
             "id": item.id,
             "ddd": item.ddd,
-            "numero": item.numero,
+            "numero": item.numero.strip(" "),
             "status": item.status
         }
 
-    resultado = [*map(create_resultado, resultado)]
     resultadoCNPJ = [*map(create_CNPJ, resultadoCNPJ)]
     resultadoCEP = [*map(create_CEP, resultadoCEP)]
     resultadoEmail = [*map(create_Email, resultadoEmail)]
     resultadoTelefone = [*map(create_Telefone, resultadoTelefone)]
 
     retorno = {}
-    retorno['resultado'] = resultado
     retorno['resultadoCNPJ'] = resultadoCNPJ if len(
-        resultadoCNPJ)else ["Não foi possivel coletar esta informação"]
+        resultadoCNPJ)else []
     retorno['resultadoCEP'] = resultadoCEP if len(
-        resultadoCEP)else ["Não foi possivel coletar esta informação"]
+        resultadoCEP)else []
     retorno['resultadoEmail'] = resultadoEmail if len(
-        resultadoEmail)else ["Não foi possivel coletar esta informação"]
+        resultadoEmail)else []
     retorno['resultadoTelefone'] = resultadoTelefone if len(
-        resultadoTelefone)else ["Não foi possivel coletar esta informação"]
+        resultadoTelefone)else []
     return retorno
