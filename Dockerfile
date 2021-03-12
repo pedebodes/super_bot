@@ -5,4 +5,3 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 CMD python migrate.py
 CMD python runserver.py
-# CMD python app.py
