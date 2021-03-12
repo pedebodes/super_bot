@@ -70,15 +70,11 @@ class Pesquisa(Resource):
     def post(self):
         try:
             dados = request.get_json()
-            item_pesquisa = scrapy.cadastraPesquisa(
-                dados['termo'], dados['user_id'])
-            
-            scrapy.getPesquisa('rolamentos', 4)
-                
-                
-            if item_pesquisa['status'] == 'cadastrado com successo':
-                scrapy.getPesquisa(
-                    dados['termo'], item_pesquisa['item_pesquisa'])
+            item_pesquisa = scrapy.cadastraPesquisa(dados['termo'], dados['user_id'])
+
+            if item_pesquisa['status'] == "cadastrado com sucesso":
+                scrapy.getPesquisa(dados['termo'], item_pesquisa['item_pesquisa'])
+           
             return {'success': {"status": item_pesquisa['status'],
                                 "itemPesquisa": item_pesquisa}}, 200
         except Exception as e:
