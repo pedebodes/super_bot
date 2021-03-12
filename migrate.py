@@ -14,8 +14,15 @@ from citext import CIText
 load_dotenv(find_dotenv())
 Base = declarative_base()
 
-engine = create_engine(os.environ.get("DATABASE_URL"),
-                       echo=bool(os.environ.get("ECHO")))
+
+user = os.environ['POSTGRES_USER']
+pwd = os.environ['POSTGRES_PASSWORD']
+db = os.environ['POSTGRES_DB']
+host = 'db_bot'
+port = os.environ['PORT']
+engine = create_engine('postgres://%s:%s@%s:%s/%s' %
+                       (user, pwd, host, port, db), echo=bool(os.environ.get("ECHO")))
+
 
 Session = sessionmaker(bind=engine)
 session = Session()
