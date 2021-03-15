@@ -20,3 +20,4 @@ definir end point( getDados(url)) recebendo somente a url como parametro -- ok
 possibilidade de flask-restfull
 possibilidade de pytest( testar util)
 remover do util funcao removeduplciado
+usar guinicorn com nginx #TODO: asas

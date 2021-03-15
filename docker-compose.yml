@@ -1,24 +1,36 @@
 version: '3.7'
 services:
-    api:
-        build: .
-        ports:
-            - "5002:5000"
-        volumes:
-            - .:/code
-        depends_on:
-            - db_bot
+    app:
+      restart: always
+      build:
+        context:  ./app
+        dockerfile: Dockerfile
+      expose:
+        - "8080"
+      volumes:
+        - /usr/src/app/sql            
+      depends_on:
+          - db_bot
+
     db_bot:
         image: postgres:12
+        restart: always
         env_file:
-          - .env
+          - app/.env
         volumes:
           - postgres_data:/var/lib/postgresql/data/
 
-    adminer:
-      image: adminer
+    proxy:
+      restart: always
+      build:
+        context:  ./nginx
+        dockerfile: Dockerfile
       ports:
-        - "81:8080"
+        - "80:80"
+      links:
+        - app
+      depends_on:
+        - app
 
 volumes:
   postgres_data:

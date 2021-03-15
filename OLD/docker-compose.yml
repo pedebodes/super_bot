@@ -1,0 +1,40 @@
+version: '3.7'
+services:
+    api:
+        build: .
+        # build: ./superbuy_bot  
+        # container_name: superbuy_bot
+        # restart: always
+        ports:
+            - "5002:5000"
+        volumes:
+            - .:/code
+        depends_on:
+            - db_bot
+        # command: gunicorn -w 1 -b 0.0.0.0:5002 wsgi:server
+
+
+    db_bot:
+        image: postgres:12
+        # restart: always
+        env_file:
+          - .env
+        volumes:
+          - postgres_data:/var/lib/postgresql/data/
+
+    adminer:
+      image: adminer
+      ports:
+        - "81:8080"
+    nginx:
+      container_name: nginx
+      # restart: always
+      build: ./nginx
+      ports:
+        - "80:80"
+      depends_on:
+        - api
+        # - flask_app
+
+volumes:
+  postgres_data:
